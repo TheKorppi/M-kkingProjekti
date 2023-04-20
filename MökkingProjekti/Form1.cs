@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MökkingProjekti
 {
     public partial class Form1 : Form
     {
+       
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -24,9 +28,20 @@ namespace MökkingProjekti
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mokkingDBDataSet.asiakas' table. You can move, or remove it, as needed.
-            this.asiakasTableAdapter.Fill(this.mokkingDBDataSet.asiakas);
 
+        }
+
+        private void taulunimicb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string taulunimi = taulunimicb.Text;
+            DataSet tauludata = Functions.paivitadatagrid(taulunimi);
+            dataGridView1.DataSource = tauludata.Tables[taulunimi];
+        }
+
+        private void laskubtn_Click(object sender, EventArgs e)
+        {
+            Form laskuform = new laskuform();
+            laskuform.ShowDialog();
         }
     }
 }
