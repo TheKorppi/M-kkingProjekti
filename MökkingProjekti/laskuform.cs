@@ -1,9 +1,11 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
+using MökkingProjekti.MokkingDBDataSetTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -18,20 +20,27 @@ namespace MökkingProjekti
         public laskuform()
         {
             InitializeComponent();
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void tulostalaskubtn_Click(object sender, EventArgs e)
         {
+            //Tämä napin painallus tulostaa pdf documentin filestreamin jälkeen olevaan osoitteeseen
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("rivi 1 :" + textBox1.Text);
-            sb.AppendLine("rivi2 :" + textBox2.Text);
-            sb.AppendLine("rivi 3 :" + textBox3.Text);
-            sb.AppendLine("rivi 4 :" + textBox4.Text);
-            sb.AppendLine("rivi 5 :" + textBox5.Text);
-
+            sb.AppendLine("Asiakkaan nimi: "+asiakaannimitb.Text);
+            sb.AppendLine("Varauksen ID: " + varauksenidtb.Text);
+            sb.AppendLine("Mökin nimi: " + mokinnimitb.Text);
+            sb.AppendLine("Toimipaikka: " + toimipaikkatb.Text);
+            sb.AppendLine("Palveluiden määrä: " + palveluidenlkmtb.Text);
+            sb.AppendLine("Varauksen alkamispvm: " + alkamispvmtb.Text);
+            sb.AppendLine("Varauksen loppumispvm: " + loppumispvmtb.Text);
+            sb.AppendLine("Laskun summa: " + laskunsummatb.Text);
+            string laskunimi = asiakaannimitb.Text + "_" + mokinnimitb.Text + "_Laskuid" + varauksenidtb.Text + "_LASKU.pdf";
+            
             Document document = new Document();
-            PdfWriter.GetInstance(document, new FileStream(@"C:\Users\ramia\Downloads\lasku.pdf", FileMode.Create));
+            PdfWriter.GetInstance(document, new FileStream(@"C:\Users\ramia\Downloads\"+laskunimi, FileMode.Create));
             document.Open();
 
             Paragraph paragraph = new Paragraph();
@@ -41,6 +50,52 @@ namespace MökkingProjekti
             document.Add(paragraph);
             document.Close();
 
+            DialogResult dialogResult = MessageBox.Show("Haluatko tulostaa muita laskuja?", "Lasku tallennettu!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                this.Close();
+            }
+
         }
+
+        private void laskuform_Load(object sender, EventArgs e)
+        {
+            //formin latautuessa ottaa server explorerista laskukokonaisuus viewin, ja lataa sen sisällön datagridiin
+            SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\ramia\\Source\\Repos\\TheKorppi\\M-kkingProjekti\\MökkingProjekti\\MokkingDB.mdf;Integrated Security=True;Connect Timeout=30");
+            connection.Open();
+            SqlCommand command = new SqlCommand("SELECT * FROM laskukokonaisuus", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            varausdgv.DataSource = dataTable;
+            tulostalaskubtn.Enabled = false;
+
+        }
+
+        private void varausdgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < varausdgv.Rows.Count - 1)
+            {
+                DataGridViewRow row = varausdgv.Rows[e.RowIndex];
+
+                asiakaannimitb.Text = row.Cells["Asiakkaan_nimi"].Value.ToString();
+                mokinnimitb.Text = row.Cells["Mökin_nimi"].Value.ToString();
+                toimipaikkatb.Text = row.Cells["Toimipaikka"].Value.ToString();
+                palveluidenlkmtb.Text = row.Cells["Palveluiden_määrä"].Value.ToString();
+                alkamispvmtb.Text = row.Cells["Varauksen_alkamispvm"].Value.ToString();
+                loppumispvmtb.Text = row.Cells["Varauksen_loppimspvm"].Value.ToString();
+                laskunsummatb.Text = row.Cells["Laskun_summa"].Value.ToString();
+                varauksenidtb.Text = row.Cells["varaus_id"].Value.ToString();
+                varausdgv.ClearSelection();
+                row.Selected = true;
+                tulostalaskubtn.Enabled = true;
+            }
+
+        }
+
     }
 }
