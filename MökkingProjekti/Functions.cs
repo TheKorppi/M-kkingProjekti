@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace MökkingProjekti
 {
@@ -14,6 +15,7 @@ namespace MökkingProjekti
         
         public static DataSet paivitadatagrid(string taulunimi)
         {
+            
             string connection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\ramia\\Source\\Repos\\TheKorppi\\M-kkingProjekti\\MökkingProjekti\\MokkingDB.mdf;Integrated Security=True;Connect Timeout=30";
             string query = "SELECT * FROM " + taulunimi;
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);

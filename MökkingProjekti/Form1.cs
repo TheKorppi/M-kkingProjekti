@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,7 @@ namespace MökkingProjekti
         private void taulunimicb_SelectedIndexChanged(object sender, EventArgs e)
         {
             haetaulu();
+            //muuttaa comboboxissa olevan sanan labelin nimeksi, ja muuttaa ensimmäisen kirjaimen isoksi.
             string taulunnimi = taulunimicb.Text;
             taulunnimi = char.ToUpper(taulunnimi[0]) + taulunnimi.Substring(1);
             taulunimi.Text = taulunnimi;
@@ -56,6 +58,26 @@ namespace MökkingProjekti
         private void lisaabtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tietokannanTiedostopolkuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // ei toimi
+            string path = Application.StartupPath;
+            textBox1.Text = path;
+            /*
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Database Files (*.mdf)|*.mdf|All Files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;               
+                filePath = filePath.Substring(0, filePath.Length - 14);
+                textBox1.Text = filePath;
+                File.WriteAllText(filePath, filePath);
+                //C:\Users\ramia\source\repos\TheKorppi\M-kkingProjekti\MökkingProjekti\bin\Debug\MokkingDB.mdf
+                //C:\Users\ramia\source\repos\TheKorppi\M-kkingProjekti\MökkingProjekti\bin\Debug\tallennettupolku.txt
+            }
+            */
         }
     }
 }
