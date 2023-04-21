@@ -51,10 +51,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.varauksenidtb = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.asiakasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.asiakasTableAdapter = new MökkingProjekti.MokkingDBDataSetTableAdapters.asiakasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.varausdgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.varausBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tulostalaskubtn
@@ -223,6 +226,15 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Varauksen ID";
             // 
+            // asiakasBindingSource
+            // 
+            this.asiakasBindingSource.DataMember = "asiakas";
+            this.asiakasBindingSource.DataSource = this.mokkingDBDataSetBindingSource;
+            // 
+            // asiakasTableAdapter
+            // 
+            this.asiakasTableAdapter.ClearBeforeFill = true;
+            // 
             // laskuform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,6 +265,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.varausBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,5 +294,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox varauksenidtb;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.BindingSource asiakasBindingSource;
+        private MokkingDBDataSetTableAdapters.asiakasTableAdapter asiakasTableAdapter;
     }
 }

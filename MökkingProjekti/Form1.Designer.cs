@@ -44,6 +44,9 @@
             this.alueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.taulunimicb = new System.Windows.Forms.ComboBox();
             this.laskubtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lisaabtn = new System.Windows.Forms.Button();
+            this.taulunimi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
@@ -59,7 +62,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(11, 322);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -136,8 +139,8 @@
             // 
             this.taulunimicb.FormattingEnabled = true;
             this.taulunimicb.Items.AddRange(new object[] {
-            "alue",
             "asiakas",
+            "alue",
             "lasku",
             "mokki",
             "palvelu",
@@ -148,23 +151,57 @@
             this.taulunimicb.Name = "taulunimicb";
             this.taulunimicb.Size = new System.Drawing.Size(92, 21);
             this.taulunimicb.TabIndex = 3;
+            this.taulunimicb.Text = "asiakas";
             this.taulunimicb.SelectedIndexChanged += new System.EventHandler(this.taulunimicb_SelectedIndexChanged);
             // 
             // laskubtn
             // 
-            this.laskubtn.Location = new System.Drawing.Point(866, 150);
+            this.laskubtn.Location = new System.Drawing.Point(866, 414);
             this.laskubtn.Name = "laskubtn";
-            this.laskubtn.Size = new System.Drawing.Size(75, 23);
+            this.laskubtn.Size = new System.Drawing.Size(92, 23);
             this.laskubtn.TabIndex = 4;
             this.laskubtn.Text = "Lasku";
             this.laskubtn.UseVisualStyleBackColor = true;
             this.laskubtn.Click += new System.EventHandler(this.laskubtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(817, 50);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "MökKing - mökkivaraustenhallintajärjestelmä";
+            // 
+            // lisaabtn
+            // 
+            this.lisaabtn.Location = new System.Drawing.Point(866, 500);
+            this.lisaabtn.Name = "lisaabtn";
+            this.lisaabtn.Size = new System.Drawing.Size(92, 23);
+            this.lisaabtn.TabIndex = 6;
+            this.lisaabtn.Text = "Lisää tietoja";
+            this.lisaabtn.UseVisualStyleBackColor = true;
+            this.lisaabtn.Click += new System.EventHandler(this.lisaabtn_Click);
+            // 
+            // taulunimi
+            // 
+            this.taulunimi.AutoSize = true;
+            this.taulunimi.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taulunimi.Location = new System.Drawing.Point(6, 290);
+            this.taulunimi.Name = "taulunimi";
+            this.taulunimi.Size = new System.Drawing.Size(82, 30);
+            this.taulunimi.TabIndex = 7;
+            this.taulunimi.Text = "Asiakas";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 668);
+            this.Controls.Add(this.taulunimi);
+            this.Controls.Add(this.lisaabtn);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.laskubtn);
             this.Controls.Add(this.taulunimicb);
             this.Controls.Add(this.dataGridView1);
@@ -181,6 +218,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mokkiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alueBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -201,6 +239,9 @@
         private System.Windows.Forms.BindingSource alueBindingSource;
         private System.Windows.Forms.ComboBox taulunimicb;
         private System.Windows.Forms.Button laskubtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button lisaabtn;
+        private System.Windows.Forms.Label taulunimi;
     }
 }
 

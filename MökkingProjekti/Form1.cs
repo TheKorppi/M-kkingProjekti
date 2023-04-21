@@ -18,9 +18,17 @@ namespace MökkingProjekti
         public Form1()
         {
             InitializeComponent();
-
+            haetaulu();
         }
 
+        
+        public void haetaulu()
+        {
+            //hakee datagridiin tiedot comboboxin kirjoituksen perusteella
+            string taulunimi = taulunimicb.Text;
+            DataSet tauludata = Functions.paivitadatagrid(taulunimi);
+            dataGridView1.DataSource = tauludata.Tables[taulunimi];
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -33,15 +41,21 @@ namespace MökkingProjekti
 
         private void taulunimicb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string taulunimi = taulunimicb.Text;
-            DataSet tauludata = Functions.paivitadatagrid(taulunimi);
-            dataGridView1.DataSource = tauludata.Tables[taulunimi];
+            haetaulu();
+            string taulunnimi = taulunimicb.Text;
+            taulunnimi = char.ToUpper(taulunnimi[0]) + taulunnimi.Substring(1);
+            taulunimi.Text = taulunnimi;
         }
 
         private void laskubtn_Click(object sender, EventArgs e)
         {
             Form laskuform = new laskuform();
             laskuform.ShowDialog();
+        }
+
+        private void lisaabtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
