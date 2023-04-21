@@ -19,15 +19,16 @@ namespace MökkingProjekti
         public Form1()
         {
             InitializeComponent();
+            Functions.ifkysymys(path);
             haetaulu();
         }
+        public string path = "C:/temp/tiedostopolku.txt";
 
-        
         public void haetaulu()
         {
             //hakee datagridiin tiedot comboboxin kirjoituksen perusteella
             string taulunimi = taulunimicb.Text;
-            DataSet tauludata = Functions.paivitadatagrid(taulunimi);
+            DataSet tauludata = Functions.paivitadatagrid(taulunimi, path);
             dataGridView1.DataSource = tauludata.Tables[taulunimi];
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -62,22 +63,7 @@ namespace MökkingProjekti
 
         private void tietokannanTiedostopolkuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // ei toimi
-            string path = Application.StartupPath;
-            textBox1.Text = path;
-            /*
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Database Files (*.mdf)|*.mdf|All Files (*.*)|*.*";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string filePath = openFileDialog.FileName;               
-                filePath = filePath.Substring(0, filePath.Length - 14);
-                textBox1.Text = filePath;
-                File.WriteAllText(filePath, filePath);
-                //C:\Users\ramia\source\repos\TheKorppi\M-kkingProjekti\MökkingProjekti\bin\Debug\MokkingDB.mdf
-                //C:\Users\ramia\source\repos\TheKorppi\M-kkingProjekti\MökkingProjekti\bin\Debug\tallennettupolku.txt
-            }
-            */
+            Functions.folderpath(path);
         }
     }
 }
