@@ -94,5 +94,10 @@ namespace MökkingProjekti
                 MessageBox.Show("no");
             }
         }
+
+        private void Pvaraus_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
