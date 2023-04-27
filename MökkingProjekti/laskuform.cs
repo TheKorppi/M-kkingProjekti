@@ -40,7 +40,7 @@ namespace MökkingProjekti
             string laskunimi = asiakaannimitb.Text + "_" + mokinnimitb.Text + "_Laskuid" + varauksenidtb.Text + "_LASKU.pdf";
             
             Document document = new Document();
-            PdfWriter.GetInstance(document, new FileStream(@"C:\Users\ramia\Downloads\"+laskunimi, FileMode.Create));
+            PdfWriter.GetInstance(document, new FileStream(@"C:\temp\"+laskunimi, FileMode.Create));
             document.Open();
 
             Paragraph paragraph = new Paragraph();
