@@ -292,7 +292,7 @@
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(284, 58);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.MinDate = new System.DateTime(2023, 4, 27, 0, 0, 0, 0);
+            this.dateTimePicker2.MinDate = new System.DateTime(2023, 4, 27+1, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker2.TabIndex = 46;

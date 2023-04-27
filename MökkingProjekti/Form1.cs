@@ -73,10 +73,14 @@ namespace MökkingProjekti
             {
                 if (control is TextBox && string.IsNullOrEmpty((control as TextBox).Text))
                 {
-                    if (control is DateTimePicker && (control as DateTimePicker).Value == DateTimePicker.MinimumDateTime)
+                    if (control is ComboBox && string.IsNullOrEmpty((control as ComboBox).Text))
                     {
-                        allTextboxesFilled = false;
-                        break;
+                        if (control is DateTimePicker && (control as DateTimePicker).Value == DateTimePicker.MinimumDateTime) 
+                        {
+                            allTextboxesFilled = false;
+                            break;
+                        }
+                            
                     }
                     
                 }
