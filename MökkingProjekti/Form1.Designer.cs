@@ -50,7 +50,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.asetuksetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tietokannanTiedostopolkuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
@@ -66,12 +65,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 396);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 322);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1007, 412);
+            this.dataGridView1.Size = new System.Drawing.Size(755, 335);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -152,20 +151,18 @@
             "posti",
             "varauksen_palvelut",
             "varaus"});
-            this.taulunimicb.Location = new System.Drawing.Point(1155, 396);
-            this.taulunimicb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.taulunimicb.Location = new System.Drawing.Point(866, 322);
             this.taulunimicb.Name = "taulunimicb";
-            this.taulunimicb.Size = new System.Drawing.Size(121, 24);
+            this.taulunimicb.Size = new System.Drawing.Size(92, 21);
             this.taulunimicb.TabIndex = 3;
             this.taulunimicb.Text = "asiakas";
             this.taulunimicb.SelectedIndexChanged += new System.EventHandler(this.taulunimicb_SelectedIndexChanged);
             // 
             // laskubtn
             // 
-            this.laskubtn.Location = new System.Drawing.Point(1155, 510);
-            this.laskubtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.laskubtn.Location = new System.Drawing.Point(866, 414);
             this.laskubtn.Name = "laskubtn";
-            this.laskubtn.Size = new System.Drawing.Size(123, 28);
+            this.laskubtn.Size = new System.Drawing.Size(92, 23);
             this.laskubtn.TabIndex = 4;
             this.laskubtn.Text = "Lasku";
             this.laskubtn.UseVisualStyleBackColor = true;
@@ -175,19 +172,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(11, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1026, 62);
+            this.label1.Size = new System.Drawing.Size(817, 50);
             this.label1.TabIndex = 5;
             this.label1.Text = "MökKing - mökkivaraustenhallintajärjestelmä";
             // 
             // lisaabtn
             // 
-            this.lisaabtn.Location = new System.Drawing.Point(1155, 615);
-            this.lisaabtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lisaabtn.Location = new System.Drawing.Point(866, 500);
             this.lisaabtn.Name = "lisaabtn";
-            this.lisaabtn.Size = new System.Drawing.Size(123, 28);
+            this.lisaabtn.Size = new System.Drawing.Size(92, 23);
             this.lisaabtn.TabIndex = 6;
             this.lisaabtn.Text = "Lisää tietoja";
             this.lisaabtn.UseVisualStyleBackColor = true;
@@ -197,10 +192,9 @@
             // 
             this.taulunimi.AutoSize = true;
             this.taulunimi.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taulunimi.Location = new System.Drawing.Point(8, 357);
-            this.taulunimi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.taulunimi.Location = new System.Drawing.Point(6, 290);
             this.taulunimi.Name = "taulunimi";
-            this.taulunimi.Size = new System.Drawing.Size(104, 37);
+            this.taulunimi.Size = new System.Drawing.Size(82, 30);
             this.taulunimi.TabIndex = 7;
             this.taulunimi.Text = "Asiakas";
             // 
@@ -211,7 +205,8 @@
             this.asetuksetToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1561, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1171, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -220,30 +215,21 @@
             this.asetuksetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tietokannanTiedostopolkuToolStripMenuItem});
             this.asetuksetToolStripMenuItem.Name = "asetuksetToolStripMenuItem";
-            this.asetuksetToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.asetuksetToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.asetuksetToolStripMenuItem.Text = "Asetukset";
             // 
             // tietokannanTiedostopolkuToolStripMenuItem
             // 
             this.tietokannanTiedostopolkuToolStripMenuItem.Name = "tietokannanTiedostopolkuToolStripMenuItem";
-            this.tietokannanTiedostopolkuToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
+            this.tietokannanTiedostopolkuToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.tietokannanTiedostopolkuToolStripMenuItem.Text = "Tietokannan tiedostopolku";
             this.tietokannanTiedostopolkuToolStripMenuItem.Click += new System.EventHandler(this.tietokannanTiedostopolkuToolStripMenuItem_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(269, 208);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 9;
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1561, 822);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1171, 668);
             this.Controls.Add(this.taulunimi);
             this.Controls.Add(this.lisaabtn);
             this.Controls.Add(this.label1);
@@ -252,7 +238,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -295,7 +280,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem asetuksetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tietokannanTiedostopolkuToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

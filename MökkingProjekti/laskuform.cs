@@ -65,9 +65,9 @@ namespace MökkingProjekti
         private void laskuform_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'mokkingDBDataSet.asiakas' table. You can move, or remove it, as needed.
-            this.asiakasTableAdapter.Fill(this.mokkingDBDataSet.asiakas);
+            //this.asiakasTableAdapter.Fill(this.mokkingDBDataSet.asiakas);
             //formin latautuessa ottaa server explorerista laskukokonaisuus viewin, ja lataa sen sisällön datagridiin
-            SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\ramia\\Source\\Repos\\TheKorppi\\M-kkingProjekti\\MökkingProjekti\\MokkingDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection connection = new SqlConnection(Functions.getDatasource());
             connection.Open();
             SqlCommand command = new SqlCommand("SELECT * FROM laskukokonaisuus", connection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);

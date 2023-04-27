@@ -38,10 +38,10 @@ namespace MökkingProjekti
                     File.WriteAllText(path, filePath);
                 }
         }
-        public static DataSet paivitadatagrid(string taulunimi, string path)
-        {                    
-            StreamReader reader  = new StreamReader(path);
-            string connection = reader.ReadLine();
+        public static DataSet paivitadatagrid(string taulunimi)
+        {
+
+            string connection = getDatasource();
             string query = "SELECT * FROM " + taulunimi;
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataSet dataSet = new DataSet();
@@ -49,6 +49,20 @@ namespace MökkingProjekti
             return dataSet;
 
         }
+        public static string getDatasource()
+        {
+            StreamReader sr = new StreamReader(getpath());
+            string path = sr.ReadLine();
+            sr.Close();
+            return (path);
+            
+        }
+        public static string getpath()
+        {
+            return ("C:/temp/tiedostopolku.txt");
+        }
+
+
 
     }
 }

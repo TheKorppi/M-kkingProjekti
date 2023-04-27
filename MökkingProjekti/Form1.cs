@@ -19,16 +19,16 @@ namespace MökkingProjekti
         public Form1()
         {
             InitializeComponent();
-            Functions.ifkysymys(path);
+            Functions.ifkysymys(Functions.getpath());
             haetaulu();
         }
-        public string path = "C:/temp/tiedostopolku.txt";
+        
 
         public void haetaulu()
         {
             //hakee datagridiin tiedot comboboxin kirjoituksen perusteella
             string taulunimi = taulunimicb.Text;
-            DataSet tauludata = Functions.paivitadatagrid(taulunimi, path);
+            DataSet tauludata = Functions.paivitadatagrid(taulunimi);
             dataGridView1.DataSource = tauludata.Tables[taulunimi];
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,7 +63,7 @@ namespace MökkingProjekti
 
         private void tietokannanTiedostopolkuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Functions.folderpath(path);
+            Functions.folderpath(Functions.getpath());
         }
     }
 }
