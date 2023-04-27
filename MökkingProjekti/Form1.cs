@@ -65,5 +65,30 @@ namespace MökkingProjekti
         {
             Functions.folderpath(Functions.getpath());
         }
+
+        private void btreservation_Click(object sender, EventArgs e)
+        {
+            bool allTextboxesFilled = true;
+            foreach (Control control in Pvaraus.Controls)
+            {
+                if (control is TextBox && string.IsNullOrEmpty((control as TextBox).Text))
+                {
+                    if (control is DateTimePicker && (control as DateTimePicker).Value == DateTimePicker.MinimumDateTime)
+                    {
+                        allTextboxesFilled = false;
+                        break;
+                    }
+                    
+                }
+            }
+            if (allTextboxesFilled)
+            {
+                MessageBox.Show("yes");
+            }
+            else
+            {
+                MessageBox.Show("no");
+            }
+        }
     }
 }
