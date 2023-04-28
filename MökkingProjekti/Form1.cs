@@ -99,25 +99,5 @@ namespace MökkingProjekti
         {
 
         }
-
-        private void pööToolStripMenuItem_Click(object sender, EventArgs e)
-        {    
-                Pvaraus.Visible = true;  
-        }
-
-        private void tsmiservice_Click(object sender, EventArgs e)
-        {
-            panelservice.Visible = true;
-        }
-
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            panelcottage.Visible = true;
-        }
-
-        private void tsmicustomer_Click(object sender, EventArgs e)
-        {
-            panelcustomer.Visible = true;
-        }
     }
 }
