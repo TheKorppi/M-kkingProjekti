@@ -46,8 +46,17 @@ namespace MökkingProjekti
             haetaulu();
             //muuttaa comboboxissa olevan sanan labelin nimeksi, ja muuttaa ensimmäisen kirjaimen isoksi.
             string taulunnimi = taulunimicb.Text;
+            switch (taulunimi.ToString())
+            {
+                case "varaus":
+                    Pvaraus.Enabled = true;
+                    Ppalvelu.Enabled = false;
+                    Pmokki.Enabled = false;
+                    break;
+            }
             taulunnimi = char.ToUpper(taulunnimi[0]) + taulunnimi.Substring(1);
             taulunimi.Text = taulunnimi;
+          
         }
 
         private void laskubtn_Click(object sender, EventArgs e)
