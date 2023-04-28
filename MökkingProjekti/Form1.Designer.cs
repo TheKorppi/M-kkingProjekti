@@ -122,7 +122,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 461);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -285,7 +285,7 @@
             // 
             this.cbcottage.FormattingEnabled = true;
             this.cbcottage.Location = new System.Drawing.Point(284, 107);
-            this.cbcottage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbcottage.Margin = new System.Windows.Forms.Padding(2);
             this.cbcottage.Name = "cbcottage";
             this.cbcottage.Size = new System.Drawing.Size(92, 21);
             this.cbcottage.TabIndex = 10;
@@ -294,25 +294,25 @@
             // 
             this.cblocation.FormattingEnabled = true;
             this.cblocation.Location = new System.Drawing.Point(284, 82);
-            this.cblocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cblocation.Margin = new System.Windows.Forms.Padding(2);
             this.cblocation.Name = "cblocation";
             this.cblocation.Size = new System.Drawing.Size(92, 21);
             this.cblocation.TabIndex = 9;
             // 
             // btcancel
             // 
-            this.btcancel.Location = new System.Drawing.Point(49, 226);
-            this.btcancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btcancel.Location = new System.Drawing.Point(13, 268);
+            this.btcancel.Margin = new System.Windows.Forms.Padding(2);
             this.btcancel.Name = "btcancel";
-            this.btcancel.Size = new System.Drawing.Size(56, 19);
+            this.btcancel.Size = new System.Drawing.Size(56, 25);
             this.btcancel.TabIndex = 12;
             this.btcancel.Text = "Peruuta";
             this.btcancel.UseVisualStyleBackColor = true;
             // 
             // btreservation
             // 
-            this.btreservation.Location = new System.Drawing.Point(49, 203);
-            this.btreservation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btreservation.Location = new System.Drawing.Point(13, 245);
+            this.btreservation.Margin = new System.Windows.Forms.Padding(2);
             this.btreservation.Name = "btreservation";
             this.btreservation.Size = new System.Drawing.Size(56, 19);
             this.btreservation.TabIndex = 11;
@@ -323,7 +323,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(284, 58);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.MinDate = new System.DateTime(2023, 4, 27, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(151, 20);
@@ -332,7 +332,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(284, 30);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.MinDate = new System.DateTime(2023, 4, 27, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
@@ -381,7 +381,7 @@
             // tbaddress
             // 
             this.tbaddress.Location = new System.Drawing.Point(107, 130);
-            this.tbaddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbaddress.Margin = new System.Windows.Forms.Padding(2);
             this.tbaddress.Name = "tbaddress";
             this.tbaddress.Size = new System.Drawing.Size(76, 20);
             this.tbaddress.TabIndex = 5;
@@ -389,7 +389,7 @@
             // tbphone
             // 
             this.tbphone.Location = new System.Drawing.Point(107, 106);
-            this.tbphone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbphone.Margin = new System.Windows.Forms.Padding(2);
             this.tbphone.Name = "tbphone";
             this.tbphone.Size = new System.Drawing.Size(76, 20);
             this.tbphone.TabIndex = 4;
@@ -397,7 +397,7 @@
             // tbpostcode
             // 
             this.tbpostcode.Location = new System.Drawing.Point(107, 154);
-            this.tbpostcode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbpostcode.Margin = new System.Windows.Forms.Padding(2);
             this.tbpostcode.Name = "tbpostcode";
             this.tbpostcode.Size = new System.Drawing.Size(76, 20);
             this.tbpostcode.TabIndex = 6;
@@ -405,7 +405,7 @@
             // tblastname
             // 
             this.tblastname.Location = new System.Drawing.Point(107, 58);
-            this.tblastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tblastname.Margin = new System.Windows.Forms.Padding(2);
             this.tblastname.Name = "tblastname";
             this.tblastname.Size = new System.Drawing.Size(76, 20);
             this.tblastname.TabIndex = 2;
@@ -413,7 +413,7 @@
             // tbemail
             // 
             this.tbemail.Location = new System.Drawing.Point(107, 82);
-            this.tbemail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbemail.Margin = new System.Windows.Forms.Padding(2);
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(76, 20);
             this.tbemail.TabIndex = 3;
@@ -421,7 +421,7 @@
             // tbfirstname
             // 
             this.tbfirstname.Location = new System.Drawing.Point(107, 34);
-            this.tbfirstname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbfirstname.Margin = new System.Windows.Forms.Padding(2);
             this.tbfirstname.Name = "tbfirstname";
             this.tbfirstname.Size = new System.Drawing.Size(76, 20);
             this.tbfirstname.TabIndex = 1;
@@ -510,7 +510,7 @@
             this.Pvaraus.Controls.Add(this.lbpostcode);
             this.Pvaraus.Controls.Add(this.lbcheckin);
             this.Pvaraus.Controls.Add(this.tbpostcode);
-            this.Pvaraus.Location = new System.Drawing.Point(20, 109);
+            this.Pvaraus.Location = new System.Drawing.Point(20, 110);
             this.Pvaraus.Name = "Pvaraus";
             this.Pvaraus.Size = new System.Drawing.Size(896, 300);
             this.Pvaraus.TabIndex = 56;
@@ -530,48 +530,48 @@
             this.Ppalvelu.Controls.Add(this.lbname);
             this.Ppalvelu.Controls.Add(this.btcancel1);
             this.Ppalvelu.Controls.Add(this.btadd);
-            this.Ppalvelu.Location = new System.Drawing.Point(1005, 109);
-            this.Ppalvelu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ppalvelu.Location = new System.Drawing.Point(20, 110);
+            this.Ppalvelu.Margin = new System.Windows.Forms.Padding(2);
             this.Ppalvelu.Name = "Ppalvelu";
-            this.Ppalvelu.Size = new System.Drawing.Size(413, 300);
+            this.Ppalvelu.Size = new System.Drawing.Size(435, 301);
             this.Ppalvelu.TabIndex = 57;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(136, 136);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Location = new System.Drawing.Point(107, 123);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(76, 20);
             this.textBox5.TabIndex = 11;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(136, 63);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Location = new System.Drawing.Point(107, 50);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(76, 20);
             this.textBox4.TabIndex = 10;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(136, 85);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Location = new System.Drawing.Point(107, 72);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(76, 20);
             this.textBox3.TabIndex = 9;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 114);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Location = new System.Drawing.Point(107, 101);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(76, 20);
             this.textBox2.TabIndex = 8;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 37);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(107, 24);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 7;
@@ -579,7 +579,7 @@
             // lbprice
             // 
             this.lbprice.AutoSize = true;
-            this.lbprice.Location = new System.Drawing.Point(62, 135);
+            this.lbprice.Location = new System.Drawing.Point(19, 122);
             this.lbprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbprice.Name = "lbprice";
             this.lbprice.Size = new System.Drawing.Size(32, 13);
@@ -589,7 +589,7 @@
             // lbkuvaus
             // 
             this.lbkuvaus.AutoSize = true;
-            this.lbkuvaus.Location = new System.Drawing.Point(61, 63);
+            this.lbkuvaus.Location = new System.Drawing.Point(18, 50);
             this.lbkuvaus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbkuvaus.Name = "lbkuvaus";
             this.lbkuvaus.Size = new System.Drawing.Size(43, 13);
@@ -599,7 +599,7 @@
             // lbtype
             // 
             this.lbtype.AutoSize = true;
-            this.lbtype.Location = new System.Drawing.Point(62, 85);
+            this.lbtype.Location = new System.Drawing.Point(19, 72);
             this.lbtype.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbtype.Name = "lbtype";
             this.lbtype.Size = new System.Drawing.Size(38, 13);
@@ -609,7 +609,7 @@
             // lbtax
             // 
             this.lbtax.AutoSize = true;
-            this.lbtax.Location = new System.Drawing.Point(62, 114);
+            this.lbtax.Location = new System.Drawing.Point(19, 101);
             this.lbtax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbtax.Name = "lbtax";
             this.lbtax.Size = new System.Drawing.Size(22, 13);
@@ -619,7 +619,7 @@
             // lbname
             // 
             this.lbname.AutoSize = true;
-            this.lbname.Location = new System.Drawing.Point(62, 37);
+            this.lbname.Location = new System.Drawing.Point(19, 24);
             this.lbname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(27, 13);
@@ -628,18 +628,18 @@
             // 
             // btcancel1
             // 
-            this.btcancel1.Location = new System.Drawing.Point(64, 226);
-            this.btcancel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btcancel1.Location = new System.Drawing.Point(23, 272);
+            this.btcancel1.Margin = new System.Windows.Forms.Padding(2);
             this.btcancel1.Name = "btcancel1";
-            this.btcancel1.Size = new System.Drawing.Size(56, 19);
+            this.btcancel1.Size = new System.Drawing.Size(56, 25);
             this.btcancel1.TabIndex = 1;
             this.btcancel1.Text = "Peruuta";
             this.btcancel1.UseVisualStyleBackColor = true;
             // 
             // btadd
             // 
-            this.btadd.Location = new System.Drawing.Point(63, 203);
-            this.btadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btadd.Location = new System.Drawing.Point(22, 249);
+            this.btadd.Margin = new System.Windows.Forms.Padding(2);
             this.btadd.Name = "btadd";
             this.btadd.Size = new System.Drawing.Size(56, 19);
             this.btadd.TabIndex = 0;
@@ -664,64 +664,64 @@
             this.Pmokki.Controls.Add(this.lbcottageprice);
             this.Pmokki.Controls.Add(this.lbdescription);
             this.Pmokki.Controls.Add(this.lbloactio);
-            this.Pmokki.Location = new System.Drawing.Point(1005, 429);
-            this.Pmokki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pmokki.Location = new System.Drawing.Point(20, 110);
+            this.Pmokki.Margin = new System.Windows.Forms.Padding(2);
             this.Pmokki.Name = "Pmokki";
-            this.Pmokki.Size = new System.Drawing.Size(413, 300);
+            this.Pmokki.Size = new System.Drawing.Size(454, 301);
             this.Pmokki.TabIndex = 58;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(298, 98);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox12.Location = new System.Drawing.Point(284, 100);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(76, 20);
             this.textBox12.TabIndex = 15;
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(136, 63);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Location = new System.Drawing.Point(107, 70);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(76, 20);
             this.textBox11.TabIndex = 14;
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(136, 96);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Location = new System.Drawing.Point(107, 100);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(76, 20);
             this.textBox10.TabIndex = 13;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(298, 43);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Location = new System.Drawing.Point(284, 45);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(76, 20);
             this.textBox9.TabIndex = 12;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(298, 68);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Location = new System.Drawing.Point(284, 70);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(76, 20);
             this.textBox8.TabIndex = 11;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(136, 127);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Location = new System.Drawing.Point(107, 131);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(76, 20);
             this.textBox7.TabIndex = 10;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(136, 41);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Location = new System.Drawing.Point(107, 45);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(76, 20);
             this.textBox6.TabIndex = 9;
@@ -729,7 +729,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(238, 43);
+            this.label2.Location = new System.Drawing.Point(200, 48);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
@@ -738,18 +738,18 @@
             // 
             // btcanelcottage
             // 
-            this.btcanelcottage.Location = new System.Drawing.Point(68, 197);
-            this.btcanelcottage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btcanelcottage.Location = new System.Drawing.Point(22, 261);
+            this.btcanelcottage.Margin = new System.Windows.Forms.Padding(2);
             this.btcanelcottage.Name = "btcanelcottage";
-            this.btcanelcottage.Size = new System.Drawing.Size(56, 19);
+            this.btcanelcottage.Size = new System.Drawing.Size(56, 24);
             this.btcanelcottage.TabIndex = 7;
             this.btcanelcottage.Text = "peruuta";
             this.btcanelcottage.UseVisualStyleBackColor = true;
             // 
             // btaddcottage
             // 
-            this.btaddcottage.Location = new System.Drawing.Point(68, 173);
-            this.btaddcottage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btaddcottage.Location = new System.Drawing.Point(22, 237);
+            this.btaddcottage.Margin = new System.Windows.Forms.Padding(2);
             this.btaddcottage.Name = "btaddcottage";
             this.btaddcottage.Size = new System.Drawing.Size(56, 19);
             this.btaddcottage.TabIndex = 6;
@@ -759,7 +759,7 @@
             // lbcottagename
             // 
             this.lbcottagename.AutoSize = true;
-            this.lbcottagename.Location = new System.Drawing.Point(61, 68);
+            this.lbcottagename.Location = new System.Drawing.Point(19, 70);
             this.lbcottagename.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbcottagename.Name = "lbcottagename";
             this.lbcottagename.Size = new System.Drawing.Size(57, 13);
@@ -769,7 +769,7 @@
             // lbcottageaddress
             // 
             this.lbcottageaddress.AutoSize = true;
-            this.lbcottageaddress.Location = new System.Drawing.Point(61, 96);
+            this.lbcottageaddress.Location = new System.Drawing.Point(19, 98);
             this.lbcottageaddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbcottageaddress.Name = "lbcottageaddress";
             this.lbcottageaddress.Size = new System.Drawing.Size(57, 13);
@@ -779,7 +779,7 @@
             // lbcottagepostcode
             // 
             this.lbcottagepostcode.AutoSize = true;
-            this.lbcottagepostcode.Location = new System.Drawing.Point(61, 132);
+            this.lbcottagepostcode.Location = new System.Drawing.Point(19, 134);
             this.lbcottagepostcode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbcottagepostcode.Name = "lbcottagepostcode";
             this.lbcottagepostcode.Size = new System.Drawing.Size(65, 13);
@@ -789,7 +789,7 @@
             // lbcottageprice
             // 
             this.lbcottageprice.AutoSize = true;
-            this.lbcottageprice.Location = new System.Drawing.Point(238, 98);
+            this.lbcottageprice.Location = new System.Drawing.Point(200, 103);
             this.lbcottageprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbcottageprice.Name = "lbcottageprice";
             this.lbcottageprice.Size = new System.Drawing.Size(32, 13);
@@ -799,7 +799,7 @@
             // lbdescription
             // 
             this.lbdescription.AutoSize = true;
-            this.lbdescription.Location = new System.Drawing.Point(238, 73);
+            this.lbdescription.Location = new System.Drawing.Point(200, 78);
             this.lbdescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbdescription.Name = "lbdescription";
             this.lbdescription.Size = new System.Drawing.Size(43, 13);
@@ -809,7 +809,7 @@
             // lbloactio
             // 
             this.lbloactio.AutoSize = true;
-            this.lbloactio.Location = new System.Drawing.Point(61, 41);
+            this.lbloactio.Location = new System.Drawing.Point(19, 43);
             this.lbloactio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbloactio.Name = "lbloactio";
             this.lbloactio.Size = new System.Drawing.Size(28, 13);
@@ -821,9 +821,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 857);
-            this.Controls.Add(this.Pmokki);
             this.Controls.Add(this.Ppalvelu);
             this.Controls.Add(this.Pvaraus);
+            this.Controls.Add(this.Pmokki);
             this.Controls.Add(this.taulunimi);
             this.Controls.Add(this.lisaabtn);
             this.Controls.Add(this.label1);
