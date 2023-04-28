@@ -55,6 +55,27 @@ namespace MökkingProjekti
                     Ppalvelu.Visible = false;
                     Pmokki.Enabled = false;
                     Pmokki.Visible = false;
+                    Plasku.Enabled = false;
+                    Plasku.Visible = false;
+                    Pasiakas.Enabled = false;
+                    Pasiakas.Visible = false;
+                    Palue.Enabled = false;
+                    Palue.Visible = false;
+                    break;
+
+                case "alue":
+                    Pvaraus.Enabled = false;
+                    Pvaraus.Visible = false;
+                    Ppalvelu.Enabled = false;
+                    Ppalvelu.Visible = false;
+                    Pmokki.Enabled = false;
+                    Pmokki.Visible = false;
+                    Plasku.Enabled = false;
+                    Plasku.Visible = false;
+                    Pasiakas.Enabled = false;
+                    Pasiakas.Visible = false;
+                    Palue.Enabled = true;
+                    Palue.Visible = true;
                     break;
 
                 case "palvelu":
@@ -64,7 +85,14 @@ namespace MökkingProjekti
                     Ppalvelu.Visible = true;
                     Pmokki.Enabled = false;
                     Pmokki.Visible = false;
+                    Plasku.Enabled = false;
+                    Plasku.Visible = false;
+                    Pasiakas.Enabled = false;
+                    Pasiakas.Visible = false;
+                    Palue.Visible = false;
+                    Palue.Visible = false;
                     break;
+
                 case "mokki":
                     Pvaraus.Enabled = false;
                     Pvaraus.Visible = false;
@@ -72,7 +100,44 @@ namespace MökkingProjekti
                     Ppalvelu.Visible = false;
                     Pmokki.Enabled = true;
                     Pmokki.Visible = true;
+                    Plasku.Enabled = false;
+                    Plasku.Visible = false;
+                    Pasiakas.Enabled = false;
+                    Pasiakas.Visible = false;
+                    Palue.Visible = false;
+                    Palue.Enabled = false;
                     break;
+
+                case "lasku":
+                    Pvaraus.Enabled = false;
+                    Pvaraus.Visible = false;
+                    Ppalvelu.Enabled = false;
+                    Ppalvelu.Visible = false;
+                    Pmokki.Enabled = false;
+                    Pmokki.Visible = false;
+                    Plasku.Enabled = true;
+                    Plasku.Visible = true;
+                    Pasiakas.Enabled = false;
+                    Pasiakas.Visible = false;
+                    Palue.Enabled = false;
+                    Palue.Visible = false;
+                    break;
+
+                case "asiakas":
+                    Pvaraus.Enabled = false;
+                    Pvaraus.Visible = false;
+                    Ppalvelu.Enabled = false;
+                    Ppalvelu.Visible = false;
+                    Pmokki.Enabled = false;
+                    Pmokki.Visible = false;
+                    Plasku.Enabled = false;
+                    Plasku.Visible = false;
+                    Pasiakas.Enabled = true;
+                    Pasiakas.Visible = true;
+                    Palue.Enabled = false;
+                    Palue.Visible = false;
+                    break;
+
             }
             taulunnimi = char.ToUpper(taulunnimi[0]) + taulunnimi.Substring(1);
             taulunimi.Text = taulunnimi;
@@ -125,6 +190,11 @@ namespace MökkingProjekti
         }
 
         private void Pvaraus_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
