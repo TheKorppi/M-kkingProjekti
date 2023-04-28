@@ -46,12 +46,32 @@ namespace MökkingProjekti
             haetaulu();
             //muuttaa comboboxissa olevan sanan labelin nimeksi, ja muuttaa ensimmäisen kirjaimen isoksi.
             string taulunnimi = taulunimicb.Text;
-            switch (taulunimi.ToString())
+            switch (taulunnimi.ToString())
             {
                 case "varaus":
                     Pvaraus.Enabled = true;
+                    Pvaraus.Visible = true;
                     Ppalvelu.Enabled = false;
+                    Ppalvelu.Visible = false;
                     Pmokki.Enabled = false;
+                    Pmokki.Visible = false;
+                    break;
+
+                case "palvelu":
+                    Pvaraus.Enabled = false;
+                    Pvaraus.Visible = false;
+                    Ppalvelu.Enabled = true;
+                    Ppalvelu.Visible = true;
+                    Pmokki.Enabled = false;
+                    Pmokki.Visible = false;
+                    break;
+                case "mokki":
+                    Pvaraus.Enabled = false;
+                    Pvaraus.Visible = false;
+                    Ppalvelu.Enabled = false;
+                    Ppalvelu.Visible = false;
+                    Pmokki.Enabled = true;
+                    Pmokki.Visible = true;
                     break;
             }
             taulunnimi = char.ToUpper(taulunnimi[0]) + taulunnimi.Substring(1);
