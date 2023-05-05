@@ -51,5 +51,10 @@ namespace MökkingProjekti
                 aikajaksoraporttidgv.DataSource = tauludata.Tables[taulunimi];
             }
         }
+
+        private void alkamispvmdatetime_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -58,6 +58,7 @@
             this.alkamispvmdatetime.Size = new System.Drawing.Size(200, 20);
             this.alkamispvmdatetime.TabIndex = 0;
             this.alkamispvmdatetime.Value = new System.DateTime(2023, 5, 5, 0, 0, 0, 0);
+            this.alkamispvmdatetime.ValueChanged += new System.EventHandler(this.alkamispvmdatetime_ValueChanged);
             // 
             // paattymispaivadatetime
             // 

@@ -155,7 +155,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 461);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -261,7 +261,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 25);
+            this.label1.Location = new System.Drawing.Point(11, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(817, 50);
             this.label1.TabIndex = 5;
@@ -295,7 +295,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1443, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1890, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -318,7 +318,7 @@
             // 
             this.cbcottage.FormattingEnabled = true;
             this.cbcottage.Location = new System.Drawing.Point(284, 107);
-            this.cbcottage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbcottage.Margin = new System.Windows.Forms.Padding(2);
             this.cbcottage.Name = "cbcottage";
             this.cbcottage.Size = new System.Drawing.Size(92, 21);
             this.cbcottage.TabIndex = 10;
@@ -327,7 +327,7 @@
             // 
             this.cblocation.FormattingEnabled = true;
             this.cblocation.Location = new System.Drawing.Point(284, 82);
-            this.cblocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cblocation.Margin = new System.Windows.Forms.Padding(2);
             this.cblocation.Name = "cblocation";
             this.cblocation.Size = new System.Drawing.Size(92, 21);
             this.cblocation.TabIndex = 9;
@@ -335,7 +335,7 @@
             // btcancel
             // 
             this.btcancel.Location = new System.Drawing.Point(13, 268);
-            this.btcancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btcancel.Margin = new System.Windows.Forms.Padding(2);
             this.btcancel.Name = "btcancel";
             this.btcancel.Size = new System.Drawing.Size(56, 25);
             this.btcancel.TabIndex = 12;
@@ -345,7 +345,7 @@
             // btreservation
             // 
             this.btreservation.Location = new System.Drawing.Point(13, 245);
-            this.btreservation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btreservation.Margin = new System.Windows.Forms.Padding(2);
             this.btreservation.Name = "btreservation";
             this.btreservation.Size = new System.Drawing.Size(56, 19);
             this.btreservation.TabIndex = 11;
@@ -356,7 +356,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(284, 58);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.MinDate = new System.DateTime(2023, 4, 27, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(151, 20);
@@ -365,7 +365,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(284, 30);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.MinDate = new System.DateTime(2023, 4, 27, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
@@ -414,7 +414,7 @@
             // tbaddress
             // 
             this.tbaddress.Location = new System.Drawing.Point(107, 130);
-            this.tbaddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbaddress.Margin = new System.Windows.Forms.Padding(2);
             this.tbaddress.Name = "tbaddress";
             this.tbaddress.Size = new System.Drawing.Size(76, 20);
             this.tbaddress.TabIndex = 5;
@@ -422,7 +422,7 @@
             // tbphone
             // 
             this.tbphone.Location = new System.Drawing.Point(107, 106);
-            this.tbphone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbphone.Margin = new System.Windows.Forms.Padding(2);
             this.tbphone.Name = "tbphone";
             this.tbphone.Size = new System.Drawing.Size(76, 20);
             this.tbphone.TabIndex = 4;
@@ -430,7 +430,7 @@
             // tbpostcode
             // 
             this.tbpostcode.Location = new System.Drawing.Point(107, 154);
-            this.tbpostcode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbpostcode.Margin = new System.Windows.Forms.Padding(2);
             this.tbpostcode.Name = "tbpostcode";
             this.tbpostcode.Size = new System.Drawing.Size(76, 20);
             this.tbpostcode.TabIndex = 6;
@@ -438,7 +438,7 @@
             // tblastname
             // 
             this.tblastname.Location = new System.Drawing.Point(107, 58);
-            this.tblastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tblastname.Margin = new System.Windows.Forms.Padding(2);
             this.tblastname.Name = "tblastname";
             this.tblastname.Size = new System.Drawing.Size(76, 20);
             this.tblastname.TabIndex = 2;
@@ -446,7 +446,7 @@
             // tbemail
             // 
             this.tbemail.Location = new System.Drawing.Point(107, 82);
-            this.tbemail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbemail.Margin = new System.Windows.Forms.Padding(2);
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(76, 20);
             this.tbemail.TabIndex = 3;
@@ -454,7 +454,7 @@
             // tbfirstname
             // 
             this.tbfirstname.Location = new System.Drawing.Point(107, 34);
-            this.tbfirstname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbfirstname.Margin = new System.Windows.Forms.Padding(2);
             this.tbfirstname.Name = "tbfirstname";
             this.tbfirstname.Size = new System.Drawing.Size(76, 20);
             this.tbfirstname.TabIndex = 1;
@@ -521,7 +521,6 @@
             // 
             // Pvaraus
             // 
-            this.Pvaraus.Controls.Add(this.Plasku);
             this.Pvaraus.Controls.Add(this.lbfirstname);
             this.Pvaraus.Controls.Add(this.btcancel);
             this.Pvaraus.Controls.Add(this.btreservation);
@@ -544,7 +543,7 @@
             this.Pvaraus.Controls.Add(this.lbpostcode);
             this.Pvaraus.Controls.Add(this.lbcheckin);
             this.Pvaraus.Controls.Add(this.tbpostcode);
-            this.Pvaraus.Location = new System.Drawing.Point(20, 110);
+            this.Pvaraus.Location = new System.Drawing.Point(20, 70);
             this.Pvaraus.Name = "Pvaraus";
             this.Pvaraus.Size = new System.Drawing.Size(896, 300);
             this.Pvaraus.TabIndex = 56;
@@ -560,8 +559,8 @@
             this.Plasku.Controls.Add(this.lbbilltax);
             this.Plasku.Controls.Add(this.lbbillID);
             this.Plasku.Controls.Add(this.textBox13);
-            this.Plasku.Location = new System.Drawing.Point(440, 2);
-            this.Plasku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Plasku.Location = new System.Drawing.Point(20, 70);
+            this.Plasku.Margin = new System.Windows.Forms.Padding(2);
             this.Plasku.Name = "Plasku";
             this.Plasku.Size = new System.Drawing.Size(434, 301);
             this.Plasku.TabIndex = 46;
@@ -569,7 +568,7 @@
             // btbillcancel
             // 
             this.btbillcancel.Location = new System.Drawing.Point(38, 155);
-            this.btbillcancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btbillcancel.Margin = new System.Windows.Forms.Padding(2);
             this.btbillcancel.Name = "btbillcancel";
             this.btbillcancel.Size = new System.Drawing.Size(56, 19);
             this.btbillcancel.TabIndex = 7;
@@ -579,7 +578,7 @@
             // btaddbill
             // 
             this.btaddbill.Location = new System.Drawing.Point(38, 132);
-            this.btaddbill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btaddbill.Margin = new System.Windows.Forms.Padding(2);
             this.btaddbill.Name = "btaddbill";
             this.btaddbill.Size = new System.Drawing.Size(56, 19);
             this.btaddbill.TabIndex = 6;
@@ -589,7 +588,7 @@
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(144, 58);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(76, 20);
             this.textBox15.TabIndex = 5;
@@ -597,7 +596,7 @@
             // textBox14
             // 
             this.textBox14.Location = new System.Drawing.Point(144, 89);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(76, 20);
             this.textBox14.TabIndex = 4;
@@ -636,14 +635,13 @@
             // textBox13
             // 
             this.textBox13.Location = new System.Drawing.Point(144, 33);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(76, 20);
             this.textBox13.TabIndex = 0;
             // 
             // Ppalvelu
             // 
-            this.Ppalvelu.Controls.Add(this.Pasiakas);
             this.Ppalvelu.Controls.Add(this.textBox5);
             this.Ppalvelu.Controls.Add(this.textBox4);
             this.Ppalvelu.Controls.Add(this.textBox3);
@@ -656,15 +654,14 @@
             this.Ppalvelu.Controls.Add(this.lbname);
             this.Ppalvelu.Controls.Add(this.btcancel1);
             this.Ppalvelu.Controls.Add(this.btadd);
-            this.Ppalvelu.Location = new System.Drawing.Point(20, 110);
-            this.Ppalvelu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ppalvelu.Location = new System.Drawing.Point(20, 70);
+            this.Ppalvelu.Margin = new System.Windows.Forms.Padding(2);
             this.Ppalvelu.Name = "Ppalvelu";
             this.Ppalvelu.Size = new System.Drawing.Size(435, 301);
             this.Ppalvelu.TabIndex = 57;
             // 
             // Pasiakas
             // 
-            this.Pasiakas.Controls.Add(this.Palue);
             this.Pasiakas.Controls.Add(this.textBox21);
             this.Pasiakas.Controls.Add(this.textBox20);
             this.Pasiakas.Controls.Add(this.textBox19);
@@ -679,8 +676,8 @@
             this.Pasiakas.Controls.Add(this.lbcustomerpostcode);
             this.Pasiakas.Controls.Add(this.lbcustomeraddress);
             this.Pasiakas.Controls.Add(this.lbcustomerfname);
-            this.Pasiakas.Location = new System.Drawing.Point(0, 0);
-            this.Pasiakas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pasiakas.Location = new System.Drawing.Point(20, 70);
+            this.Pasiakas.Margin = new System.Windows.Forms.Padding(2);
             this.Pasiakas.Name = "Pasiakas";
             this.Pasiakas.Size = new System.Drawing.Size(434, 301);
             this.Pasiakas.TabIndex = 45;
@@ -691,8 +688,8 @@
             this.Palue.Controls.Add(this.btlocationadd);
             this.Palue.Controls.Add(this.textBox22);
             this.Palue.Controls.Add(this.lblocationname);
-            this.Palue.Location = new System.Drawing.Point(0, 2);
-            this.Palue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Palue.Location = new System.Drawing.Point(20, 70);
+            this.Palue.Margin = new System.Windows.Forms.Padding(2);
             this.Palue.Name = "Palue";
             this.Palue.Size = new System.Drawing.Size(435, 301);
             this.Palue.TabIndex = 14;
@@ -700,7 +697,7 @@
             // btlocationcancel
             // 
             this.btlocationcancel.Location = new System.Drawing.Point(38, 152);
-            this.btlocationcancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btlocationcancel.Margin = new System.Windows.Forms.Padding(2);
             this.btlocationcancel.Name = "btlocationcancel";
             this.btlocationcancel.Size = new System.Drawing.Size(56, 19);
             this.btlocationcancel.TabIndex = 9;
@@ -710,7 +707,7 @@
             // btlocationadd
             // 
             this.btlocationadd.Location = new System.Drawing.Point(38, 128);
-            this.btlocationadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btlocationadd.Margin = new System.Windows.Forms.Padding(2);
             this.btlocationadd.Name = "btlocationadd";
             this.btlocationadd.Size = new System.Drawing.Size(56, 19);
             this.btlocationadd.TabIndex = 8;
@@ -720,7 +717,7 @@
             // textBox22
             // 
             this.textBox22.Location = new System.Drawing.Point(107, 35);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(2);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(76, 20);
             this.textBox22.TabIndex = 1;
@@ -738,7 +735,7 @@
             // textBox21
             // 
             this.textBox21.Location = new System.Drawing.Point(152, 158);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(2);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(76, 20);
             this.textBox21.TabIndex = 13;
@@ -746,7 +743,7 @@
             // textBox20
             // 
             this.textBox20.Location = new System.Drawing.Point(152, 134);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(2);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(76, 20);
             this.textBox20.TabIndex = 12;
@@ -754,7 +751,7 @@
             // textBox19
             // 
             this.textBox19.Location = new System.Drawing.Point(152, 108);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(2);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(76, 20);
             this.textBox19.TabIndex = 11;
@@ -762,7 +759,7 @@
             // textBox18
             // 
             this.textBox18.Location = new System.Drawing.Point(152, 80);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(76, 20);
             this.textBox18.TabIndex = 10;
@@ -770,7 +767,7 @@
             // textBox17
             // 
             this.textBox17.Location = new System.Drawing.Point(152, 51);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(76, 20);
             this.textBox17.TabIndex = 9;
@@ -778,7 +775,7 @@
             // textBox16
             // 
             this.textBox16.Location = new System.Drawing.Point(152, 24);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(76, 20);
             this.textBox16.TabIndex = 8;
@@ -786,7 +783,7 @@
             // btcustomercancel
             // 
             this.btcustomercancel.Location = new System.Drawing.Point(26, 246);
-            this.btcustomercancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btcustomercancel.Margin = new System.Windows.Forms.Padding(2);
             this.btcustomercancel.Name = "btcustomercancel";
             this.btcustomercancel.Size = new System.Drawing.Size(56, 25);
             this.btcustomercancel.TabIndex = 7;
@@ -796,7 +793,7 @@
             // btcustomeradd
             // 
             this.btcustomeradd.Location = new System.Drawing.Point(26, 224);
-            this.btcustomeradd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btcustomeradd.Margin = new System.Windows.Forms.Padding(2);
             this.btcustomeradd.Name = "btcustomeradd";
             this.btcustomeradd.Size = new System.Drawing.Size(56, 19);
             this.btcustomeradd.TabIndex = 6;
@@ -866,7 +863,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(107, 128);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(76, 20);
             this.textBox5.TabIndex = 11;
@@ -874,7 +871,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(107, 50);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(76, 20);
             this.textBox4.TabIndex = 10;
@@ -882,7 +879,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(107, 77);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(76, 20);
             this.textBox3.TabIndex = 9;
@@ -890,7 +887,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(107, 101);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(76, 20);
             this.textBox2.TabIndex = 8;
@@ -898,7 +895,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(107, 24);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 7;
@@ -956,7 +953,7 @@
             // btcancel1
             // 
             this.btcancel1.Location = new System.Drawing.Point(20, 245);
-            this.btcancel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btcancel1.Margin = new System.Windows.Forms.Padding(2);
             this.btcancel1.Name = "btcancel1";
             this.btcancel1.Size = new System.Drawing.Size(56, 25);
             this.btcancel1.TabIndex = 1;
@@ -966,7 +963,7 @@
             // btadd
             // 
             this.btadd.Location = new System.Drawing.Point(22, 223);
-            this.btadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btadd.Margin = new System.Windows.Forms.Padding(2);
             this.btadd.Name = "btadd";
             this.btadd.Size = new System.Drawing.Size(56, 19);
             this.btadd.TabIndex = 0;
@@ -991,8 +988,8 @@
             this.Pmokki.Controls.Add(this.lbcottageprice);
             this.Pmokki.Controls.Add(this.lbdescription);
             this.Pmokki.Controls.Add(this.lbloactio);
-            this.Pmokki.Location = new System.Drawing.Point(20, 110);
-            this.Pmokki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pmokki.Location = new System.Drawing.Point(20, 70);
+            this.Pmokki.Margin = new System.Windows.Forms.Padding(2);
             this.Pmokki.Name = "Pmokki";
             this.Pmokki.Size = new System.Drawing.Size(454, 301);
             this.Pmokki.TabIndex = 58;
@@ -1000,7 +997,7 @@
             // textBox12
             // 
             this.textBox12.Location = new System.Drawing.Point(284, 100);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(76, 20);
             this.textBox12.TabIndex = 15;
@@ -1008,7 +1005,7 @@
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(107, 70);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(76, 20);
             this.textBox11.TabIndex = 14;
@@ -1016,7 +1013,7 @@
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(107, 100);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(76, 20);
             this.textBox10.TabIndex = 13;
@@ -1024,7 +1021,7 @@
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(284, 45);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(76, 20);
             this.textBox9.TabIndex = 12;
@@ -1032,7 +1029,7 @@
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(284, 70);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(76, 20);
             this.textBox8.TabIndex = 11;
@@ -1040,7 +1037,7 @@
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(107, 131);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(76, 20);
             this.textBox7.TabIndex = 10;
@@ -1048,7 +1045,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(107, 45);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(76, 20);
             this.textBox6.TabIndex = 9;
@@ -1066,7 +1063,7 @@
             // btcanelcottage
             // 
             this.btcanelcottage.Location = new System.Drawing.Point(22, 261);
-            this.btcanelcottage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btcanelcottage.Margin = new System.Windows.Forms.Padding(2);
             this.btcanelcottage.Name = "btcanelcottage";
             this.btcanelcottage.Size = new System.Drawing.Size(56, 24);
             this.btcanelcottage.TabIndex = 7;
@@ -1076,7 +1073,7 @@
             // btaddcottage
             // 
             this.btaddcottage.Location = new System.Drawing.Point(22, 237);
-            this.btaddcottage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btaddcottage.Margin = new System.Windows.Forms.Padding(2);
             this.btaddcottage.Name = "btaddcottage";
             this.btaddcottage.Size = new System.Drawing.Size(56, 19);
             this.btaddcottage.TabIndex = 6;
@@ -1157,18 +1154,22 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 857);
+            this.ClientSize = new System.Drawing.Size(1890, 922);
+            this.Controls.Add(this.Pasiakas);
+            this.Controls.Add(this.Plasku);
+            this.Controls.Add(this.Palue);
             this.Controls.Add(this.aikajaksobtn);
             this.Controls.Add(this.Ppalvelu);
-            this.Controls.Add(this.Pvaraus);
             this.Controls.Add(this.Pmokki);
             this.Controls.Add(this.taulunimi);
+            this.Controls.Add(this.Pvaraus);
             this.Controls.Add(this.lisaabtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.laskubtn);
             this.Controls.Add(this.taulunimicb);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
+            this.Location = new System.Drawing.Point(20, 70);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Mökking - mökkivaraustenhallintajärjestelmä";
