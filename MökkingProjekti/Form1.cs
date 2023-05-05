@@ -290,5 +290,24 @@ namespace MökkingProjekti
             Palue.Visible = false;
             haetaulu("palvelu");
         }
+
+        private void jotainToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Functions.folderpath(Functions.getpath());
+        }
+
+        private void suljeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult vastaus = MessageBox.Show("Haluatko varmasti sulkea ohjelman?", "Vahvista", MessageBoxButtons.YesNo);
+
+            if (vastaus == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (vastaus == DialogResult.No)
+            {
+                // this.Close();
+            }
+        }
     }
 }
