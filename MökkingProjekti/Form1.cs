@@ -15,7 +15,7 @@ namespace MökkingProjekti
 {
     public partial class Form1 : Form
     {
-        public string mode;
+        public string mode="asiakas";
        
         public Form1()
         {
@@ -35,9 +35,18 @@ namespace MökkingProjekti
         {
             switch (mode)
             {
-               // case "asiakas":
+                case "asiakas":
                    
-                  // tbasiakasnimi = dataGridView1.Rows[e.RowIndex].Cells[1].Value;
+                   tbasiakasnimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                   tbasiakassnimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                   tbasiakaspuhnum.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                   tbasiakassposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                   tbasiakasosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                   tbasiakaspostinum.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                   break;
+
+                case "a":
+                    break;
 
             }
         }
