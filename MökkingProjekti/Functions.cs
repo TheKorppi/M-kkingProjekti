@@ -76,6 +76,15 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public static void poistaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "DELETE FROM asiakas WHERE etunimi = '" + nimi + "' AND sukunimi = '" + sukunimi + "' AND puhelinnro = '" + puhnum + "';";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
         public static string getDatasource()
         {
             StreamReader sr = new StreamReader(getpath());

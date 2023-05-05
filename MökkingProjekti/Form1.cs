@@ -306,6 +306,7 @@ namespace MökkingProjekti
         private void btnasiakaslisaa_Click(object sender, EventArgs e)
         {
             Functions.lisaaasiakas(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text);
+            haetaulu(mode);
         }
 
         private void btnmuokkaa_Click(object sender, EventArgs e)
@@ -320,7 +321,8 @@ namespace MökkingProjekti
 
         private void btnpoistaasiakas_Click(object sender, EventArgs e)
         {
-
+            Functions.poistaasiakas(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text);
+            haetaulu(mode);
         }
 
 
