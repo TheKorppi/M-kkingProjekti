@@ -10,6 +10,8 @@ using System.Diagnostics;
 using System.Runtime.Remoting.Contexts;
 using System.IO;
 using iTextSharp.text.pdf.parser;
+using Org.BouncyCastle.Utilities.Collections;
+using static MökkingProjekti.MokkingDBDataSet;
 
 namespace MökkingProjekti
 {
@@ -63,6 +65,16 @@ namespace MökkingProjekti
             adapter.Fill(dataSet, taulunimi);
             return dataSet;
 
+        }
+        public static void lisaaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum)
+        {
+            string connection = getDatasource();
+            string query = "insert into asiakas(etunimi, sukunimi, puhelinnro, email, lahiosoite, postinro)  values" + "('" + nimi + "','" + sukunimi + "','" + puhnum + "','" + email + "','" + lahiosoite + "','" + postinum+"');";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
         public static string getDatasource()
         {

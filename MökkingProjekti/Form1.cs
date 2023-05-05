@@ -305,7 +305,7 @@ namespace MökkingProjekti
 
         private void btnasiakaslisaa_Click(object sender, EventArgs e)
         {
-
+            Functions.lisaaasiakas(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text);
         }
 
         private void btnmuokkaa_Click(object sender, EventArgs e)
