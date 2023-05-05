@@ -15,6 +15,7 @@ namespace MökkingProjekti
 {
     public partial class Form1 : Form
     {
+        public string mode;
        
         public Form1()
         {
@@ -32,7 +33,13 @@ namespace MökkingProjekti
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            switch (mode)
+            {
+               // case "asiakas":
+                   
+                  // tbasiakasnimi = dataGridView1.Rows[e.RowIndex].Cells[1].Value;
 
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -192,6 +199,7 @@ namespace MökkingProjekti
             Palue.Enabled = true;
             Palue.Visible = true;
             haetaulu("mokki");
+            mode = "mokki";
             
         }
 
@@ -210,7 +218,7 @@ namespace MökkingProjekti
             Palue.Enabled = false;
             Palue.Visible = false;
             haetaulu("asiakas");
-            
+            mode = "asiakas";
         }
 
         private void tsbtnvaraukset_Click(object sender, EventArgs e)
@@ -228,6 +236,7 @@ namespace MökkingProjekti
             Palue.Enabled = false;
             Palue.Visible = false;
             haetaulu("varaus");
+            mode = "varaus";
         }
 
         private void tsbtnlaskut_Click(object sender, EventArgs e)
@@ -245,6 +254,7 @@ namespace MökkingProjekti
             Palue.Enabled = false;
             Palue.Visible = false;
             haetaulu("lasku");
+            mode = "lasku";
         }
 
         private void tsbtnpalvelut_Click(object sender, EventArgs e)
@@ -262,6 +272,7 @@ namespace MökkingProjekti
             Palue.Visible = false;
             Palue.Visible = false;
             haetaulu("palvelu");
+            mode = "palvelu";
         }
 
         private void jotainToolStripMenuItem_Click(object sender, EventArgs e)
