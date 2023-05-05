@@ -20,14 +20,13 @@ namespace MökkingProjekti
         {
             InitializeComponent();
             Functions.ifkysymys(Functions.getpath());
-            haetaulu();
+            haetaulu("asiakas");
         }
         
 
-        public void haetaulu()
+        public void haetaulu(string taulunimi)
         {
             //hakee datagridiin tiedot comboboxin kirjoituksen perusteella
-            string taulunimi = taulunimicb.Text;
             DataSet tauludata = Functions.paivitadatagrid(taulunimi);
             dataGridView1.DataSource = tauludata.Tables[taulunimi];
         }
@@ -43,9 +42,9 @@ namespace MökkingProjekti
 
         private void taulunimicb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            haetaulu();
+            
             //muuttaa comboboxissa olevan sanan labelin nimeksi, ja muuttaa ensimmäisen kirjaimen isoksi.
-            string taulunnimi = taulunimicb.Text;
+            string taulunnimi = toolStrip1.Text;
             switch (taulunnimi.ToString())
             {
                 case "varaus":
@@ -203,6 +202,93 @@ namespace MökkingProjekti
         {
             Form aikajaksoraportti = new Aikajaksoraportti();
             aikajaksoraportti.ShowDialog();
+        }
+
+        private void tsbtnalueetjamökit_Click(object sender, EventArgs e)
+        {
+            Pvaraus.Enabled = false;
+            Pvaraus.Visible = false;
+            Ppalvelu.Enabled = false;
+            Ppalvelu.Visible = false;
+            Pmokki.Enabled = false;
+            Pmokki.Visible = false;
+            Plasku.Enabled = false;
+            Plasku.Visible = false;
+            Pasiakas.Enabled = false;
+            Pasiakas.Visible = false;
+            Palue.Enabled = true;
+            Palue.Visible = true;
+            haetaulu("mokki");
+            
+        }
+
+        private void tsbtnasiakkaat_Click(object sender, EventArgs e)
+        {
+            Pvaraus.Enabled = false;
+            Pvaraus.Visible = false;
+            Ppalvelu.Enabled = false;
+            Ppalvelu.Visible = false;
+            Pmokki.Enabled = false;
+            Pmokki.Visible = false;
+            Plasku.Enabled = false;
+            Plasku.Visible = false;
+            Pasiakas.Enabled = true;
+            Pasiakas.Visible = true;
+            Palue.Enabled = false;
+            Palue.Visible = false;
+            haetaulu("asiakas");
+            
+        }
+
+        private void tsbtnvaraukset_Click(object sender, EventArgs e)
+        {
+            Pvaraus.Enabled = true;
+            Pvaraus.Visible = true;
+            Ppalvelu.Enabled = false;
+            Ppalvelu.Visible = false;
+            Pmokki.Enabled = false;
+            Pmokki.Visible = false;
+            Plasku.Enabled = false;
+            Plasku.Visible = false;
+            Pasiakas.Enabled = false;
+            Pasiakas.Visible = false;
+            Palue.Enabled = false;
+            Palue.Visible = false;
+            haetaulu("varaus");
+        }
+
+        private void tsbtnlaskut_Click(object sender, EventArgs e)
+        {
+            Pvaraus.Enabled = false;
+            Pvaraus.Visible = false;
+            Ppalvelu.Enabled = false;
+            Ppalvelu.Visible = false;
+            Pmokki.Enabled = false;
+            Pmokki.Visible = false;
+            Plasku.Enabled = true;
+            Plasku.Visible = true;
+            Pasiakas.Enabled = false;
+            Pasiakas.Visible = false;
+            Palue.Enabled = false;
+            Palue.Visible = false;
+            haetaulu("lasku");
+        }
+
+        private void tsbtnpalvelut_Click(object sender, EventArgs e)
+        {
+            Pvaraus.Enabled = false;
+            Pvaraus.Visible = false;
+            Ppalvelu.Enabled = true;
+            Ppalvelu.Visible = true;
+            Pmokki.Enabled = false;
+            Pmokki.Visible = false;
+            Plasku.Enabled = false;
+            Plasku.Visible = false;
+            Pasiakas.Enabled = false;
+            Pasiakas.Visible = false;
+            Palue.Visible = false;
+            Palue.Visible = false;
+            haetaulu("palvelu");
         }
     }
 }
