@@ -159,34 +159,7 @@ namespace MökkingProjekti
             Functions.folderpath(Functions.getpath());
         }
 
-        private void btreservation_Click(object sender, EventArgs e)
-        {
-            bool allTextboxesFilled = true;
-            foreach (Control control in Pvaraus.Controls)
-            {
-                if (control is TextBox && string.IsNullOrEmpty((control as TextBox).Text))
-                {
-                    if (control is ComboBox && string.IsNullOrEmpty((control as ComboBox).Text))
-                    {
-                        if (control is DateTimePicker && (control as DateTimePicker).Value == DateTimePicker.MinimumDateTime) 
-                        {
-                            allTextboxesFilled = false;
-                            break;
-                        }
-                            
-                    }
-                    
-                }
-            }
-            if (allTextboxesFilled)
-            {
-                MessageBox.Show("yes");
-            }
-            else
-            {
-                MessageBox.Show("no");
-            }
-        }
+       
 
         private void Pvaraus_Paint(object sender, PaintEventArgs e)
         {
@@ -309,5 +282,144 @@ namespace MökkingProjekti
                 // this.Close();
             }
         }
+
+        private void btnasiakaslisaa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnmuokkaa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnasiakasperuuta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnpoistaasiakas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        private void btnlisaalasku_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnperuutalasku_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnmuokkaalasku_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnpoistalasku_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void btnmuokkaaalue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlisaaalue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnperuutaalue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnpoistaalue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void btnlisaapalvelu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnmuokkaapalvelu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnperuutapalvelu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnpoistapalvelu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        private void btnmuokkaavaraus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnperuutavaraus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnpoistavaraus_Click(object sender, EventArgs e)
+        {
+
+        } 
+        
+        private void btreservation_Click(object sender, EventArgs e)
+        {
+            bool allTextboxesFilled = true;
+            foreach (Control control in Pvaraus.Controls)
+            {
+                if (control is TextBox && string.IsNullOrEmpty((control as TextBox).Text))
+                {
+                    if (control is ComboBox && string.IsNullOrEmpty((control as ComboBox).Text))
+                    {
+                        if (control is DateTimePicker && (control as DateTimePicker).Value == DateTimePicker.MinimumDateTime) 
+                        {
+                            allTextboxesFilled = false;
+                            break;
+                        }
+                            
+                    }
+                    
+                }
+            }
+            if (allTextboxesFilled)
+            {
+                MessageBox.Show("yes");
+            }
+            else
+            {
+                MessageBox.Show("no");
+            }
+        }
+
+
+
+
+
     }
 }
