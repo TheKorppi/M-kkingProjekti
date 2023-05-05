@@ -38,13 +38,28 @@ namespace MökkingProjekti
                     File.WriteAllText(path, filePath);
                 }
         }
-        public static DataSet paivitadatagrid(string taulunimi)
+        public static DataSet paivitadatagrid(string taulunimi, DateTime alkudate = default(DateTime), DateTime loppudate = default(DateTime), string aluenimi1 ="")
         {
 
             string connection = getDatasource();
-            string query = "SELECT * FROM " + taulunimi;
+            string query = "";
+            if (alkudate != default(DateTime) && loppudate != default(DateTime))
+            {
+                query += "SELECT * FROM "+taulunimi+ " WHERE varattu_alkupvm >= @alkudate AND varattu_loppupvm <= @loppudate AND aluenimi = @aluenimi";
+            }
+            else
+            {
+                query = "SELECT * FROM " + taulunimi;
+            }
+            
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataSet dataSet = new DataSet();
+            if (alkudate != default(DateTime) && loppudate != default(DateTime))
+            {
+                adapter.SelectCommand.Parameters.AddWithValue("@alkudate", alkudate);
+                adapter.SelectCommand.Parameters.AddWithValue("@loppudate", loppudate);
+                adapter.SelectCommand.Parameters.AddWithValue("@aluenimi", aluenimi1);
+            }
             adapter.Fill(dataSet, taulunimi);
             return dataSet;
 

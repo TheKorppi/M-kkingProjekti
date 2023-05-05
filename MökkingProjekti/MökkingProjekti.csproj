@@ -90,6 +90,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aikajaksoraportti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aikajaksoraportti.Designer.cs">
+      <DependentUpon>Aikajaksoraportti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     <Compile Include="Varauscs.Designer.cs">
       <DependentUpon>Varauscs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Aikajaksoraportti.resx">
+      <DependentUpon>Aikajaksoraportti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

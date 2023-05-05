@@ -198,5 +198,11 @@ namespace MökkingProjekti
         {
 
         }
+
+        private void aikajaksobtn_Click(object sender, EventArgs e)
+        {
+            Form aikajaksoraportti = new Aikajaksoraportti();
+            aikajaksoraportti.ShowDialog();
+        }
     }
 }
