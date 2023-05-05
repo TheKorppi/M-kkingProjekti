@@ -47,9 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lisaabtn = new System.Windows.Forms.Button();
             this.taulunimi = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.asetuksetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tietokannanTiedostopolkuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cbcottage = new System.Windows.Forms.ComboBox();
             this.cblocation = new System.Windows.Forms.ComboBox();
             this.btcancel = new System.Windows.Forms.Button();
@@ -142,7 +139,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alueBindingSource)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.Pvaraus.SuspendLayout();
             this.Plasku.SuspendLayout();
             this.Ppalvelu.SuspendLayout();
@@ -286,33 +282,6 @@
             this.taulunimi.Size = new System.Drawing.Size(82, 30);
             this.taulunimi.TabIndex = 7;
             this.taulunimi.Text = "Asiakas";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asetuksetToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1890, 24);
-            this.menuStrip1.TabIndex = 8;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // asetuksetToolStripMenuItem
-            // 
-            this.asetuksetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tietokannanTiedostopolkuToolStripMenuItem});
-            this.asetuksetToolStripMenuItem.Name = "asetuksetToolStripMenuItem";
-            this.asetuksetToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.asetuksetToolStripMenuItem.Text = "Asetukset";
-            // 
-            // tietokannanTiedostopolkuToolStripMenuItem
-            // 
-            this.tietokannanTiedostopolkuToolStripMenuItem.Name = "tietokannanTiedostopolkuToolStripMenuItem";
-            this.tietokannanTiedostopolkuToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.tietokannanTiedostopolkuToolStripMenuItem.Text = "Tietokannan tiedostopolku";
-            this.tietokannanTiedostopolkuToolStripMenuItem.Click += new System.EventHandler(this.tietokannanTiedostopolkuToolStripMenuItem_Click);
             // 
             // cbcottage
             // 
@@ -1168,9 +1137,7 @@
             this.Controls.Add(this.laskubtn);
             this.Controls.Add(this.taulunimicb);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuStrip1);
             this.Location = new System.Drawing.Point(20, 70);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Mökking - mökkivaraustenhallintajärjestelmä";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1183,8 +1150,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alueBindingSource)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.Pvaraus.ResumeLayout(false);
             this.Pvaraus.PerformLayout();
             this.Plasku.ResumeLayout(false);
@@ -1222,9 +1187,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button lisaabtn;
         private System.Windows.Forms.Label taulunimi;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem asetuksetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tietokannanTiedostopolkuToolStripMenuItem;
         private System.Windows.Forms.ComboBox cbcottage;
         private System.Windows.Forms.ComboBox cblocation;
         private System.Windows.Forms.Button btcancel;
