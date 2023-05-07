@@ -213,6 +213,7 @@ namespace MökkingProjekti
             Palue.Visible = true;
             haetaulu("mokki");
             mode = "mokki";
+            taulunimi.Text = "Mökit";
             
         }
 
@@ -233,6 +234,7 @@ namespace MökkingProjekti
             Palue.Visible = false;
             haetaulu("asiakas");
             mode = "asiakas";
+            taulunimi.Text = "Asiakkat";
         }
 
 
@@ -253,6 +255,7 @@ namespace MökkingProjekti
             Palue.Visible = false;
             haetaulu("varaus");
             mode = "varaus";
+            taulunimi.Text = "Varaukset";
         }
 
         // toolstrip painikkeesta aukasee LASKUT paneelin ja sulkee muut
@@ -272,6 +275,7 @@ namespace MökkingProjekti
             Palue.Visible = false;
             haetaulu("lasku");
             mode = "lasku";
+            taulunimi.Text = "Laskut";
         }
 
 
@@ -292,6 +296,7 @@ namespace MökkingProjekti
             Palue.Visible = false;
             haetaulu("palvelu");
             mode = "palvelu";
+            taulunimi.Text = "Palvelu";
         }
 
 
