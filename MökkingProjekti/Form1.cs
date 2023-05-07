@@ -199,8 +199,8 @@ namespace MökkingProjekti
             Pvaraus.Visible = false;
             Ppalvelu.Enabled = false;
             Ppalvelu.Visible = false;
-            Pmokki.Enabled = false;
-            Pmokki.Visible = false;
+            Pmokki.Enabled = true;
+            Pmokki.Visible = true;
             Plasku.Enabled = false;
             Plasku.Visible = false;
             Pasiakas.Enabled = false;
@@ -316,8 +316,13 @@ namespace MökkingProjekti
 
         private void btnasiakasperuuta_Click(object sender, EventArgs e)
         {
-
-        }
+            tbasiakasnimi.Clear();
+            tbasiakassnimi.Clear();
+            tbasiakaspuhnum.Clear();
+            tbasiakassposti.Clear();
+            tbasiakasosoite.Clear();
+            tbasiakaspostinum.Clear();
+        } //    TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
 
         private void btnpoistaasiakas_Click(object sender, EventArgs e)
         {
@@ -335,8 +340,10 @@ namespace MökkingProjekti
 
         private void btnperuutalasku_Click(object sender, EventArgs e)
         {
-
-        }
+            tblaskusvarausid.Clear();
+            tblaskusumma.Clear();
+            tblaskualv.Clear();
+        }//TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
 
         private void btnmuokkaalasku_Click(object sender, EventArgs e)
         {
@@ -360,9 +367,9 @@ namespace MökkingProjekti
 
         }
 
-        private void btnperuutaalue_Click(object sender, EventArgs e)
+        private void btnperuutaalue_Click(object sender, EventArgs e) //TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
         {
-
+            tbaluenimi.Clear();
         }
 
         private void btnpoistaalue_Click(object sender, EventArgs e)
@@ -382,9 +389,13 @@ namespace MökkingProjekti
 
         }
 
-        private void btnperuutapalvelu_Click(object sender, EventArgs e)
+        private void btnperuutapalvelu_Click(object sender, EventArgs e) // TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
         {
-
+            tbpalvelunimi.Clear();
+            tbpalvelutyyppi.Clear();
+            tbpalvelukuvaus.Clear();
+            tbpalvelualv.Clear();
+            tbpalveluhinta.Clear();
         }
 
         private void btnpoistapalvelu_Click(object sender, EventArgs e)
@@ -400,14 +411,21 @@ namespace MökkingProjekti
 
         }
 
-        private void btnperuutavaraus_Click(object sender, EventArgs e)
+        private void btnperuutavaraus_Click(object sender, EventArgs e) //TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
         {
-
+            tbvarausetunimi.Clear();
+            tbvaraussukunimi.Clear();
+            tbvaraussahkoposti.Clear();
+            tbvarauspuhelinnumero.Clear();
+            tbvaraajanosoite.Clear();
+            tbvaraajanpostinumero.Clear();
+            dtplahtopaiva.Value = DateTime.Today;
+            dtptulopaiva.Value = DateTime.Today;
         }
 
         private void btnpoistavaraus_Click(object sender, EventArgs e)
         {
-
+       
         } 
         
         private void btreservation_Click(object sender, EventArgs e)
@@ -438,10 +456,43 @@ namespace MökkingProjekti
                 MessageBox.Show("no");
             }
         }
+        
+
+
+        private void btnperuutamokki_Click(object sender, EventArgs e)
+        {
+            tbmokkialuenimi.Clear();
+            tbmokkinimi.Clear();
+            tbmokkiosoite.Clear();
+            tbmokkipostinumero.Clear();
+            tbmokkivarustelu.Clear();
+            tbmokkikuvaus.Clear();
+            tbmokkihinta.Clear();
+        }  // TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
+
+        private void btnlisaamokki_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnmuokkaamokki_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnpoistamokki_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
 
 
 
+
+        private void Plasku_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
