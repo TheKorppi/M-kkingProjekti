@@ -29,6 +29,24 @@ namespace MökkingProjekti
             //Tämä napin painallus tulostaa pdf documentin filestreamin jälkeen olevaan osoitteeseen
             StringBuilder sb = new StringBuilder();
 
+            Document document = new Document();
+            string laskunimi = asiakaannimitb.Text + "_" + mokinnimitb.Text + "_Laskuid" + varauksenidtb.Text + "_LASKU.pdf";
+
+            PdfWriter.GetInstance(document, new FileStream(@"C:\temp\"+laskunimi, FileMode.Create));
+            document.Open();
+
+            //Lisätään yrityksen tiedot
+            DateTime laskutuspaiva = DateTime.Today;
+
+            Paragraph yritystiedot = new Paragraph("Village Newbies Oy                                               Päiväys:" + laskutuspaiva.ToString ("d") + 
+                "\nSiilokatu 1\n90700 Oulu\nPuh. 044 1234567\nvillagenewbies@excamlpe.com\nTilinumero: FI1234567890\nViitenumero: varausID \n\n" +
+                "Käytä maksaessa viitenumerona varausID numeroa tekstikentässä.\nMaksa lasku 14 pv kuluessa, välttääksesi 8% viivästyskorko + 5e laskutuslisä");
+            yritystiedot.Alignment = Element.ALIGN_LEFT;
+            yritystiedot.SpacingAfter = 20f;
+            document.Add(yritystiedot);
+
+
+
             sb.AppendLine("Asiakkaan nimi: "+asiakaannimitb.Text);
             sb.AppendLine("Varauksen ID: " + varauksenidtb.Text);
             sb.AppendLine("Mökin nimi: " + mokinnimitb.Text);
@@ -37,17 +55,16 @@ namespace MökkingProjekti
             sb.AppendLine("Varauksen alkamispvm: " + alkamispvmtb.Text);
             sb.AppendLine("Varauksen loppumispvm: " + loppumispvmtb.Text);
             sb.AppendLine("Laskun summa: " + laskunsummatb.Text);
-            string laskunimi = asiakaannimitb.Text + "_" + mokinnimitb.Text + "_Laskuid" + varauksenidtb.Text + "_LASKU.pdf";
             
-            Document document = new Document();
-            PdfWriter.GetInstance(document, new FileStream(@"C:\temp\"+laskunimi, FileMode.Create));
-            document.Open();
-
+            
             Paragraph paragraph = new Paragraph();
             paragraph.Alignment = Element.ALIGN_LEFT;
             paragraph.Add(new Chunk(sb.ToString()));
 
             document.Add(paragraph);
+
+
+
             document.Close();
 
             DialogResult dialogResult = MessageBox.Show("Haluatko tulostaa muita laskuja?", "Lasku tallennettu!", MessageBoxButtons.YesNo);
