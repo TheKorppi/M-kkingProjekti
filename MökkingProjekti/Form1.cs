@@ -31,6 +31,7 @@ namespace MökkingProjekti
             DataSet tauludata = Functions.paivitadatagrid(taulunimi);
             dataGridView1.DataSource = tauludata.Tables[taulunimi];
         }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             switch (mode)
@@ -159,11 +160,12 @@ namespace MökkingProjekti
           
         }
 
-        private void laskubtn_Click(object sender, EventArgs e)
+        private void laskubtn_Click(object sender, EventArgs e) // aukasee LASKUT formin
         {
             Form laskuform = new laskuform();
             laskuform.ShowDialog();
         }
+
 
         private void lisaabtn_Click(object sender, EventArgs e)
         {
@@ -187,12 +189,14 @@ namespace MökkingProjekti
 
         }
 
-        private void aikajaksobtn_Click(object sender, EventArgs e)
+        private void aikajaksobtn_Click(object sender, EventArgs e) // aukasee aikajaksoRAPORTIT formille 
         {
             Form aikajaksoraportti = new Aikajaksoraportti();
             aikajaksoraportti.ShowDialog();
         }
 
+
+        // toolstrip painikkeesta aukasee ALUEET JA MÖKIT paneelin ja sulkee muut
         private void tsbtnalueetjamökit_Click(object sender, EventArgs e)
         {
             Pvaraus.Enabled = false;
@@ -212,6 +216,7 @@ namespace MökkingProjekti
             
         }
 
+        // toolstrip painikkeesta aukasee ASIAKKAAAAT paneelin ja sulkee muut
         private void tsbtnasiakkaat_Click(object sender, EventArgs e)
         {
             Pvaraus.Enabled = false;
@@ -230,6 +235,8 @@ namespace MökkingProjekti
             mode = "asiakas";
         }
 
+
+        // toolstrip painikkeesta aukasee VARAUKSET paneelin ja sulkee muut
         private void tsbtnvaraukset_Click(object sender, EventArgs e)
         {
             Pvaraus.Enabled = true;
@@ -248,6 +255,7 @@ namespace MökkingProjekti
             mode = "varaus";
         }
 
+        // toolstrip painikkeesta aukasee LASKUT paneelin ja sulkee muut
         private void tsbtnlaskut_Click(object sender, EventArgs e)
         {
             Pvaraus.Enabled = false;
@@ -266,7 +274,9 @@ namespace MökkingProjekti
             mode = "lasku";
         }
 
-        private void tsbtnpalvelut_Click(object sender, EventArgs e)
+
+        // toolstrip painikkeesta aukasee PALVELUT paneelin ja sulkee muut
+        private void tsbtnpalvelut_Click(object sender, EventArgs e) 
         {
             Pvaraus.Enabled = false;
             Pvaraus.Visible = false;
@@ -284,24 +294,30 @@ namespace MökkingProjekti
             mode = "palvelu";
         }
 
+
+        // aukasee käyttäjän koneelta tiedostopolun ohjelmiston tietokannalle 
         private void jotainToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Functions.folderpath(Functions.getpath());
         }
 
-        private void suljeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void suljeToolStripMenuItem_Click(object sender, EventArgs e) // sulkee ohjelman 
         {
             DialogResult vastaus = MessageBox.Show("Haluatko varmasti sulkea ohjelman?", "Vahvista", MessageBoxButtons.YesNo);
-
-            if (vastaus == DialogResult.Yes)
+            
+            // tekee varmistuksen sulkemiselle,
+            if (vastaus == DialogResult.Yes)  // KYLLÄ sulkee ohjelman
             {
                 Application.Exit();
             }
-            else if (vastaus == DialogResult.No)
+            else if (vastaus == DialogResult.No) // EI jatkaa ohjelmaa
             {
                 // this.Close();
             }
         }
+
+
+        // asiakas paneelin painikkeet 
 
         private void btnasiakaslisaa_Click(object sender, EventArgs e)
         {
@@ -332,6 +348,7 @@ namespace MökkingProjekti
 
 
 
+        // Lasku paneelin painikkeet
 
         private void btnlisaalasku_Click(object sender, EventArgs e)
         {
@@ -355,7 +372,8 @@ namespace MökkingProjekti
 
         }
 
-       
+
+       // alue paneelin painikkeet
 
         private void btnmuokkaaalue_Click(object sender, EventArgs e)
         {
@@ -378,6 +396,7 @@ namespace MökkingProjekti
         }
 
 
+        // Palvelu paneelin painikkeet
 
         private void btnlisaapalvelu_Click(object sender, EventArgs e)
         {
@@ -404,7 +423,7 @@ namespace MökkingProjekti
         }
 
 
-
+        // varaus paneelin painikkeet
 
         private void btnmuokkaavaraus_Click(object sender, EventArgs e)
         {
@@ -456,8 +475,9 @@ namespace MökkingProjekti
                 MessageBox.Show("no");
             }
         }
-        
 
+        
+        // mökki paneelin painikkeet
 
         private void btnperuutamokki_Click(object sender, EventArgs e)
         {
