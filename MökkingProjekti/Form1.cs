@@ -519,5 +519,84 @@ namespace MökkingProjekti
         {
 
         }
+
+
+
+        // VARMISTUKSIA, ei voi syöttää  kuin numeroita ja tietyn verran
+
+        private void tbasiakaspostinum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Tarkistetaan, että käyttäjä syöttää vain numeroita ja backspacea
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // Tarkistetaan, että merkkijonon pituus ei ylitä 10
+            if (tbasiakaspostinum.Text.Length >= 5 && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbasiakaspuhnum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Tarkistetaan, että käyttäjä syöttää vain numeroita ja backspacea
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // Tarkistetaan, että merkkijonon pituus ei ylitä 10
+            if (tbasiakaspuhnum.Text.Length >= 10 && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbvaraajanpostinumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Tarkistetaan, että käyttäjä syöttää vain numeroita ja backspacea
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // Tarkistetaan, että merkkijonon pituus ei ylitä 10
+            if (tbvaraajanpostinumero.Text.Length >= 5 && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbvarauspuhelinnumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Tarkistetaan, että käyttäjä syöttää vain numeroita ja backspacea
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // Tarkistetaan, että merkkijonon pituus ei ylitä 10
+            if (tbvarauspuhelinnumero.Text.Length >= 10 && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbmokkipostinumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Tarkistetaan, että käyttäjä syöttää vain numeroita ja backspacea
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // Tarkistetaan, että merkkijonon pituus ei ylitä 10
+            if (tbmokkipostinumero.Text.Length >= 5 && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -160,7 +160,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnpalvelut = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
@@ -260,7 +259,7 @@
             // laskubtn
             // 
             this.laskubtn.Location = new System.Drawing.Point(1099, 682);
-            this.laskubtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.laskubtn.Margin = new System.Windows.Forms.Padding(4);
             this.laskubtn.Name = "laskubtn";
             this.laskubtn.Size = new System.Drawing.Size(123, 28);
             this.laskubtn.TabIndex = 4;
@@ -282,7 +281,7 @@
             // lisaabtn
             // 
             this.lisaabtn.Location = new System.Drawing.Point(1097, 785);
-            this.lisaabtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lisaabtn.Margin = new System.Windows.Forms.Padding(4);
             this.lisaabtn.Name = "lisaabtn";
             this.lisaabtn.Size = new System.Drawing.Size(123, 28);
             this.lisaabtn.TabIndex = 6;
@@ -410,6 +409,7 @@
             this.tbvarauspuhelinnumero.Name = "tbvarauspuhelinnumero";
             this.tbvarauspuhelinnumero.Size = new System.Drawing.Size(100, 22);
             this.tbvarauspuhelinnumero.TabIndex = 4;
+            this.tbvarauspuhelinnumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbvarauspuhelinnumero_KeyPress);
             // 
             // tbvaraajanpostinumero
             // 
@@ -418,6 +418,7 @@
             this.tbvaraajanpostinumero.Name = "tbvaraajanpostinumero";
             this.tbvaraajanpostinumero.Size = new System.Drawing.Size(100, 22);
             this.tbvaraajanpostinumero.TabIndex = 6;
+            this.tbvaraajanpostinumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbvaraajanpostinumero_KeyPress);
             // 
             // tbvaraussukunimi
             // 
@@ -527,7 +528,7 @@
             this.Pvaraus.Controls.Add(this.lbcheckin);
             this.Pvaraus.Controls.Add(this.tbvaraajanpostinumero);
             this.Pvaraus.Location = new System.Drawing.Point(27, 97);
-            this.Pvaraus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pvaraus.Margin = new System.Windows.Forms.Padding(4);
             this.Pvaraus.Name = "Pvaraus";
             this.Pvaraus.Size = new System.Drawing.Size(1195, 369);
             this.Pvaraus.TabIndex = 56;
@@ -904,6 +905,7 @@
             this.tbasiakaspostinum.Name = "tbasiakaspostinum";
             this.tbasiakaspostinum.Size = new System.Drawing.Size(100, 22);
             this.tbasiakaspostinum.TabIndex = 6;
+            this.tbasiakaspostinum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbasiakaspostinum_KeyPress);
             // 
             // tbasiakasosoite
             // 
@@ -920,6 +922,7 @@
             this.tbasiakaspuhnum.Name = "tbasiakaspuhnum";
             this.tbasiakaspuhnum.Size = new System.Drawing.Size(100, 22);
             this.tbasiakaspuhnum.TabIndex = 3;
+            this.tbasiakaspuhnum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbasiakaspuhnum_KeyPress);
             // 
             // tbasiakassposti
             // 
@@ -1191,6 +1194,7 @@
             this.tbmokkipostinumero.Name = "tbmokkipostinumero";
             this.tbmokkipostinumero.Size = new System.Drawing.Size(100, 22);
             this.tbmokkipostinumero.TabIndex = 4;
+            this.tbmokkipostinumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbmokkipostinumero_KeyPress);
             // 
             // tbmokkialuenimi
             // 
@@ -1288,7 +1292,7 @@
             // aikajaksobtn
             // 
             this.aikajaksobtn.Location = new System.Drawing.Point(1097, 878);
-            this.aikajaksobtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aikajaksobtn.Margin = new System.Windows.Forms.Padding(4);
             this.aikajaksobtn.Name = "aikajaksobtn";
             this.aikajaksobtn.Size = new System.Drawing.Size(123, 28);
             this.aikajaksobtn.TabIndex = 59;
@@ -1311,8 +1315,7 @@
             this.tsbtnlaskut,
             this.toolStripSeparator4,
             this.tsbtnpalvelut,
-            this.toolStripSeparator5,
-            this.toolStripButton6});
+            this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1924, 31);
@@ -1334,21 +1337,21 @@
             // jotainToolStripMenuItem
             // 
             this.jotainToolStripMenuItem.Name = "jotainToolStripMenuItem";
-            this.jotainToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.jotainToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.jotainToolStripMenuItem.Text = "Tiedostopolku";
             this.jotainToolStripMenuItem.Click += new System.EventHandler(this.jotainToolStripMenuItem_Click);
             // 
             // suljeToolStripMenuItem
             // 
             this.suljeToolStripMenuItem.Name = "suljeToolStripMenuItem";
-            this.suljeToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.suljeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.suljeToolStripMenuItem.Text = "Sulje";
             this.suljeToolStripMenuItem.Click += new System.EventHandler(this.suljeToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbtnalueetjamökit
             // 
@@ -1356,14 +1359,14 @@
             this.tsbtnalueetjamökit.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnalueetjamökit.Image")));
             this.tsbtnalueetjamökit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnalueetjamökit.Name = "tsbtnalueetjamökit";
-            this.tsbtnalueetjamökit.Size = new System.Drawing.Size(114, 28);
+            this.tsbtnalueetjamökit.Size = new System.Drawing.Size(114, 24);
             this.tsbtnalueetjamökit.Text = "Alueet ja mökit";
             this.tsbtnalueetjamökit.Click += new System.EventHandler(this.tsbtnalueetjamökit_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbtnasiakkaat
             // 
@@ -1371,14 +1374,14 @@
             this.tsbtnasiakkaat.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnasiakkaat.Image")));
             this.tsbtnasiakkaat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnasiakkaat.Name = "tsbtnasiakkaat";
-            this.tsbtnasiakkaat.Size = new System.Drawing.Size(76, 28);
+            this.tsbtnasiakkaat.Size = new System.Drawing.Size(76, 24);
             this.tsbtnasiakkaat.Text = "Asiakkaat";
             this.tsbtnasiakkaat.Click += new System.EventHandler(this.tsbtnasiakkaat_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbtnvaraukset
             // 
@@ -1386,14 +1389,14 @@
             this.tsbtnvaraukset.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnvaraukset.Image")));
             this.tsbtnvaraukset.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnvaraukset.Name = "tsbtnvaraukset";
-            this.tsbtnvaraukset.Size = new System.Drawing.Size(76, 28);
+            this.tsbtnvaraukset.Size = new System.Drawing.Size(76, 24);
             this.tsbtnvaraukset.Text = "Varaukset";
             this.tsbtnvaraukset.Click += new System.EventHandler(this.tsbtnvaraukset_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbtnlaskut
             // 
@@ -1401,14 +1404,14 @@
             this.tsbtnlaskut.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnlaskut.Image")));
             this.tsbtnlaskut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnlaskut.Name = "tsbtnlaskut";
-            this.tsbtnlaskut.Size = new System.Drawing.Size(54, 28);
+            this.tsbtnlaskut.Size = new System.Drawing.Size(54, 24);
             this.tsbtnlaskut.Text = "Laskut";
             this.tsbtnlaskut.Click += new System.EventHandler(this.tsbtnlaskut_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbtnpalvelut
             // 
@@ -1416,23 +1419,14 @@
             this.tsbtnpalvelut.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnpalvelut.Image")));
             this.tsbtnpalvelut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnpalvelut.Name = "tsbtnpalvelut";
-            this.tsbtnpalvelut.Size = new System.Drawing.Size(64, 28);
+            this.tsbtnpalvelut.Size = new System.Drawing.Size(64, 24);
             this.tsbtnpalvelut.Text = "Palvelut";
             this.tsbtnpalvelut.Click += new System.EventHandler(this.tsbtnpalvelut_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(29, 28);
-            this.toolStripButton6.Text = "toolStripButton6";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // Form1
             // 
@@ -1453,7 +1447,7 @@
             this.Controls.Add(this.laskubtn);
             this.Controls.Add(this.dataGridView1);
             this.Location = new System.Drawing.Point(20, 70);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Mökking - mökkivaraustenhallintajärjestelmä";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1602,7 +1596,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton tsbtnpalvelut;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.Button btnmuokkaa;
         private System.Windows.Forms.Button btnpoistaasiakas;
         private System.Windows.Forms.Button btnmuokkaalasku;
