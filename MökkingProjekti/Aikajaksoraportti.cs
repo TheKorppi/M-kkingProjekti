@@ -56,5 +56,13 @@ namespace MökkingProjekti
         {
 
         }
+
+        private void Aikajaksoraportti_KeyUp(object sender, KeyEventArgs e) //sulkee kyseisen formin pikanäppäimellä ESC
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

@@ -313,8 +313,10 @@
             this.Controls.Add(this.lbemail);
             this.Controls.Add(this.lblastname);
             this.Controls.Add(this.lbfirstname);
+            this.KeyPreview = true;
             this.Name = "Varaus";
             this.Text = "Varaus";
+            this.Load += new System.EventHandler(this.Varaus_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
