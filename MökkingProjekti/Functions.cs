@@ -66,6 +66,7 @@ namespace MökkingProjekti
             return dataSet;
 
         }
+        
         public static void lisaaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum)
         {
             string connection = getDatasource();

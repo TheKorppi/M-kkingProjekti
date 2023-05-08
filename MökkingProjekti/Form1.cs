@@ -46,7 +46,21 @@ namespace MökkingProjekti
                    tbasiakaspostinum.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                    break;
 
-                case "a":
+                case "varaus":
+                    tbvarausetunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    tbvaraussukunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    tbvarauspuhelinnumero.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    tbvaraussahkoposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    tbvaraajanosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    tbvaraajanpostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                    haetaulu("varaus");
+                    break;
+
+                case "palvelu":
+                    tbpalvelunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    tbpalvelutyyppi.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    tbpalvelukuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    tbpalveluhinta.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                     break;
 
             }
@@ -253,7 +267,7 @@ namespace MökkingProjekti
             Pasiakas.Visible = false;
             Palue.Enabled = false;
             Palue.Visible = false;
-            haetaulu("varaus");
+            haetaulu("asiakas");
             mode = "varaus";
             taulunimi.Text = "Varaukset";
         }
@@ -597,6 +611,11 @@ namespace MökkingProjekti
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnhaeasiakas_Click(object sender, EventArgs e)
+        {
+            haetaulu("asiakas");
         }
     }
 }
