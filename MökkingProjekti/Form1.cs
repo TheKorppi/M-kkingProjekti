@@ -346,7 +346,8 @@ namespace MökkingProjekti
 
         private void btnmuokkaa_Click(object sender, EventArgs e)
         {
-
+            DataSet dataa = Functions.haetieto(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text, "asiakas");
+            dataGridView1.DataSource = dataa.Tables["asiakas"];
         }
 
         private void btnasiakasperuuta_Click(object sender, EventArgs e)
@@ -396,6 +397,7 @@ namespace MökkingProjekti
 
         private void btnmuokkaaalue_Click(object sender, EventArgs e)
         {
+           
 
         }
 
@@ -615,7 +617,7 @@ namespace MökkingProjekti
 
         private void btnhaeasiakas_Click(object sender, EventArgs e)
         {
-            haetaulu("asiakas");
+          haetaulu("asiakas");
         }
     }
 }
