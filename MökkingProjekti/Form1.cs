@@ -619,5 +619,18 @@ namespace MökkingProjekti
         {
           haetaulu("asiakas");
         }
+
+        // Pika näppäin ohjelmallisesti lisätty, pääseen textbokseissa liikkumaan taaksepäin Tab + shift
+
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab && e.Modifiers == Keys.Shift)
+            {
+                this.ProcessTabKey(false);
+                e.SuppressKeyPress = true;
+            }
+        }
+
+
     }
 }

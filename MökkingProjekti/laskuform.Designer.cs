@@ -62,9 +62,10 @@
             // 
             // tulostalaskubtn
             // 
-            this.tulostalaskubtn.Location = new System.Drawing.Point(985, 290);
+            this.tulostalaskubtn.Location = new System.Drawing.Point(1313, 357);
+            this.tulostalaskubtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tulostalaskubtn.Name = "tulostalaskubtn";
-            this.tulostalaskubtn.Size = new System.Drawing.Size(346, 90);
+            this.tulostalaskubtn.Size = new System.Drawing.Size(461, 111);
             this.tulostalaskubtn.TabIndex = 5;
             this.tulostalaskubtn.Text = "tulosta lasku";
             this.tulostalaskubtn.UseVisualStyleBackColor = true;
@@ -73,9 +74,11 @@
             // varausdgv
             // 
             this.varausdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.varausdgv.Location = new System.Drawing.Point(12, 12);
+            this.varausdgv.Location = new System.Drawing.Point(16, 15);
+            this.varausdgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.varausdgv.Name = "varausdgv";
-            this.varausdgv.Size = new System.Drawing.Size(879, 426);
+            this.varausdgv.RowHeadersWidth = 51;
+            this.varausdgv.Size = new System.Drawing.Size(1172, 524);
             this.varausdgv.TabIndex = 6;
             this.varausdgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.varausdgv_CellContentClick);
             // 
@@ -100,129 +103,145 @@
             // 
             // asiakaannimitb
             // 
-            this.asiakaannimitb.Location = new System.Drawing.Point(985, 39);
+            this.asiakaannimitb.Location = new System.Drawing.Point(1313, 48);
+            this.asiakaannimitb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.asiakaannimitb.Name = "asiakaannimitb";
-            this.asiakaannimitb.Size = new System.Drawing.Size(113, 20);
+            this.asiakaannimitb.Size = new System.Drawing.Size(149, 22);
             this.asiakaannimitb.TabIndex = 7;
             // 
             // mokinnimitb
             // 
-            this.mokinnimitb.Location = new System.Drawing.Point(1218, 39);
+            this.mokinnimitb.Location = new System.Drawing.Point(1624, 48);
+            this.mokinnimitb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mokinnimitb.Name = "mokinnimitb";
-            this.mokinnimitb.Size = new System.Drawing.Size(113, 20);
+            this.mokinnimitb.Size = new System.Drawing.Size(149, 22);
             this.mokinnimitb.TabIndex = 8;
             // 
             // toimipaikkatb
             // 
-            this.toimipaikkatb.Location = new System.Drawing.Point(985, 92);
+            this.toimipaikkatb.Location = new System.Drawing.Point(1313, 113);
+            this.toimipaikkatb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.toimipaikkatb.Name = "toimipaikkatb";
-            this.toimipaikkatb.Size = new System.Drawing.Size(113, 20);
+            this.toimipaikkatb.Size = new System.Drawing.Size(149, 22);
             this.toimipaikkatb.TabIndex = 9;
             // 
             // palveluidenlkmtb
             // 
-            this.palveluidenlkmtb.Location = new System.Drawing.Point(1218, 92);
+            this.palveluidenlkmtb.Location = new System.Drawing.Point(1624, 113);
+            this.palveluidenlkmtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.palveluidenlkmtb.Name = "palveluidenlkmtb";
-            this.palveluidenlkmtb.Size = new System.Drawing.Size(113, 20);
+            this.palveluidenlkmtb.Size = new System.Drawing.Size(149, 22);
             this.palveluidenlkmtb.TabIndex = 10;
             // 
             // alkamispvmtb
             // 
-            this.alkamispvmtb.Location = new System.Drawing.Point(985, 153);
+            this.alkamispvmtb.Location = new System.Drawing.Point(1313, 188);
+            this.alkamispvmtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.alkamispvmtb.Name = "alkamispvmtb";
-            this.alkamispvmtb.Size = new System.Drawing.Size(113, 20);
+            this.alkamispvmtb.Size = new System.Drawing.Size(149, 22);
             this.alkamispvmtb.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(985, 20);
+            this.label1.Location = new System.Drawing.Point(1313, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(98, 16);
             this.label1.TabIndex = 14;
             this.label1.Text = "Asiakkaan nimi";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1215, 20);
+            this.label2.Location = new System.Drawing.Point(1620, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 15;
             this.label2.Text = "Mökin nimi";
             // 
             // loppumispvmtb
             // 
-            this.loppumispvmtb.Location = new System.Drawing.Point(1218, 153);
+            this.loppumispvmtb.Location = new System.Drawing.Point(1624, 188);
+            this.loppumispvmtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.loppumispvmtb.Name = "loppumispvmtb";
-            this.loppumispvmtb.Size = new System.Drawing.Size(113, 20);
+            this.loppumispvmtb.Size = new System.Drawing.Size(149, 22);
             this.loppumispvmtb.TabIndex = 16;
             // 
             // laskunsummatb
             // 
-            this.laskunsummatb.Location = new System.Drawing.Point(985, 210);
+            this.laskunsummatb.Location = new System.Drawing.Point(1313, 258);
+            this.laskunsummatb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.laskunsummatb.Name = "laskunsummatb";
-            this.laskunsummatb.Size = new System.Drawing.Size(113, 20);
+            this.laskunsummatb.Size = new System.Drawing.Size(149, 22);
             this.laskunsummatb.TabIndex = 17;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(982, 76);
+            this.label3.Location = new System.Drawing.Point(1309, 94);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.Size = new System.Drawing.Size(82, 16);
             this.label3.TabIndex = 18;
             this.label3.Text = "Toimipaikka";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1215, 76);
+            this.label4.Location = new System.Drawing.Point(1620, 94);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 13);
+            this.label4.Size = new System.Drawing.Size(169, 16);
             this.label4.TabIndex = 19;
             this.label4.Text = "Käytettyjen palveluiden lkm";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(982, 137);
+            this.label5.Location = new System.Drawing.Point(1309, 169);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 13);
+            this.label5.Size = new System.Drawing.Size(148, 16);
             this.label5.TabIndex = 20;
             this.label5.Text = "Varauksen alkamispvm";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1215, 137);
+            this.label6.Location = new System.Drawing.Point(1620, 169);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 13);
+            this.label6.Size = new System.Drawing.Size(156, 16);
             this.label6.TabIndex = 21;
             this.label6.Text = "Varauksen loppumispvm";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(982, 194);
+            this.label7.Location = new System.Drawing.Point(1309, 239);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.Size = new System.Drawing.Size(97, 16);
             this.label7.TabIndex = 22;
             this.label7.Text = "Laskun summa";
             // 
             // varauksenidtb
             // 
-            this.varauksenidtb.Location = new System.Drawing.Point(1218, 210);
+            this.varauksenidtb.Location = new System.Drawing.Point(1624, 258);
+            this.varauksenidtb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.varauksenidtb.Name = "varauksenidtb";
-            this.varauksenidtb.Size = new System.Drawing.Size(113, 20);
+            this.varauksenidtb.Size = new System.Drawing.Size(149, 22);
             this.varauksenidtb.TabIndex = 23;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1215, 194);
+            this.label8.Location = new System.Drawing.Point(1620, 239);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 13);
+            this.label8.Size = new System.Drawing.Size(88, 16);
             this.label8.TabIndex = 24;
             this.label8.Text = "Varauksen ID";
             // 
@@ -237,9 +256,9 @@
             // 
             // laskuform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1376, 450);
+            this.ClientSize = new System.Drawing.Size(1835, 554);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.varauksenidtb);
             this.Controls.Add(this.label7);
@@ -258,9 +277,12 @@
             this.Controls.Add(this.asiakaannimitb);
             this.Controls.Add(this.varausdgv);
             this.Controls.Add(this.tulostalaskubtn);
+            this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "laskuform";
             this.Text = "laskuform";
             this.Load += new System.EventHandler(this.laskuform_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.laskuform_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.varausdgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).EndInit();

@@ -26,5 +26,10 @@ namespace MökkingProjekti
         {
 
         }
+
+        private void Varaus_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
