@@ -78,6 +78,33 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+        public static void lisaaalue(string nimi)
+        {
+            string connection = getDatasource();
+            string query = "SELECT COUNT(*) FROM alue WHERE nimi='" + nimi + "';";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlCommand command = new SqlCommand(query, con);
+            int count = (int)command.ExecuteScalar();
+            con.Close();
+
+            // Jos alue ei ole jo tietokannassa, suorita lisäys
+            if (count == 0)
+            {
+                con.Open();
+                query = "INSERT INTO alue(nimi) VALUES('" + nimi + "');";
+                command = new SqlCommand(query, con);
+                command.ExecuteNonQuery();
+                con.Close();
+            }
+            else
+            {
+                MessageBox.Show("Alue nimellä " + nimi + " on jo tietokannassa!");
+            }
+        }
+
+
         public static void poistaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum)
         {
             SqlConnection con = new SqlConnection(getDatasource());
@@ -87,6 +114,21 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+        public static void poistaalue(string nimi)
+        {
+            DialogResult result = MessageBox.Show("Haluatko varmasti poistaa alueen?", "Vahvista poisto", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SqlConnection con = new SqlConnection(getDatasource());
+                string query = "DELETE FROM alue WHERE nimi = '" + nimi + "';";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+
         public static DataSet haetieto(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum, string taulunimi)
         {
             int count = 0;

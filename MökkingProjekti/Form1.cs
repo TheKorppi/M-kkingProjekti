@@ -403,7 +403,8 @@ namespace MökkingProjekti
 
         private void btnlisaaalue_Click(object sender, EventArgs e)
         {
-
+            Functions.lisaaalue(tbaluenimi.Text);
+            haetaulu(mode);
         }
 
         private void btnperuutaalue_Click(object sender, EventArgs e) //TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
@@ -413,7 +414,8 @@ namespace MökkingProjekti
 
         private void btnpoistaalue_Click(object sender, EventArgs e)
         {
-
+            Functions.poistaalue(tbaluenimi.Text);
+            haetaulu(mode);
         }
 
 
