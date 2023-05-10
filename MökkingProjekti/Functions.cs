@@ -79,6 +79,16 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public static void lisaapalvelu(string alueid, string nimi, string typpi, string kuvaus, string hinta, string alv)
+        {
+            string connection = getDatasource();
+            string query = "insert into palvelu(alue_id, nimi, tyyppi, kuvaus, hinta, alv)  values" + "(" + alueid + ",'" + nimi + "'," + typpi + ",'" + kuvaus + "'," + hinta + "," + alv + ");";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
         public static void lisaalasku(string id, string hinta, string alv)
         {
             string connection = getDatasource();
@@ -157,6 +167,15 @@ namespace MökkingProjekti
         {
             SqlConnection con = new SqlConnection(getDatasource());
             string query = "DELETE FROM asiakas WHERE etunimi = '" + nimi + "' AND sukunimi = '" + sukunimi + "' AND puhelinnro = '" + puhnum + "';";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+        public static void poistapalvelu(int ID)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "DELETE FROM palvelu WHERE palvelu_id = " +ID;
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();

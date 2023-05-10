@@ -87,7 +87,7 @@
             this.lbbillID = new System.Windows.Forms.Label();
             this.tblaskusvarausid = new System.Windows.Forms.TextBox();
             this.Ppalvelu = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbpalvelualue = new System.Windows.Forms.ComboBox();
             this.Alue = new System.Windows.Forms.Label();
             this.btnpoistapalvelu = new System.Windows.Forms.Button();
             this.btnmuokkaapalvelu = new System.Windows.Forms.Button();
@@ -195,7 +195,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            
             // 
             // asiakasBindingSource
             // 
@@ -715,7 +714,7 @@
             // 
             // Ppalvelu
             // 
-            this.Ppalvelu.Controls.Add(this.comboBox1);
+            this.Ppalvelu.Controls.Add(this.cmbpalvelualue);
             this.Ppalvelu.Controls.Add(this.Alue);
             this.Ppalvelu.Controls.Add(this.btnpoistapalvelu);
             this.Ppalvelu.Controls.Add(this.btnmuokkaapalvelu);
@@ -737,17 +736,17 @@
             this.Ppalvelu.Size = new System.Drawing.Size(435, 301);
             this.Ppalvelu.TabIndex = 57;
             // 
-            // comboBox1
+            // cmbpalvelualue
             // 
-            this.comboBox1.DataSource = this.alueBindingSource;
-            this.comboBox1.DisplayMember = "nimi";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(301, 22);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.ValueMember = "nimi";
+            this.cmbpalvelualue.DataSource = this.alueBindingSource;
+            this.cmbpalvelualue.DisplayMember = "nimi";
+            this.cmbpalvelualue.FormattingEnabled = true;
+            this.cmbpalvelualue.Location = new System.Drawing.Point(301, 22);
+            this.cmbpalvelualue.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbpalvelualue.Name = "cmbpalvelualue";
+            this.cmbpalvelualue.Size = new System.Drawing.Size(92, 21);
+            this.cmbpalvelualue.TabIndex = 11;
+            this.cmbpalvelualue.ValueMember = "nimi";
             // 
             // Alue
             // 
@@ -1702,7 +1701,7 @@
         private System.Windows.Forms.Button btnhaeasiakas;
         private System.Windows.Forms.TextBox tbmokkihenkilomaara;
         private System.Windows.Forms.Label lbmokkihenkilomaara;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbpalvelualue;
         private System.Windows.Forms.Label Alue;
     }
 }

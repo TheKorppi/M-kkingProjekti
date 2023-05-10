@@ -357,7 +357,8 @@ namespace MökkingProjekti
 
         private void btnlisaapalvelu_Click(object sender, EventArgs e)
         {
-
+            Functions.lisaapalvelu(cmbpalvelualue.Text, tbpalvelunimi.Text, tbpalvelutyyppi.Text, tbpalvelukuvaus.Text, tbpalveluhinta.Text, tbpalvelualv.Text);
+            haetaulu("palvelu");
         }
 
         private void btnmuokkaapalvelu_Click(object sender, EventArgs e)
@@ -376,7 +377,8 @@ namespace MökkingProjekti
 
         private void btnpoistapalvelu_Click(object sender, EventArgs e)
         {
-
+            Functions.poistapalvelu(ID);
+            haetaulu("palvelu");
         }
 
 
