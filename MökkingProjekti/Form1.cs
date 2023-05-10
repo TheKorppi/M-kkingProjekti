@@ -55,17 +55,34 @@ namespace MökkingProjekti
                     tbvaraussahkoposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                     tbvaraajanosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                     tbvaraajanpostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                    ID = (int)dataGridView1.Rows[e.RowIndex].Cells[1].Value;
+                    ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                     haetaulu("varaus");
                     break;
 
                 case "palvelu":
                     tbpalvelunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    tbpalvelutyyppi.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                    tbpalvelukuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                    tbpalveluhinta.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                    ID = (int)dataGridView1.Rows[e.RowIndex].Cells[1].Value;
+                    tbpalvelutyyppi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    tbpalvelukuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    tbpalveluhinta.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                     break;
+
+                case "mokki":
+                    tbmokkialuenimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    tbmokkinimi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    tbmokkiosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    tbmokkipostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    tbmokkivarustelu.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                    tbmokkikuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                    tbmokkihinta.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    tbmokkihenkilomaara.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                    ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    break;
+
+
+                case "lasku":
+                    break;
+
 
             }
         }
@@ -190,6 +207,7 @@ namespace MökkingProjekti
             Pasiakas.Visible = false;
             Palue.Enabled = false;
             Palue.Visible = false;
+            dataGridView1.DataSource = null;
             haetaulu("lasku");
             mode = "lasku";
             taulunimi.Text = "Laskut";
@@ -211,6 +229,7 @@ namespace MökkingProjekti
             Pasiakas.Visible = false;
             Palue.Visible = false;
             Palue.Visible = false;
+            dataGridView1.DataSource = null;
             haetaulu("palvelu");
             mode = "palvelu";
             taulunimi.Text = "Palvelu";

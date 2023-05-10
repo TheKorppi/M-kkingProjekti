@@ -106,7 +106,7 @@ namespace MökkingProjekti
             if(count == 0)
             {
                 conn.Open();
-                query = "INSERT INTO mokki (alue_id, mokkinimi, katuosoite, postinro, varustelu, kuvaus, hinta, henkilomaara) VALUES ('" + alue_id + "','" + mokkinimi + "','" + katuosoite + "','" + postinro + "','" + varustelu + "','" + kuvaus + "','" + henkilomaara + "','" + hinta + "');";
+                query = "INSERT INTO mokki (alue_id, mokkinimi, katuosoite, postinro, varustelu, kuvaus, hinta, henkilomaara) VALUES (" + alue_id + " ,'" + mokkinimi + "','" + katuosoite + "','" + postinro + "','" + varustelu + "','" + kuvaus + "', " + henkilomaara + ", " + hinta  + ");";
                 command = new SqlCommand(query, conn);
                 command.ExecuteNonQuery();
                 conn.Close();
