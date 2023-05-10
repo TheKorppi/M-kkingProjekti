@@ -190,6 +190,15 @@ namespace MökkingProjekti
                 con.Close();
             }
         }
+        public static void paivatiaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum,int ID)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "UPDATE asiakas SET etunimi = '"+nimi+"' , sukunimi = '"+sukunimi+"', puhelinnro = '"+puhnum+"', email = '"+email+"', lahiosoite = '" +lahiosoite+"', postinro = '"+ postinum+"' WHERE asiakas_id = "+ID;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
         public static DataSet haetieto(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum, string taulunimi)
         {

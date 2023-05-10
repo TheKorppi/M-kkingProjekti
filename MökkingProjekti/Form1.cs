@@ -16,6 +16,7 @@ namespace MökkingProjekti
     public partial class Form1 : Form
     {
         public string mode="asiakas";
+        public int ID = 0;
        
         public Form1()
         {
@@ -44,7 +45,8 @@ namespace MökkingProjekti
                    tbasiakassposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                    tbasiakasosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                    tbasiakaspostinum.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                   break;
+                    ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    break;
 
                 case "varaus":
                     tbvarausetunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -53,6 +55,7 @@ namespace MökkingProjekti
                     tbvaraussahkoposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                     tbvaraajanosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                     tbvaraajanpostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                    ID = (int)dataGridView1.Rows[e.RowIndex].Cells[1].Value;
                     haetaulu("varaus");
                     break;
 
@@ -61,6 +64,7 @@ namespace MökkingProjekti
                     tbpalvelutyyppi.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                     tbpalvelukuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                     tbpalveluhinta.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                    ID = (int)dataGridView1.Rows[e.RowIndex].Cells[1].Value;
                     break;
 
             }
@@ -245,8 +249,10 @@ namespace MökkingProjekti
 
         private void btnmuokkaa_Click(object sender, EventArgs e)
         {
-            DataSet dataa = Functions.haetieto(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text, "asiakas");
-            dataGridView1.DataSource = dataa.Tables["asiakas"];
+            Functions.paivatiaasiakas(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text, ID);
+            haetaulu("asiakas");
+            //DataSet dataa = Functions.haetieto(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text, "asiakas");
+            //dataGridView1.DataSource = dataa.Tables["asiakas"];
         }
 
         private void btnasiakasperuuta_Click(object sender, EventArgs e)
