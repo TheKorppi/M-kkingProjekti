@@ -79,6 +79,16 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public static void lisaalasku(string id, string hinta, string alv)
+        {
+            string connection = getDatasource();
+            string query = "insert into lasku(varaus_id, summa, alv)  values" + "("+ id+", "+hinta+", "+alv+");";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
         //lisää mökin tietokantaan ja näyttää datagripviewissä
         public static void lisaamokki(string alue_id, string mokkinimi,string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara)

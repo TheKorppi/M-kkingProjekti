@@ -896,6 +896,7 @@
             // 
             // Pasiakas
             // 
+            this.Pasiakas.Controls.Add(this.btnhaeasiakas);
             this.Pasiakas.Controls.Add(this.btnmuokkaa);
             this.Pasiakas.Controls.Add(this.btnpoistaasiakas);
             this.Pasiakas.Controls.Add(this.tbasiakaspostinum);
@@ -1507,7 +1508,7 @@
             // 
             // btnhaeasiakas
             // 
-            this.btnhaeasiakas.Location = new System.Drawing.Point(823, 497);
+            this.btnhaeasiakas.Location = new System.Drawing.Point(194, 218);
             this.btnhaeasiakas.Name = "btnhaeasiakas";
             this.btnhaeasiakas.Size = new System.Drawing.Size(91, 23);
             this.btnhaeasiakas.TabIndex = 61;
@@ -1520,7 +1521,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1823, 857);
-            this.Controls.Add(this.btnhaeasiakas);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.Plasku);
             this.Controls.Add(this.Pasiakas);

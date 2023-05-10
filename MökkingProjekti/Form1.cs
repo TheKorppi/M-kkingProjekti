@@ -81,6 +81,10 @@ namespace MökkingProjekti
 
 
                 case "lasku":
+                    tblaskualv.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    tblaskusumma.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    tblaskusvarausid.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
                     break;
 
 
@@ -296,7 +300,8 @@ namespace MökkingProjekti
 
         private void btnlisaalasku_Click(object sender, EventArgs e)
         {
-
+            Functions.lisaalasku(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text);
+            haetaulu("lasku");
         }
 
         private void btnperuutalasku_Click(object sender, EventArgs e)
@@ -555,7 +560,8 @@ namespace MökkingProjekti
 
         private void btnhaeasiakas_Click(object sender, EventArgs e)
         {
-          haetaulu("asiakas");
+            DataSet dataa = Functions.haetieto(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text, "asiakas");
+            dataGridView1.DataSource = dataa.Tables["asiakas"];
         }
 
         // Pika näppäin ohjelmallisesti lisätty, pääseen textbokseissa liikkumaan taaksepäin Tab + shift
