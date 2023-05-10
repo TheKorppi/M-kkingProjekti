@@ -104,6 +104,7 @@
             this.btnperuutapalvelu = new System.Windows.Forms.Button();
             this.btnlisaapalvelu = new System.Windows.Forms.Button();
             this.Pasiakas = new System.Windows.Forms.Panel();
+            this.btnhaeasiakas = new System.Windows.Forms.Button();
             this.btnmuokkaa = new System.Windows.Forms.Button();
             this.btnpoistaasiakas = new System.Windows.Forms.Button();
             this.tbasiakaspostinum = new System.Windows.Forms.TextBox();
@@ -164,7 +165,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnpalvelut = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnhaeasiakas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
@@ -187,7 +187,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 461);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -195,6 +195,7 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            
             // 
             // asiakasBindingSource
             // 
@@ -305,7 +306,7 @@
             // 
             this.cbmokki.FormattingEnabled = true;
             this.cbmokki.Location = new System.Drawing.Point(284, 107);
-            this.cbmokki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbmokki.Margin = new System.Windows.Forms.Padding(2);
             this.cbmokki.Name = "cbmokki";
             this.cbmokki.Size = new System.Drawing.Size(92, 21);
             this.cbmokki.TabIndex = 10;
@@ -314,7 +315,7 @@
             // 
             this.cbalue.FormattingEnabled = true;
             this.cbalue.Location = new System.Drawing.Point(284, 82);
-            this.cbalue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbalue.Margin = new System.Windows.Forms.Padding(2);
             this.cbalue.Name = "cbalue";
             this.cbalue.Size = new System.Drawing.Size(92, 21);
             this.cbalue.TabIndex = 9;
@@ -322,7 +323,7 @@
             // btnperuutavaraus
             // 
             this.btnperuutavaraus.Location = new System.Drawing.Point(96, 259);
-            this.btnperuutavaraus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnperuutavaraus.Margin = new System.Windows.Forms.Padding(2);
             this.btnperuutavaraus.Name = "btnperuutavaraus";
             this.btnperuutavaraus.Size = new System.Drawing.Size(56, 25);
             this.btnperuutavaraus.TabIndex = 12;
@@ -333,7 +334,7 @@
             // btnlisaavaraus
             // 
             this.btnlisaavaraus.Location = new System.Drawing.Point(21, 247);
-            this.btnlisaavaraus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlisaavaraus.Margin = new System.Windows.Forms.Padding(2);
             this.btnlisaavaraus.Name = "btnlisaavaraus";
             this.btnlisaavaraus.Size = new System.Drawing.Size(59, 37);
             this.btnlisaavaraus.TabIndex = 11;
@@ -344,7 +345,7 @@
             // dtplahtopaiva
             // 
             this.dtplahtopaiva.Location = new System.Drawing.Point(284, 58);
-            this.dtplahtopaiva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtplahtopaiva.Margin = new System.Windows.Forms.Padding(2);
             this.dtplahtopaiva.MinDate = new System.DateTime(2023, 4, 27, 0, 0, 0, 0);
             this.dtplahtopaiva.Name = "dtplahtopaiva";
             this.dtplahtopaiva.Size = new System.Drawing.Size(151, 20);
@@ -353,7 +354,7 @@
             // dtptulopaiva
             // 
             this.dtptulopaiva.Location = new System.Drawing.Point(284, 30);
-            this.dtptulopaiva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtptulopaiva.Margin = new System.Windows.Forms.Padding(2);
             this.dtptulopaiva.MinDate = new System.DateTime(2023, 4, 27, 0, 0, 0, 0);
             this.dtptulopaiva.Name = "dtptulopaiva";
             this.dtptulopaiva.Size = new System.Drawing.Size(151, 20);
@@ -402,7 +403,7 @@
             // tbvaraajanosoite
             // 
             this.tbvaraajanosoite.Location = new System.Drawing.Point(107, 130);
-            this.tbvaraajanosoite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbvaraajanosoite.Margin = new System.Windows.Forms.Padding(2);
             this.tbvaraajanosoite.Name = "tbvaraajanosoite";
             this.tbvaraajanosoite.Size = new System.Drawing.Size(76, 20);
             this.tbvaraajanosoite.TabIndex = 5;
@@ -410,7 +411,7 @@
             // tbvarauspuhelinnumero
             // 
             this.tbvarauspuhelinnumero.Location = new System.Drawing.Point(107, 106);
-            this.tbvarauspuhelinnumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbvarauspuhelinnumero.Margin = new System.Windows.Forms.Padding(2);
             this.tbvarauspuhelinnumero.Name = "tbvarauspuhelinnumero";
             this.tbvarauspuhelinnumero.Size = new System.Drawing.Size(76, 20);
             this.tbvarauspuhelinnumero.TabIndex = 4;
@@ -419,7 +420,7 @@
             // tbvaraajanpostinumero
             // 
             this.tbvaraajanpostinumero.Location = new System.Drawing.Point(107, 154);
-            this.tbvaraajanpostinumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbvaraajanpostinumero.Margin = new System.Windows.Forms.Padding(2);
             this.tbvaraajanpostinumero.Name = "tbvaraajanpostinumero";
             this.tbvaraajanpostinumero.Size = new System.Drawing.Size(76, 20);
             this.tbvaraajanpostinumero.TabIndex = 6;
@@ -428,7 +429,7 @@
             // tbvaraussukunimi
             // 
             this.tbvaraussukunimi.Location = new System.Drawing.Point(107, 58);
-            this.tbvaraussukunimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbvaraussukunimi.Margin = new System.Windows.Forms.Padding(2);
             this.tbvaraussukunimi.Name = "tbvaraussukunimi";
             this.tbvaraussukunimi.Size = new System.Drawing.Size(76, 20);
             this.tbvaraussukunimi.TabIndex = 2;
@@ -436,7 +437,7 @@
             // tbvaraussahkoposti
             // 
             this.tbvaraussahkoposti.Location = new System.Drawing.Point(107, 82);
-            this.tbvaraussahkoposti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbvaraussahkoposti.Margin = new System.Windows.Forms.Padding(2);
             this.tbvaraussahkoposti.Name = "tbvaraussahkoposti";
             this.tbvaraussahkoposti.Size = new System.Drawing.Size(76, 20);
             this.tbvaraussahkoposti.TabIndex = 3;
@@ -444,7 +445,7 @@
             // tbvarausetunimi
             // 
             this.tbvarausetunimi.Location = new System.Drawing.Point(107, 34);
-            this.tbvarausetunimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbvarausetunimi.Margin = new System.Windows.Forms.Padding(2);
             this.tbvarausetunimi.Name = "tbvarausetunimi";
             this.tbvarausetunimi.Size = new System.Drawing.Size(76, 20);
             this.tbvarausetunimi.TabIndex = 1;
@@ -547,7 +548,7 @@
             // tbhaku
             // 
             this.tbhaku.Location = new System.Drawing.Point(288, 181);
-            this.tbhaku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbhaku.Margin = new System.Windows.Forms.Padding(2);
             this.tbhaku.Name = "tbhaku";
             this.tbhaku.Size = new System.Drawing.Size(76, 20);
             this.tbhaku.TabIndex = 49;
@@ -555,7 +556,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(206, 181);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 48;
@@ -565,7 +566,7 @@
             // btnlisaapalveluvaraus
             // 
             this.btnlisaapalveluvaraus.Location = new System.Drawing.Point(20, 199);
-            this.btnlisaapalveluvaraus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlisaapalveluvaraus.Margin = new System.Windows.Forms.Padding(2);
             this.btnlisaapalveluvaraus.Name = "btnlisaapalveluvaraus";
             this.btnlisaapalveluvaraus.Size = new System.Drawing.Size(60, 41);
             this.btnlisaapalveluvaraus.TabIndex = 47;
@@ -575,7 +576,7 @@
             // btnpoistavaraus
             // 
             this.btnpoistavaraus.Location = new System.Drawing.Point(170, 266);
-            this.btnpoistavaraus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnpoistavaraus.Margin = new System.Windows.Forms.Padding(2);
             this.btnpoistavaraus.Name = "btnpoistavaraus";
             this.btnpoistavaraus.Size = new System.Drawing.Size(56, 19);
             this.btnpoistavaraus.TabIndex = 46;
@@ -586,7 +587,7 @@
             // btnmuokkaavaraus
             // 
             this.btnmuokkaavaraus.Location = new System.Drawing.Point(98, 221);
-            this.btnmuokkaavaraus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmuokkaavaraus.Margin = new System.Windows.Forms.Padding(2);
             this.btnmuokkaavaraus.Name = "btnmuokkaavaraus";
             this.btnmuokkaavaraus.Size = new System.Drawing.Size(56, 19);
             this.btnmuokkaavaraus.TabIndex = 45;
@@ -607,7 +608,7 @@
             this.Plasku.Controls.Add(this.lbbillID);
             this.Plasku.Controls.Add(this.tblaskusvarausid);
             this.Plasku.Location = new System.Drawing.Point(20, 79);
-            this.Plasku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Plasku.Margin = new System.Windows.Forms.Padding(2);
             this.Plasku.Name = "Plasku";
             this.Plasku.Size = new System.Drawing.Size(434, 301);
             this.Plasku.TabIndex = 46;
@@ -616,7 +617,7 @@
             // btnmuokkaalasku
             // 
             this.btnmuokkaalasku.Location = new System.Drawing.Point(144, 132);
-            this.btnmuokkaalasku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmuokkaalasku.Margin = new System.Windows.Forms.Padding(2);
             this.btnmuokkaalasku.Name = "btnmuokkaalasku";
             this.btnmuokkaalasku.Size = new System.Drawing.Size(56, 19);
             this.btnmuokkaalasku.TabIndex = 6;
@@ -627,7 +628,7 @@
             // btnpoistalasku
             // 
             this.btnpoistalasku.Location = new System.Drawing.Point(144, 157);
-            this.btnpoistalasku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnpoistalasku.Margin = new System.Windows.Forms.Padding(2);
             this.btnpoistalasku.Name = "btnpoistalasku";
             this.btnpoistalasku.Size = new System.Drawing.Size(56, 19);
             this.btnpoistalasku.TabIndex = 7;
@@ -638,7 +639,7 @@
             // btnperuutalasku
             // 
             this.btnperuutalasku.Location = new System.Drawing.Point(38, 155);
-            this.btnperuutalasku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnperuutalasku.Margin = new System.Windows.Forms.Padding(2);
             this.btnperuutalasku.Name = "btnperuutalasku";
             this.btnperuutalasku.Size = new System.Drawing.Size(56, 19);
             this.btnperuutalasku.TabIndex = 5;
@@ -649,7 +650,7 @@
             // btnlisaalasku
             // 
             this.btnlisaalasku.Location = new System.Drawing.Point(38, 132);
-            this.btnlisaalasku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlisaalasku.Margin = new System.Windows.Forms.Padding(2);
             this.btnlisaalasku.Name = "btnlisaalasku";
             this.btnlisaalasku.Size = new System.Drawing.Size(56, 19);
             this.btnlisaalasku.TabIndex = 4;
@@ -660,7 +661,7 @@
             // tblaskusumma
             // 
             this.tblaskusumma.Location = new System.Drawing.Point(144, 58);
-            this.tblaskusumma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tblaskusumma.Margin = new System.Windows.Forms.Padding(2);
             this.tblaskusumma.Name = "tblaskusumma";
             this.tblaskusumma.Size = new System.Drawing.Size(76, 20);
             this.tblaskusumma.TabIndex = 2;
@@ -668,7 +669,7 @@
             // tblaskualv
             // 
             this.tblaskualv.Location = new System.Drawing.Point(144, 89);
-            this.tblaskualv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tblaskualv.Margin = new System.Windows.Forms.Padding(2);
             this.tblaskualv.Name = "tblaskualv";
             this.tblaskualv.Size = new System.Drawing.Size(76, 20);
             this.tblaskualv.TabIndex = 3;
@@ -707,7 +708,7 @@
             // tblaskusvarausid
             // 
             this.tblaskusvarausid.Location = new System.Drawing.Point(144, 33);
-            this.tblaskusvarausid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tblaskusvarausid.Margin = new System.Windows.Forms.Padding(2);
             this.tblaskusvarausid.Name = "tblaskusvarausid";
             this.tblaskusvarausid.Size = new System.Drawing.Size(76, 20);
             this.tblaskusvarausid.TabIndex = 1;
@@ -731,7 +732,7 @@
             this.Ppalvelu.Controls.Add(this.btnperuutapalvelu);
             this.Ppalvelu.Controls.Add(this.btnlisaapalvelu);
             this.Ppalvelu.Location = new System.Drawing.Point(20, 79);
-            this.Ppalvelu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ppalvelu.Margin = new System.Windows.Forms.Padding(2);
             this.Ppalvelu.Name = "Ppalvelu";
             this.Ppalvelu.Size = new System.Drawing.Size(435, 301);
             this.Ppalvelu.TabIndex = 57;
@@ -742,7 +743,7 @@
             this.comboBox1.DisplayMember = "nimi";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(301, 22);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 11;
@@ -761,7 +762,7 @@
             // btnpoistapalvelu
             // 
             this.btnpoistapalvelu.Location = new System.Drawing.Point(126, 231);
-            this.btnpoistapalvelu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnpoistapalvelu.Margin = new System.Windows.Forms.Padding(2);
             this.btnpoistapalvelu.Name = "btnpoistapalvelu";
             this.btnpoistapalvelu.Size = new System.Drawing.Size(56, 19);
             this.btnpoistapalvelu.TabIndex = 9;
@@ -772,7 +773,7 @@
             // btnmuokkaapalvelu
             // 
             this.btnmuokkaapalvelu.Location = new System.Drawing.Point(126, 203);
-            this.btnmuokkaapalvelu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmuokkaapalvelu.Margin = new System.Windows.Forms.Padding(2);
             this.btnmuokkaapalvelu.Name = "btnmuokkaapalvelu";
             this.btnmuokkaapalvelu.Size = new System.Drawing.Size(56, 19);
             this.btnmuokkaapalvelu.TabIndex = 8;
@@ -783,7 +784,7 @@
             // tbpalveluhinta
             // 
             this.tbpalveluhinta.Location = new System.Drawing.Point(107, 128);
-            this.tbpalveluhinta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbpalveluhinta.Margin = new System.Windows.Forms.Padding(2);
             this.tbpalveluhinta.Name = "tbpalveluhinta";
             this.tbpalveluhinta.Size = new System.Drawing.Size(76, 20);
             this.tbpalveluhinta.TabIndex = 5;
@@ -791,7 +792,7 @@
             // tbpalvelukuvaus
             // 
             this.tbpalvelukuvaus.Location = new System.Drawing.Point(107, 50);
-            this.tbpalvelukuvaus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbpalvelukuvaus.Margin = new System.Windows.Forms.Padding(2);
             this.tbpalvelukuvaus.Name = "tbpalvelukuvaus";
             this.tbpalvelukuvaus.Size = new System.Drawing.Size(76, 20);
             this.tbpalvelukuvaus.TabIndex = 2;
@@ -799,7 +800,7 @@
             // tbpalvelutyyppi
             // 
             this.tbpalvelutyyppi.Location = new System.Drawing.Point(107, 77);
-            this.tbpalvelutyyppi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbpalvelutyyppi.Margin = new System.Windows.Forms.Padding(2);
             this.tbpalvelutyyppi.Name = "tbpalvelutyyppi";
             this.tbpalvelutyyppi.Size = new System.Drawing.Size(76, 20);
             this.tbpalvelutyyppi.TabIndex = 3;
@@ -807,7 +808,7 @@
             // tbpalvelualv
             // 
             this.tbpalvelualv.Location = new System.Drawing.Point(107, 101);
-            this.tbpalvelualv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbpalvelualv.Margin = new System.Windows.Forms.Padding(2);
             this.tbpalvelualv.Name = "tbpalvelualv";
             this.tbpalvelualv.ReadOnly = true;
             this.tbpalvelualv.Size = new System.Drawing.Size(76, 20);
@@ -817,7 +818,7 @@
             // tbpalvelunimi
             // 
             this.tbpalvelunimi.Location = new System.Drawing.Point(107, 24);
-            this.tbpalvelunimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbpalvelunimi.Margin = new System.Windows.Forms.Padding(2);
             this.tbpalvelunimi.Name = "tbpalvelunimi";
             this.tbpalvelunimi.Size = new System.Drawing.Size(76, 20);
             this.tbpalvelunimi.TabIndex = 1;
@@ -875,7 +876,7 @@
             // btnperuutapalvelu
             // 
             this.btnperuutapalvelu.Location = new System.Drawing.Point(24, 231);
-            this.btnperuutapalvelu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnperuutapalvelu.Margin = new System.Windows.Forms.Padding(2);
             this.btnperuutapalvelu.Name = "btnperuutapalvelu";
             this.btnperuutapalvelu.Size = new System.Drawing.Size(56, 25);
             this.btnperuutapalvelu.TabIndex = 7;
@@ -886,7 +887,7 @@
             // btnlisaapalvelu
             // 
             this.btnlisaapalvelu.Location = new System.Drawing.Point(24, 203);
-            this.btnlisaapalvelu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlisaapalvelu.Margin = new System.Windows.Forms.Padding(2);
             this.btnlisaapalvelu.Name = "btnlisaapalvelu";
             this.btnlisaapalvelu.Size = new System.Drawing.Size(56, 19);
             this.btnlisaapalvelu.TabIndex = 6;
@@ -914,15 +915,25 @@
             this.Pasiakas.Controls.Add(this.lbcustomeraddress);
             this.Pasiakas.Controls.Add(this.lbcustomerfname);
             this.Pasiakas.Location = new System.Drawing.Point(20, 79);
-            this.Pasiakas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pasiakas.Margin = new System.Windows.Forms.Padding(2);
             this.Pasiakas.Name = "Pasiakas";
             this.Pasiakas.Size = new System.Drawing.Size(434, 301);
             this.Pasiakas.TabIndex = 45;
             // 
+            // btnhaeasiakas
+            // 
+            this.btnhaeasiakas.Location = new System.Drawing.Point(194, 218);
+            this.btnhaeasiakas.Name = "btnhaeasiakas";
+            this.btnhaeasiakas.Size = new System.Drawing.Size(91, 23);
+            this.btnhaeasiakas.TabIndex = 61;
+            this.btnhaeasiakas.Text = "Hae asiakas";
+            this.btnhaeasiakas.UseVisualStyleBackColor = true;
+            this.btnhaeasiakas.Click += new System.EventHandler(this.btnhaeasiakas_Click);
+            // 
             // btnmuokkaa
             // 
             this.btnmuokkaa.Location = new System.Drawing.Point(126, 218);
-            this.btnmuokkaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmuokkaa.Margin = new System.Windows.Forms.Padding(2);
             this.btnmuokkaa.Name = "btnmuokkaa";
             this.btnmuokkaa.Size = new System.Drawing.Size(63, 24);
             this.btnmuokkaa.TabIndex = 9;
@@ -933,7 +944,7 @@
             // btnpoistaasiakas
             // 
             this.btnpoistaasiakas.Location = new System.Drawing.Point(126, 246);
-            this.btnpoistaasiakas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnpoistaasiakas.Margin = new System.Windows.Forms.Padding(2);
             this.btnpoistaasiakas.Name = "btnpoistaasiakas";
             this.btnpoistaasiakas.Size = new System.Drawing.Size(63, 24);
             this.btnpoistaasiakas.TabIndex = 10;
@@ -944,7 +955,7 @@
             // tbasiakaspostinum
             // 
             this.tbasiakaspostinum.Location = new System.Drawing.Point(152, 158);
-            this.tbasiakaspostinum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbasiakaspostinum.Margin = new System.Windows.Forms.Padding(2);
             this.tbasiakaspostinum.Name = "tbasiakaspostinum";
             this.tbasiakaspostinum.Size = new System.Drawing.Size(76, 20);
             this.tbasiakaspostinum.TabIndex = 6;
@@ -953,7 +964,7 @@
             // tbasiakasosoite
             // 
             this.tbasiakasosoite.Location = new System.Drawing.Point(152, 134);
-            this.tbasiakasosoite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbasiakasosoite.Margin = new System.Windows.Forms.Padding(2);
             this.tbasiakasosoite.Name = "tbasiakasosoite";
             this.tbasiakasosoite.Size = new System.Drawing.Size(76, 20);
             this.tbasiakasosoite.TabIndex = 5;
@@ -961,7 +972,7 @@
             // tbasiakaspuhnum
             // 
             this.tbasiakaspuhnum.Location = new System.Drawing.Point(152, 79);
-            this.tbasiakaspuhnum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbasiakaspuhnum.Margin = new System.Windows.Forms.Padding(2);
             this.tbasiakaspuhnum.Name = "tbasiakaspuhnum";
             this.tbasiakaspuhnum.Size = new System.Drawing.Size(76, 20);
             this.tbasiakaspuhnum.TabIndex = 3;
@@ -970,7 +981,7 @@
             // tbasiakassposti
             // 
             this.tbasiakassposti.Location = new System.Drawing.Point(152, 107);
-            this.tbasiakassposti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbasiakassposti.Margin = new System.Windows.Forms.Padding(2);
             this.tbasiakassposti.Name = "tbasiakassposti";
             this.tbasiakassposti.Size = new System.Drawing.Size(76, 20);
             this.tbasiakassposti.TabIndex = 4;
@@ -978,7 +989,7 @@
             // tbasiakassnimi
             // 
             this.tbasiakassnimi.Location = new System.Drawing.Point(152, 51);
-            this.tbasiakassnimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbasiakassnimi.Margin = new System.Windows.Forms.Padding(2);
             this.tbasiakassnimi.Name = "tbasiakassnimi";
             this.tbasiakassnimi.Size = new System.Drawing.Size(76, 20);
             this.tbasiakassnimi.TabIndex = 2;
@@ -986,7 +997,7 @@
             // tbasiakasnimi
             // 
             this.tbasiakasnimi.Location = new System.Drawing.Point(152, 24);
-            this.tbasiakasnimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbasiakasnimi.Margin = new System.Windows.Forms.Padding(2);
             this.tbasiakasnimi.Name = "tbasiakasnimi";
             this.tbasiakasnimi.Size = new System.Drawing.Size(76, 20);
             this.tbasiakasnimi.TabIndex = 1;
@@ -994,7 +1005,7 @@
             // btnasiakasperuuta
             // 
             this.btnasiakasperuuta.Location = new System.Drawing.Point(26, 246);
-            this.btnasiakasperuuta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnasiakasperuuta.Margin = new System.Windows.Forms.Padding(2);
             this.btnasiakasperuuta.Name = "btnasiakasperuuta";
             this.btnasiakasperuuta.Size = new System.Drawing.Size(56, 25);
             this.btnasiakasperuuta.TabIndex = 8;
@@ -1005,7 +1016,7 @@
             // btnasiakaslisaa
             // 
             this.btnasiakaslisaa.Location = new System.Drawing.Point(26, 218);
-            this.btnasiakaslisaa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnasiakaslisaa.Margin = new System.Windows.Forms.Padding(2);
             this.btnasiakaslisaa.Name = "btnasiakaslisaa";
             this.btnasiakaslisaa.Size = new System.Drawing.Size(56, 25);
             this.btnasiakaslisaa.TabIndex = 7;
@@ -1082,7 +1093,7 @@
             this.Palue.Controls.Add(this.tbaluenimi);
             this.Palue.Controls.Add(this.lblocationname);
             this.Palue.Location = new System.Drawing.Point(20, 79);
-            this.Palue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Palue.Margin = new System.Windows.Forms.Padding(2);
             this.Palue.Name = "Palue";
             this.Palue.Size = new System.Drawing.Size(435, 301);
             this.Palue.TabIndex = 14;
@@ -1090,7 +1101,7 @@
             // btnpoistaalue
             // 
             this.btnpoistaalue.Location = new System.Drawing.Point(136, 154);
-            this.btnpoistaalue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnpoistaalue.Margin = new System.Windows.Forms.Padding(2);
             this.btnpoistaalue.Name = "btnpoistaalue";
             this.btnpoistaalue.Size = new System.Drawing.Size(56, 19);
             this.btnpoistaalue.TabIndex = 5;
@@ -1101,7 +1112,7 @@
             // btnmuokkaaalue
             // 
             this.btnmuokkaaalue.Location = new System.Drawing.Point(136, 128);
-            this.btnmuokkaaalue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmuokkaaalue.Margin = new System.Windows.Forms.Padding(2);
             this.btnmuokkaaalue.Name = "btnmuokkaaalue";
             this.btnmuokkaaalue.Size = new System.Drawing.Size(56, 19);
             this.btnmuokkaaalue.TabIndex = 4;
@@ -1112,7 +1123,7 @@
             // btnperuutaalue
             // 
             this.btnperuutaalue.Location = new System.Drawing.Point(38, 152);
-            this.btnperuutaalue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnperuutaalue.Margin = new System.Windows.Forms.Padding(2);
             this.btnperuutaalue.Name = "btnperuutaalue";
             this.btnperuutaalue.Size = new System.Drawing.Size(56, 19);
             this.btnperuutaalue.TabIndex = 3;
@@ -1123,7 +1134,7 @@
             // btnlisaaalue
             // 
             this.btnlisaaalue.Location = new System.Drawing.Point(38, 128);
-            this.btnlisaaalue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlisaaalue.Margin = new System.Windows.Forms.Padding(2);
             this.btnlisaaalue.Name = "btnlisaaalue";
             this.btnlisaaalue.Size = new System.Drawing.Size(56, 19);
             this.btnlisaaalue.TabIndex = 2;
@@ -1134,7 +1145,7 @@
             // tbaluenimi
             // 
             this.tbaluenimi.Location = new System.Drawing.Point(107, 35);
-            this.tbaluenimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbaluenimi.Margin = new System.Windows.Forms.Padding(2);
             this.tbaluenimi.Name = "tbaluenimi";
             this.tbaluenimi.Size = new System.Drawing.Size(76, 20);
             this.tbaluenimi.TabIndex = 1;
@@ -1172,7 +1183,7 @@
             this.Pmokki.Controls.Add(this.lbdescription);
             this.Pmokki.Controls.Add(this.lbloactio);
             this.Pmokki.Location = new System.Drawing.Point(460, 79);
-            this.Pmokki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pmokki.Margin = new System.Windows.Forms.Padding(2);
             this.Pmokki.Name = "Pmokki";
             this.Pmokki.Size = new System.Drawing.Size(454, 301);
             this.Pmokki.TabIndex = 58;
@@ -1180,7 +1191,7 @@
             // tbmokkihenkilomaara
             // 
             this.tbmokkihenkilomaara.Location = new System.Drawing.Point(284, 130);
-            this.tbmokkihenkilomaara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbmokkihenkilomaara.Margin = new System.Windows.Forms.Padding(2);
             this.tbmokkihenkilomaara.Name = "tbmokkihenkilomaara";
             this.tbmokkihenkilomaara.Size = new System.Drawing.Size(76, 20);
             this.tbmokkihenkilomaara.TabIndex = 12;
@@ -1199,7 +1210,7 @@
             // btnpoistamokki
             // 
             this.btnpoistamokki.Location = new System.Drawing.Point(126, 240);
-            this.btnpoistamokki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnpoistamokki.Margin = new System.Windows.Forms.Padding(2);
             this.btnpoistamokki.Name = "btnpoistamokki";
             this.btnpoistamokki.Size = new System.Drawing.Size(56, 19);
             this.btnpoistamokki.TabIndex = 10;
@@ -1210,7 +1221,7 @@
             // btnmuokkaamokki
             // 
             this.btnmuokkaamokki.Location = new System.Drawing.Point(126, 201);
-            this.btnmuokkaamokki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmuokkaamokki.Margin = new System.Windows.Forms.Padding(2);
             this.btnmuokkaamokki.Name = "btnmuokkaamokki";
             this.btnmuokkaamokki.Size = new System.Drawing.Size(56, 19);
             this.btnmuokkaamokki.TabIndex = 9;
@@ -1221,7 +1232,7 @@
             // tbmokkihinta
             // 
             this.tbmokkihinta.Location = new System.Drawing.Point(284, 100);
-            this.tbmokkihinta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbmokkihinta.Margin = new System.Windows.Forms.Padding(2);
             this.tbmokkihinta.Name = "tbmokkihinta";
             this.tbmokkihinta.Size = new System.Drawing.Size(76, 20);
             this.tbmokkihinta.TabIndex = 7;
@@ -1229,7 +1240,7 @@
             // tbmokkinimi
             // 
             this.tbmokkinimi.Location = new System.Drawing.Point(107, 70);
-            this.tbmokkinimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbmokkinimi.Margin = new System.Windows.Forms.Padding(2);
             this.tbmokkinimi.Name = "tbmokkinimi";
             this.tbmokkinimi.Size = new System.Drawing.Size(76, 20);
             this.tbmokkinimi.TabIndex = 2;
@@ -1237,7 +1248,7 @@
             // tbmokkiosoite
             // 
             this.tbmokkiosoite.Location = new System.Drawing.Point(107, 100);
-            this.tbmokkiosoite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbmokkiosoite.Margin = new System.Windows.Forms.Padding(2);
             this.tbmokkiosoite.Name = "tbmokkiosoite";
             this.tbmokkiosoite.Size = new System.Drawing.Size(76, 20);
             this.tbmokkiosoite.TabIndex = 3;
@@ -1245,7 +1256,7 @@
             // tbmokkivarustelu
             // 
             this.tbmokkivarustelu.Location = new System.Drawing.Point(284, 45);
-            this.tbmokkivarustelu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbmokkivarustelu.Margin = new System.Windows.Forms.Padding(2);
             this.tbmokkivarustelu.Name = "tbmokkivarustelu";
             this.tbmokkivarustelu.Size = new System.Drawing.Size(76, 20);
             this.tbmokkivarustelu.TabIndex = 5;
@@ -1253,7 +1264,7 @@
             // tbmokkikuvaus
             // 
             this.tbmokkikuvaus.Location = new System.Drawing.Point(284, 70);
-            this.tbmokkikuvaus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbmokkikuvaus.Margin = new System.Windows.Forms.Padding(2);
             this.tbmokkikuvaus.Name = "tbmokkikuvaus";
             this.tbmokkikuvaus.Size = new System.Drawing.Size(76, 20);
             this.tbmokkikuvaus.TabIndex = 6;
@@ -1261,7 +1272,7 @@
             // tbmokkipostinumero
             // 
             this.tbmokkipostinumero.Location = new System.Drawing.Point(107, 131);
-            this.tbmokkipostinumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbmokkipostinumero.Margin = new System.Windows.Forms.Padding(2);
             this.tbmokkipostinumero.Name = "tbmokkipostinumero";
             this.tbmokkipostinumero.Size = new System.Drawing.Size(76, 20);
             this.tbmokkipostinumero.TabIndex = 4;
@@ -1270,7 +1281,7 @@
             // tbmokkialuenimi
             // 
             this.tbmokkialuenimi.Location = new System.Drawing.Point(107, 45);
-            this.tbmokkialuenimi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbmokkialuenimi.Margin = new System.Windows.Forms.Padding(2);
             this.tbmokkialuenimi.Name = "tbmokkialuenimi";
             this.tbmokkialuenimi.Size = new System.Drawing.Size(76, 20);
             this.tbmokkialuenimi.TabIndex = 1;
@@ -1288,7 +1299,7 @@
             // btnperuutamokki
             // 
             this.btnperuutamokki.Location = new System.Drawing.Point(21, 240);
-            this.btnperuutamokki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnperuutamokki.Margin = new System.Windows.Forms.Padding(2);
             this.btnperuutamokki.Name = "btnperuutamokki";
             this.btnperuutamokki.Size = new System.Drawing.Size(56, 24);
             this.btnperuutamokki.TabIndex = 8;
@@ -1299,7 +1310,7 @@
             // btnlisaamokki
             // 
             this.btnlisaamokki.Location = new System.Drawing.Point(22, 201);
-            this.btnlisaamokki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlisaamokki.Margin = new System.Windows.Forms.Padding(2);
             this.btnlisaamokki.Name = "btnlisaamokki";
             this.btnlisaamokki.Size = new System.Drawing.Size(56, 19);
             this.btnlisaamokki.TabIndex = 7;
@@ -1505,16 +1516,6 @@
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnhaeasiakas
-            // 
-            this.btnhaeasiakas.Location = new System.Drawing.Point(194, 218);
-            this.btnhaeasiakas.Name = "btnhaeasiakas";
-            this.btnhaeasiakas.Size = new System.Drawing.Size(91, 23);
-            this.btnhaeasiakas.TabIndex = 61;
-            this.btnhaeasiakas.Text = "Hae asiakas";
-            this.btnhaeasiakas.UseVisualStyleBackColor = true;
-            this.btnhaeasiakas.Click += new System.EventHandler(this.btnhaeasiakas_Click);
             // 
             // Form1
             // 

@@ -162,6 +162,15 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public static void poistalasku(string varausid, string summa, string alv)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "DELETE FROM lasku WHERE varaus_id = " + varausid + " AND summa = " + summa + " AND alv = " + alv + " ;";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
         // mökin poisto varmistuksella 
         public static void poistamokki(string alue_id, string mokkinimi, string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara)
         {
@@ -204,6 +213,24 @@ namespace MökkingProjekti
         {
             SqlConnection con = new SqlConnection(getDatasource());
             string query = "UPDATE asiakas SET etunimi = '"+nimi+"' , sukunimi = '"+sukunimi+"', puhelinnro = '"+puhnum+"', email = '"+email+"', lahiosoite = '" +lahiosoite+"', postinro = '"+ postinum+"' WHERE asiakas_id = "+ID;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+        public static void paivitalasku(string varausid, string summa, string alv, int ID)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "UPDATE lasku SET varaus_id = " + varausid + " , summa = " + summa + ", alv = " + alv + " WHERE lasku_id = " + ID;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+        public static void paivitamokki(string alue_id, string mokkinimi, string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara,int ID)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "UPDATE mokki SET alue_id = "+alue_id+", mokkinimi ='" + mokkinimi + "' , katuosoite = '" + katuosoite + "', postinro = '" + postinro + "', varustelu = '" + varustelu + "', kuvaus = '" + kuvaus + "', hinta = " + hinta+ " , henkilomaara= "+henkilomaara +" WHERE mokki_id = " + ID;
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();

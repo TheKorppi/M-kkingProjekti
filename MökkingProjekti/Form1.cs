@@ -84,7 +84,7 @@ namespace MökkingProjekti
                     tblaskualv.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                     tblaskusumma.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                     tblaskusvarausid.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-
+                    ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                     break;
 
 
@@ -313,12 +313,17 @@ namespace MökkingProjekti
 
         private void btnmuokkaalasku_Click(object sender, EventArgs e)
         {
-
+            Functions.paivitalasku(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text, ID);
+            haetaulu("lasku");
         }
 
         private void btnpoistalasku_Click(object sender, EventArgs e)
         {
+            Functions.poistalasku(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text);
+            haetaulu("lasku");
 
+
+            
         }
 
 
@@ -451,7 +456,8 @@ namespace MökkingProjekti
 
         private void btnmuokkaamokki_Click(object sender, EventArgs e)
         {
-
+            Functions.paivitamokki(tbmokkialuenimi.Text, tbmokkinimi.Text, tbmokkiosoite.Text, tbmokkipostinumero.Text, tbmokkivarustelu.Text, tbmokkikuvaus.Text, tbmokkihenkilomaara.Text, tbmokkihinta.Text,ID);
+            haetaulu("mokki");
         }
 
         private void btnpoistamokki_Click(object sender, EventArgs e)
