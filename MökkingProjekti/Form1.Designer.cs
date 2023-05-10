@@ -87,6 +87,8 @@
             this.lbbillID = new System.Windows.Forms.Label();
             this.tblaskusvarausid = new System.Windows.Forms.TextBox();
             this.Ppalvelu = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Alue = new System.Windows.Forms.Label();
             this.btnpoistapalvelu = new System.Windows.Forms.Button();
             this.btnmuokkaapalvelu = new System.Windows.Forms.Button();
             this.tbpalveluhinta = new System.Windows.Forms.TextBox();
@@ -126,6 +128,8 @@
             this.tbaluenimi = new System.Windows.Forms.TextBox();
             this.lblocationname = new System.Windows.Forms.Label();
             this.Pmokki = new System.Windows.Forms.Panel();
+            this.tbmokkihenkilomaara = new System.Windows.Forms.TextBox();
+            this.lbmokkihenkilomaara = new System.Windows.Forms.Label();
             this.btnpoistamokki = new System.Windows.Forms.Button();
             this.btnmuokkaamokki = new System.Windows.Forms.Button();
             this.tbmokkihinta = new System.Windows.Forms.TextBox();
@@ -161,8 +165,6 @@
             this.tsbtnpalvelut = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btnhaeasiakas = new System.Windows.Forms.Button();
-            this.lbmokkihenkilomaara = new System.Windows.Forms.Label();
-            this.tbmokkihenkilomaara = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
@@ -704,6 +706,8 @@
             // 
             // Ppalvelu
             // 
+            this.Ppalvelu.Controls.Add(this.comboBox1);
+            this.Ppalvelu.Controls.Add(this.Alue);
             this.Ppalvelu.Controls.Add(this.btnpoistapalvelu);
             this.Ppalvelu.Controls.Add(this.btnmuokkaapalvelu);
             this.Ppalvelu.Controls.Add(this.tbpalveluhinta);
@@ -723,6 +727,26 @@
             this.Ppalvelu.Name = "Ppalvelu";
             this.Ppalvelu.Size = new System.Drawing.Size(580, 370);
             this.Ppalvelu.TabIndex = 57;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.alueBindingSource;
+            this.comboBox1.DisplayMember = "nimi";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(401, 27);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 11;
+            this.comboBox1.ValueMember = "nimi";
+            // 
+            // Alue
+            // 
+            this.Alue.AutoSize = true;
+            this.Alue.Location = new System.Drawing.Point(294, 36);
+            this.Alue.Name = "Alue";
+            this.Alue.Size = new System.Drawing.Size(34, 16);
+            this.Alue.TabIndex = 10;
+            this.Alue.Text = "Alue";
             // 
             // btnpoistapalvelu
             // 
@@ -1130,6 +1154,23 @@
             this.Pmokki.Size = new System.Drawing.Size(605, 370);
             this.Pmokki.TabIndex = 58;
             // 
+            // tbmokkihenkilomaara
+            // 
+            this.tbmokkihenkilomaara.Location = new System.Drawing.Point(379, 160);
+            this.tbmokkihenkilomaara.Name = "tbmokkihenkilomaara";
+            this.tbmokkihenkilomaara.Size = new System.Drawing.Size(100, 22);
+            this.tbmokkihenkilomaara.TabIndex = 12;
+            this.tbmokkihenkilomaara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbmokkihenkilomaara_KeyPress);
+            // 
+            // lbmokkihenkilomaara
+            // 
+            this.lbmokkihenkilomaara.AutoSize = true;
+            this.lbmokkihenkilomaara.Location = new System.Drawing.Point(270, 166);
+            this.lbmokkihenkilomaara.Name = "lbmokkihenkilomaara";
+            this.lbmokkihenkilomaara.Size = new System.Drawing.Size(92, 16);
+            this.lbmokkihenkilomaara.TabIndex = 11;
+            this.lbmokkihenkilomaara.Text = "Henkilömäärä";
+            // 
             // btnpoistamokki
             // 
             this.btnpoistamokki.Location = new System.Drawing.Point(168, 295);
@@ -1357,7 +1398,7 @@
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbtnalueetjamökit
             // 
@@ -1365,14 +1406,14 @@
             this.tsbtnalueetjamökit.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnalueetjamökit.Image")));
             this.tsbtnalueetjamökit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnalueetjamökit.Name = "tsbtnalueetjamökit";
-            this.tsbtnalueetjamökit.Size = new System.Drawing.Size(114, 28);
+            this.tsbtnalueetjamökit.Size = new System.Drawing.Size(114, 24);
             this.tsbtnalueetjamökit.Text = "Alueet ja mökit";
             this.tsbtnalueetjamökit.Click += new System.EventHandler(this.tsbtnalueetjamökit_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbtnasiakkaat
             // 
@@ -1380,14 +1421,14 @@
             this.tsbtnasiakkaat.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnasiakkaat.Image")));
             this.tsbtnasiakkaat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnasiakkaat.Name = "tsbtnasiakkaat";
-            this.tsbtnasiakkaat.Size = new System.Drawing.Size(76, 28);
+            this.tsbtnasiakkaat.Size = new System.Drawing.Size(76, 24);
             this.tsbtnasiakkaat.Text = "Asiakkaat";
             this.tsbtnasiakkaat.Click += new System.EventHandler(this.tsbtnasiakkaat_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbtnvaraukset
             // 
@@ -1395,14 +1436,14 @@
             this.tsbtnvaraukset.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnvaraukset.Image")));
             this.tsbtnvaraukset.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnvaraukset.Name = "tsbtnvaraukset";
-            this.tsbtnvaraukset.Size = new System.Drawing.Size(76, 28);
+            this.tsbtnvaraukset.Size = new System.Drawing.Size(76, 24);
             this.tsbtnvaraukset.Text = "Varaukset";
             this.tsbtnvaraukset.Click += new System.EventHandler(this.tsbtnvaraukset_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbtnlaskut
             // 
@@ -1410,14 +1451,14 @@
             this.tsbtnlaskut.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnlaskut.Image")));
             this.tsbtnlaskut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnlaskut.Name = "tsbtnlaskut";
-            this.tsbtnlaskut.Size = new System.Drawing.Size(54, 28);
+            this.tsbtnlaskut.Size = new System.Drawing.Size(54, 24);
             this.tsbtnlaskut.Text = "Laskut";
             this.tsbtnlaskut.Click += new System.EventHandler(this.tsbtnlaskut_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbtnpalvelut
             // 
@@ -1425,14 +1466,14 @@
             this.tsbtnpalvelut.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnpalvelut.Image")));
             this.tsbtnpalvelut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnpalvelut.Name = "tsbtnpalvelut";
-            this.tsbtnpalvelut.Size = new System.Drawing.Size(64, 28);
+            this.tsbtnpalvelut.Size = new System.Drawing.Size(64, 24);
             this.tsbtnpalvelut.Text = "Palvelut";
             this.tsbtnpalvelut.Click += new System.EventHandler(this.tsbtnpalvelut_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // btnhaeasiakas
             // 
@@ -1444,22 +1485,6 @@
             this.btnhaeasiakas.Text = "Hae asiakas";
             this.btnhaeasiakas.UseVisualStyleBackColor = true;
             this.btnhaeasiakas.Click += new System.EventHandler(this.btnhaeasiakas_Click);
-            // 
-            // lbmokkihenkilomaara
-            // 
-            this.lbmokkihenkilomaara.AutoSize = true;
-            this.lbmokkihenkilomaara.Location = new System.Drawing.Point(270, 166);
-            this.lbmokkihenkilomaara.Name = "lbmokkihenkilomaara";
-            this.lbmokkihenkilomaara.Size = new System.Drawing.Size(92, 16);
-            this.lbmokkihenkilomaara.TabIndex = 11;
-            this.lbmokkihenkilomaara.Text = "Henkilömäärä";
-            // 
-            // tbmokkihenkilomaara
-            // 
-            this.tbmokkihenkilomaara.Location = new System.Drawing.Point(379, 160);
-            this.tbmokkihenkilomaara.Name = "tbmokkihenkilomaara";
-            this.tbmokkihenkilomaara.Size = new System.Drawing.Size(100, 22);
-            this.tbmokkihenkilomaara.TabIndex = 12;
             // 
             // Form1
             // 
@@ -1648,6 +1673,8 @@
         private System.Windows.Forms.Button btnhaeasiakas;
         private System.Windows.Forms.TextBox tbmokkihenkilomaara;
         private System.Windows.Forms.Label lbmokkihenkilomaara;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label Alue;
     }
 }
 

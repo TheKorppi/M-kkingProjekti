@@ -71,108 +71,7 @@ namespace MökkingProjekti
 
         }
 
-        private void taulunimicb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-            //muuttaa comboboxissa olevan sanan labelin nimeksi, ja muuttaa ensimmäisen kirjaimen isoksi.
-            string taulunnimi = toolStrip1.Text;
-            switch (taulunnimi.ToString())
-            {
-                case "varaus":
-                    Pvaraus.Enabled = true;
-                    Pvaraus.Visible = true;
-                    Ppalvelu.Enabled = false;
-                    Ppalvelu.Visible = false;
-                    Pmokki.Enabled = false;
-                    Pmokki.Visible = false;
-                    Plasku.Enabled = false;
-                    Plasku.Visible = false;
-                    Pasiakas.Enabled = false;
-                    Pasiakas.Visible = false;
-                    Palue.Enabled = false;
-                    Palue.Visible = false;
-                    break;
-
-                case "alue":
-                    Pvaraus.Enabled = false;
-                    Pvaraus.Visible = false;
-                    Ppalvelu.Enabled = false;
-                    Ppalvelu.Visible = false;
-                    Pmokki.Enabled = false;
-                    Pmokki.Visible = false;
-                    Plasku.Enabled = false;
-                    Plasku.Visible = false;
-                    Pasiakas.Enabled = false;
-                    Pasiakas.Visible = false;
-                    Palue.Enabled = true;
-                    Palue.Visible = true;
-                    break;
-
-                case "palvelu":
-                    Pvaraus.Enabled = false;
-                    Pvaraus.Visible = false;
-                    Ppalvelu.Enabled = true;
-                    Ppalvelu.Visible = true;
-                    Pmokki.Enabled = false;
-                    Pmokki.Visible = false;
-                    Plasku.Enabled = false;
-                    Plasku.Visible = false;
-                    Pasiakas.Enabled = false;
-                    Pasiakas.Visible = false;
-                    Palue.Visible = false;
-                    Palue.Visible = false;
-                    break;
-
-                case "mokki":
-                    Pvaraus.Enabled = false;
-                    Pvaraus.Visible = false;
-                    Ppalvelu.Enabled = false;
-                    Ppalvelu.Visible = false;
-                    Pmokki.Enabled = true;
-                    Pmokki.Visible = true;
-                    Plasku.Enabled = false;
-                    Plasku.Visible = false;
-                    Pasiakas.Enabled = false;
-                    Pasiakas.Visible = false;
-                    Palue.Visible = false;
-                    Palue.Enabled = false;
-                    break;
-
-                case "lasku":
-                    Pvaraus.Enabled = false;
-                    Pvaraus.Visible = false;
-                    Ppalvelu.Enabled = false;
-                    Ppalvelu.Visible = false;
-                    Pmokki.Enabled = false;
-                    Pmokki.Visible = false;
-                    Plasku.Enabled = true;
-                    Plasku.Visible = true;
-                    Pasiakas.Enabled = false;
-                    Pasiakas.Visible = false;
-                    Palue.Enabled = false;
-                    Palue.Visible = false;
-                    break;
-
-                case "asiakas":
-                    Pvaraus.Enabled = false;
-                    Pvaraus.Visible = false;
-                    Ppalvelu.Enabled = false;
-                    Ppalvelu.Visible = false;
-                    Pmokki.Enabled = false;
-                    Pmokki.Visible = false;
-                    Plasku.Enabled = false;
-                    Plasku.Visible = false;
-                    Pasiakas.Enabled = true;
-                    Pasiakas.Visible = true;
-                    Palue.Enabled = false;
-                    Palue.Visible = false;
-                    break;
-
-            }
-            taulunnimi = char.ToUpper(taulunnimi[0]) + taulunnimi.Substring(1);
-            taulunimi.Text = taulunnimi;
-          
-        }
+        
 
         private void laskubtn_Click(object sender, EventArgs e) // aukasee LASKUT formin
         {
@@ -511,12 +410,14 @@ namespace MökkingProjekti
             tbmokkivarustelu.Clear();
             tbmokkikuvaus.Clear();
             tbmokkihinta.Clear();
+            tbmokkihenkilomaara.Clear();
         }  // TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
 
         private void btnlisaamokki_Click(object sender, EventArgs e)
         {
-
-        }
+            Functions.lisaamokki(tbmokkialuenimi.Text, tbmokkinimi.Text, tbmokkiosoite.Text, tbmokkipostinumero.Text, tbmokkivarustelu.Text, tbmokkikuvaus.Text, tbmokkihenkilomaara.Text, tbmokkihinta.Text);
+            haetaulu(mode);
+        } // onnistuu mökin lisääminen tietokantaan ja näyttää datagripviewissä
 
         private void btnmuokkaamokki_Click(object sender, EventArgs e)
         {
@@ -525,7 +426,8 @@ namespace MökkingProjekti
 
         private void btnpoistamokki_Click(object sender, EventArgs e)
         {
-
+            Functions.poistamokki(tbmokkialuenimi.Text, tbmokkinimi.Text, tbmokkiosoite.Text,tbmokkipostinumero.Text, tbmokkivarustelu.Text, tbmokkikuvaus.Text,tbmokkihinta.Text,tbmokkihenkilomaara.Text);
+            haetaulu(mode);
         }
 
 
@@ -616,6 +518,15 @@ namespace MökkingProjekti
                 e.Handled = true;
             }
         }
+        
+        private void tbmokkihenkilomaara_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         private void btnhaeasiakas_Click(object sender, EventArgs e)
         {
@@ -633,6 +544,6 @@ namespace MökkingProjekti
             }
         }
 
-
+       
     }
 }

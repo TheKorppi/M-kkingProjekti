@@ -13,6 +13,7 @@ using iTextSharp.text.pdf.parser;
 using Org.BouncyCastle.Utilities.Collections;
 using static MökkingProjekti.MokkingDBDataSet;
 using System.Collections;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace MökkingProjekti
 {
@@ -79,6 +80,43 @@ namespace MökkingProjekti
             con.Close();
         }
 
+        //lisää mökin tietokantaan ja näyttää datagripviewissä
+        public static void lisaamokki(string alue_id, string mokkinimi,string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara)
+        {   
+            /*
+            string connection = getDatasource();
+            string query = "insert into mokki(alue_id, mokkinimi, katuosoite, postinro, varustelu, kuvaus, hinta, henkilomaara) values" + "('" + alue_id + "','" + mokkinimi + "','" + katuosoite + "','" + postinro + "','" + varustelu + "','" + kuvaus + "','" + henkilomaara + "','" + hinta + "');";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlCommand command = new SqlCommand(query, con);
+            command.ExecuteNonQuery();
+            */ //yksinkertainen versio
+
+            //mökin lisäys varmistuksen kanssa, ei lisää jos tiedo löytyvät
+
+            string connection = getDatasource();
+            string query = "SELECT COUNT(*) FROM mokki WHERE alue_id='" + alue_id + "' AND mokkinimi='" + mokkinimi + "' AND katuosoite='" + katuosoite + "' AND postinro='" + postinro + "' AND varustelu='" + varustelu + "' AND kuvaus='" + kuvaus  + "'";
+            SqlConnection conn = new SqlConnection(connection);
+            conn.Open();
+            SqlCommand command = new SqlCommand(query, conn);
+            int count = (int)command.ExecuteScalar();
+            conn.Close();
+
+            // jos mokki ei olo jo tietokannassa,suorita lisäys
+            if(count == 0)
+            {
+                conn.Open();
+                query = "INSERT INTO mokki (alue_id, mokkinimi, katuosoite, postinro, varustelu, kuvaus, hinta, henkilomaara) VALUES ('" + alue_id + "','" + mokkinimi + "','" + katuosoite + "','" + postinro + "','" + varustelu + "','" + kuvaus + "','" + henkilomaara + "','" + hinta + "');";
+                command = new SqlCommand(query, conn);
+                command.ExecuteNonQuery();
+                conn.Close();
+            }
+            else
+            {
+                MessageBox.Show("Mökki nimellä ja kuvauksella " + mokkinimi + "  " + kuvaus + " on jo tietokannassa");
+            }
+        }
+        //lisää alueen tietokantaan ja varmistaa onko aluetta ennestään tietokannassa
         public static void lisaaalue(string nimi)
         {
             string connection = getDatasource();
@@ -114,7 +152,31 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        // mökin poisto varmistuksella 
+        public static void poistamokki(string alue_id, string mokkinimi, string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara)
+        {
+            /*
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "DELETE FROM mokki WHERE mokkinimi='" + mokkinimi + "' AND kuvaus= '" + kuvaus + "';";
+            con.Open();
+            SqlCommand command = new SqlCommand(query, con);    
+            command.ExecuteNonQuery();
+            con.Close();
+            */
 
+            DialogResult result = MessageBox.Show("Haluatko varmasti poistaa tämän mökin?", "Vahvistus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SqlConnection con = new SqlConnection(getDatasource());
+                string query = "DELETE FROM mokki WHERE mokkinimi='" + mokkinimi + "' AND kuvaus= '" + kuvaus + "';";
+                con.Open();
+                SqlCommand command = new SqlCommand(query, con);
+                command.ExecuteNonQuery();
+                con.Close();
+            }
+
+        }
+        // alueen poisto varmistuksella 
         public static void poistaalue(string nimi)
         {
             DialogResult result = MessageBox.Show("Haluatko varmasti poistaa alueen?", "Vahvista poisto", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
