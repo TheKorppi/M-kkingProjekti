@@ -196,7 +196,8 @@ namespace MökkingProjekti
 
         private void lisaabtn_Click(object sender, EventArgs e)
         {
-
+            Functions.haelaskutieto(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text, "lasku");
+            haetaulu("lasku");
         }
 
         private void tietokannanTiedostopolkuToolStripMenuItem_Click(object sender, EventArgs e)

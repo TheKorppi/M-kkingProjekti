@@ -394,6 +394,283 @@ namespace MökkingProjekti
             adapter.Fill(dataSet, taulunimi);
             return dataSet;
         }
+        public static DataSet haemokkitieto(string alueid, string postinro, string mokkinimi, string kuvaus, string katuosoite, string hinta, string henkilomaara, string varustelu,string taulunimi)
+        {
+            int count = 0;
+            string query = "SELECT * FROM " + taulunimi + " WHERE "; //alue_id = alueid and postinro = @postinro and mokkinimi = @mokkinimi and kuvaus = @kuvaus and katuosoite = @katuosoite and hinta = @hinta" and henkilomaara = @henkilomaara and =a;
+            if (alueid != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "alue_id = @alueid ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and alue_id = @alueid ";
+                }
+
+            }
+            if (postinro != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "postinro = @postinro ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and postinro = @postinro ";
+                }
+            }
+            if (mokkinimi != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "mokkinimi = @mokkinimi ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and mokkinimi = @mokkinimi ";
+                }
+            }
+            if (kuvaus != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "kuvaus = @kuvaus ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and kuvaus = @kuvaus ";
+                }
+            }
+            if (katuosoite != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "katuosoite = @katuosoite ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and katuosoite = @katuosoite ";
+                }
+            }
+            if (hinta != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "hinta = @hinta ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and hinta = @hinta ";
+                }
+            }
+            if (henkilomaara != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "henkilomaara = @henkilomaara ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and henkilomaara = @henkilomaara ";
+                }
+            }
+            if (varustelu != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "varustelu = @varustelu ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and varustelu = @varustelu ";
+                }
+            }
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, getDatasource());
+            DataSet dataSet = new DataSet();
+            adapter.SelectCommand.Parameters.AddWithValue("@alue_id", alueid);
+            adapter.SelectCommand.Parameters.AddWithValue("@postinro", postinro);
+            adapter.SelectCommand.Parameters.AddWithValue("@mokkinimi", mokkinimi);
+            adapter.SelectCommand.Parameters.AddWithValue("@kuvaus", kuvaus);
+            adapter.SelectCommand.Parameters.AddWithValue("@katuosoite", katuosoite);
+            adapter.SelectCommand.Parameters.AddWithValue("@hinta", hinta);
+            adapter.SelectCommand.Parameters.AddWithValue("@henkilomaara", henkilomaara);
+            adapter.SelectCommand.Parameters.AddWithValue("@varustelu", varustelu);
+            adapter.Fill(dataSet, taulunimi);
+            return dataSet;
+
+        }
+        public static DataSet haelaskutieto(string varaus_id, string summa, string alv, string taulunimi)
+        {
+            int count = 0;
+            string query = "SELECT * FROM " + taulunimi + " WHERE "; //varaus_id = alueid and summa = @summa and alv = @alv and kuvaus = @kuvaus and katuosoite = @katuosoite and hinta = @hinta" and henkilomaara = @henkilomaara and =a;
+            if (varaus_id != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "varaus_id = @varaus_id ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and varaus_id = @varaus_id ";
+                }
+
+            }
+            if (summa != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "summa = @summa ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and summa = @summa ";
+                }
+            }
+            if (alv != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "alv = @alv ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and alv = @alv ";
+                }
+            }
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, getDatasource());
+            DataSet dataSet = new DataSet();
+            adapter.SelectCommand.Parameters.AddWithValue("@varaus_id", varaus_id);
+            adapter.SelectCommand.Parameters.AddWithValue("@summa", summa);
+            adapter.SelectCommand.Parameters.AddWithValue("@alv", alv);
+
+            adapter.Fill(dataSet, taulunimi);
+            return dataSet;
+        }
+        public static DataSet haepalvelutieto(string alueid, string nimi, string tyyppi, string kuvaus, string hinta, string alv, string taulunimi)
+        {
+            int count = 0;
+            string query = "SELECT * FROM " + taulunimi + " WHERE "; //alue_id = alueid and nimi = @nimi and tyyppi = @tyyppi and kuvaus = @kuvaus and hinta = @hinta and hinta = @hinta" and alv = @alv and =a;
+            if (nimi != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "alue_id = @alueid ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and alue_id = @alueid ";
+                }
+
+            }
+            if (nimi != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "nimi = @nimi ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and nimi = @nimi ";
+                }
+            }
+            if (tyyppi != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "tyyppi = @tyyppi ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and tyyppi = @tyyppi ";
+                }
+            }
+            if (kuvaus != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "kuvaus = @kuvaus ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and kuvaus = @kuvaus ";
+                }
+            }
+            if (hinta != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "hinta = @hinta ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and hinta = @hinta ";
+                }
+            }
+
+            if (alv != "")
+            {
+
+                if (count == 0)
+                {
+                    query = query + "alv = @alv ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and alv = @alv ";
+                }
+            }
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, getDatasource());
+            DataSet dataSet = new DataSet();
+            adapter.SelectCommand.Parameters.AddWithValue("alueid", nimi);
+            adapter.SelectCommand.Parameters.AddWithValue("@nimi", nimi);
+            adapter.SelectCommand.Parameters.AddWithValue("@tyyppi", tyyppi);
+            adapter.SelectCommand.Parameters.AddWithValue("@kuvaus", kuvaus);
+            adapter.SelectCommand.Parameters.AddWithValue("@hinta", hinta);
+            adapter.SelectCommand.Parameters.AddWithValue("@alv", alv);
+            adapter.Fill(dataSet, taulunimi);
+            return dataSet;
+
+        }
         public static string getDatasource()
         {
             StreamReader sr = new StreamReader(getpath());
