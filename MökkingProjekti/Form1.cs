@@ -100,11 +100,19 @@ namespace MökkingProjekti
                 case "palvelu":
                     if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
                     {
-                        tbpalvelunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                        tbpalvelutyyppi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                        tbpalvelukuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                        tbpalveluhinta.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                        ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                        if (state)
+                        {
+                            tbvarauspalveluid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                            tbpalvelunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                            tbpalvelutyyppi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                            tbpalvelukuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                            tbpalveluhinta.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                            ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                        }
+                        else
+                        {
+                            tbvarauksenpalvelutid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                        }
                     }
                     break;
 
