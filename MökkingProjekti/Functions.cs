@@ -795,128 +795,145 @@ namespace MökkingProjekti
         }
         public static string reader()
         {
-            
-            
-            SqlConnection con = new SqlConnection(getDatasource());
-            string query = "SELECT varaus_id FROM varaus WHERE varaus_id = (SELECT MAX(varaus_id) FROM varaus);";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataReader rdr = cmd.ExecuteReader();
-            
-            while (rdr.Read())
+            try
             {
-                string id = rdr["varaus_id"].ToString();
-                return id;
-                
+                SqlConnection con = new SqlConnection(getDatasource());
+                string query = "SELECT varaus_id FROM varaus WHERE varaus_id = (SELECT MAX(varaus_id) FROM varaus);";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    string id = rdr["varaus_id"].ToString();
+                    return id;
+
+                }
+                con.Close();
+                return null;
             }
-            con.Close();
-            return null;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null ;
+            }
+
+            
 
         }
         public static DataSet haepalvelutieto(string alueid, string nimi, string tyyppi, string kuvaus, string hinta, string alv, string taulunimi)
         {
-            int count = 0;
-            string query = "SELECT * FROM " + taulunimi + " WHERE "; //alue_id = alueid and nimi = @nimi and tyyppi = @tyyppi and kuvaus = @kuvaus and hinta = @hinta and hinta = @hinta" and alv = @alv and =a;
-            if (alueid != "")
+            try
             {
-
-                if (count == 0)
+                int count = 0;
+                string query = "SELECT * FROM " + taulunimi + " WHERE "; //alue_id = alueid and nimi = @nimi and tyyppi = @tyyppi and kuvaus = @kuvaus and hinta = @hinta and hinta = @hinta" and alv = @alv and =a;
+                if (alueid != "")
                 {
-                    query = query + "alue_id = @alueid ";
-                    count++;
+
+                    if (count == 0)
+                    {
+                        query = query + "alue_id = @alueid ";
+                        count++;
+                    }
+                    else
+                    {
+                        query = query + "and alue_id = @alueid ";
+                    }
+
                 }
                 else
+                    alueid = null;
+                if (nimi != "")
                 {
-                    query = query + "and alue_id = @alueid ";
+
+                    if (count == 0)
+                    {
+                        query = query + "nimi = @nimi ";
+                        count++;
+                    }
+                    else
+                    {
+                        query = query + "and nimi = @nimi ";
+                    }
                 }
-
-            }
-            else 
-                alueid = null;
-            if (nimi != "")
-            {
-
-                if (count == 0)
+                if (tyyppi != "")
                 {
-                    query = query + "nimi = @nimi ";
-                    count++;
+
+                    if (count == 0)
+                    {
+                        query = query + "tyyppi = @tyyppi ";
+                        count++;
+                    }
+                    else
+                    {
+                        query = query + "and tyyppi = @tyyppi ";
+                    }
                 }
                 else
+                    tyyppi = null;
+                if (kuvaus != "")
                 {
-                    query = query + "and nimi = @nimi ";
-                }
-            }
-            if (tyyppi != "")
-            {
 
-                if (count == 0)
+                    if (count == 0)
+                    {
+                        query = query + "kuvaus = @kuvaus ";
+                        count++;
+                    }
+                    else
+                    {
+                        query = query + "and kuvaus = @kuvaus ";
+                    }
+                }
+                if (hinta != "")
                 {
-                    query = query + "tyyppi = @tyyppi ";
-                    count++;
+
+                    if (count == 0)
+                    {
+                        query = query + "hinta = @hinta ";
+                        count++;
+                    }
+                    else
+                    {
+                        query = query + "and hinta = @hinta ";
+                    }
                 }
                 else
-                {
-                    query = query + "and tyyppi = @tyyppi ";
-                }
-            }
-            else
-                tyyppi = null;
-            if (kuvaus != "")
-            {
+                    hinta = null;
 
-                if (count == 0)
+                if (alv != "")
                 {
-                    query = query + "kuvaus = @kuvaus ";
-                    count++;
+
+                    if (count == 0)
+                    {
+                        query = query + "alv = @alv ";
+                        count++;
+                    }
+                    else
+                    {
+                        query = query + "and alv = @alv ";
+                    }
                 }
                 else
-                {
-                    query = query + "and kuvaus = @kuvaus ";
-                }
+                    alv = null;
+
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, getDatasource());
+                DataSet dataSet = new DataSet();
+                adapter.SelectCommand.Parameters.AddWithValue("alueid", Convert.ToInt32(alueid));
+                adapter.SelectCommand.Parameters.AddWithValue("@nimi", nimi);
+                adapter.SelectCommand.Parameters.AddWithValue("@tyyppi", Convert.ToInt32(tyyppi));
+                adapter.SelectCommand.Parameters.AddWithValue("@kuvaus", kuvaus);
+                adapter.SelectCommand.Parameters.AddWithValue("@hinta", Convert.ToDouble(hinta));
+                adapter.SelectCommand.Parameters.AddWithValue("@alv", Convert.ToDouble(alv));
+                adapter.Fill(dataSet, taulunimi);
+                return dataSet;
             }
-            if (hinta != "")
+            catch (Exception ex)
             {
-
-                if (count == 0)
-                {
-                    query = query + "hinta = @hinta ";
-                    count++;
-                }
-                else
-                {
-                    query = query + "and hinta = @hinta ";
-                }
+                MessageBox.Show(ex.ToString());
+                return null;
             }
-            else
-                hinta = null;
-
-            if (alv != "")
-            {
-
-                if (count == 0)
-                {
-                    query = query + "alv = @alv ";
-                    count++;
-                }
-                else
-                {
-                    query = query + "and alv = @alv ";
-                }
-            }
-            else
-                alv = null;
-
-
-            SqlDataAdapter adapter = new SqlDataAdapter(query, getDatasource());
-            DataSet dataSet = new DataSet();
-            adapter.SelectCommand.Parameters.AddWithValue("alueid",Convert.ToInt32(alueid));
-            adapter.SelectCommand.Parameters.AddWithValue("@nimi", nimi);
-            adapter.SelectCommand.Parameters.AddWithValue("@tyyppi", Convert.ToInt32(tyyppi));
-            adapter.SelectCommand.Parameters.AddWithValue("@kuvaus", kuvaus);
-            adapter.SelectCommand.Parameters.AddWithValue("@hinta", Convert.ToDouble(hinta));
-            adapter.SelectCommand.Parameters.AddWithValue("@alv", Convert.ToDouble(alv));
-            adapter.Fill(dataSet, taulunimi);
-            return dataSet;
+            
 
         }
         public static string getDatasource()
