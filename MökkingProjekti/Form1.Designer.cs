@@ -558,7 +558,6 @@
             this.Pvaraus.Name = "Pvaraus";
             this.Pvaraus.Size = new System.Drawing.Size(1195, 369);
             this.Pvaraus.TabIndex = 56;
-            this.Pvaraus.Paint += new System.Windows.Forms.PaintEventHandler(this.Pvaraus_Paint);
             // 
             // tbhaku
             // 
@@ -628,7 +627,6 @@
             this.Plasku.Name = "Plasku";
             this.Plasku.Size = new System.Drawing.Size(579, 370);
             this.Plasku.TabIndex = 46;
-            this.Plasku.Paint += new System.Windows.Forms.PaintEventHandler(this.Plasku_Paint);
             // 
             // btnvaraushae
             // 
@@ -727,7 +725,6 @@
             this.lbbillID.Size = new System.Drawing.Size(66, 16);
             this.lbbillID.TabIndex = 1;
             this.lbbillID.Text = "Varaus ID";
-            this.lbbillID.Click += new System.EventHandler(this.label3_Click);
             // 
             // tblaskusvarausid
             // 

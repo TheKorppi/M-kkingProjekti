@@ -69,6 +69,7 @@ namespace MökkingProjekti
             return dataSet;
 
         }
+        
         //lisää asiakas tietokantaan ja varmistaa onko aluetta ennestään tietokannassa
         public static void lisaaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum)
         {
@@ -326,7 +327,6 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
-
         public static void paivitalasku(string varausid, string summa, string alv, int ID)
         {
             SqlConnection con = new SqlConnection(getDatasource());

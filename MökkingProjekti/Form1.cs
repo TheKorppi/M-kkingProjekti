@@ -233,6 +233,11 @@ namespace MökkingProjekti
 
                 toolTip1.SetToolTip(this.aikajaksobtn, "Aukaisee uuden sivun aikajaksoraporteille");
                 toolTip1.SetToolTip(this.laskubtn, "Aukaisee uuden sivun laskuja varten");
+
+                toolTip1.SetToolTip(this.btnvaihdanakymaa, "Näyttää varaukset");
+                toolTip1.SetToolTip(this.btnvarauspalvelulisaa, "Lisää palvelu varaukseeen");
+                toolTip1.SetToolTip(this.btnvarauspalvelupoista, "Poistaa lisäpalvelut varauksesta");
+                toolTip1.SetToolTip(this.btnvarauspalvelumuokkaa, "Voit muokata varauksen palveluita");
             }
        
         }
@@ -254,18 +259,6 @@ namespace MökkingProjekti
         private void tietokannanTiedostopolkuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Functions.folderpath(Functions.getpath());
-        }
-
-       
-
-        private void Pvaraus_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void aikajaksobtn_Click(object sender, EventArgs e) // aukasee aikajaksoRAPORTIT formille 
@@ -644,16 +637,6 @@ namespace MökkingProjekti
 
 
 
-
-
-
-        private void Plasku_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-
         // VARMISTUKSIA, ei voi syöttää  kuin numeroita ja tietyn verran
 
         private void tbasiakaspostinum_KeyPress(object sender, KeyPressEventArgs e)
@@ -739,7 +722,6 @@ namespace MökkingProjekti
             }
         }
 
-
         private void btnhaeasiakas_Click(object sender, EventArgs e)
         {
             DataSet dataa = Functions.haetieto(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text, "asiakas");
@@ -756,6 +738,8 @@ namespace MökkingProjekti
                 e.SuppressKeyPress = true;
             }
         }
+
+
 
         private void btnmokkihaku_Click(object sender, EventArgs e)
         {
