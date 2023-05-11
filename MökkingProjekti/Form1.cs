@@ -530,7 +530,7 @@ namespace MökkingProjekti
 
         private void btnmuokkaamokki_Click(object sender, EventArgs e)
         {
-            Functions.paivitamokki(tbmokkialuenimi.Text, tbmokkinimi.Text, tbmokkiosoite.Text, tbmokkipostinumero.Text, tbmokkivarustelu.Text, tbmokkikuvaus.Text, tbmokkihenkilomaara.Text, tbmokkihinta.Text,ID);
+            Functions.paivitamokki(tbmokkialuenimi.Text, tbmokkinimi.Text, tbmokkiosoite.Text, tbmokkipostinumero.Text, tbmokkivarustelu.Text, tbmokkikuvaus.Text, tbmokkihinta.Text, tbmokkihenkilomaara.Text, ID);
             haetaulu("mokki");
         }
 
