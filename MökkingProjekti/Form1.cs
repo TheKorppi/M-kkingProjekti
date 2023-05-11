@@ -97,6 +97,28 @@ namespace MökkingProjekti
 
             }
         }
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            switch (mode)
+            {               
+                case "varaus":
+
+                    IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
+                    haetaulu("varaus");
+                    break;
+
+                case "palvelu":
+                    cmbpalvelualue.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
+                    break;
+
+                case "mokki":
+                    tbaluenimi.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
+                   
+                    break;
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -339,7 +361,8 @@ namespace MökkingProjekti
 
         private void btnmuokkaaalue_Click(object sender, EventArgs e)
         {
-           
+            Functions.paivitaalue(tbaluenimi.Text, IDhelp);
+            haeaputaulu("alue");
 
         }
 
@@ -593,6 +616,6 @@ namespace MökkingProjekti
             }
         }
 
-       
+        
     }
 }

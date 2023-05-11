@@ -264,6 +264,16 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public static void paivitaalue(string nimi, int id)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "UPDATE alue SET nimi = '" + nimi + "' WHERE alue_id = " + id;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
 
         public static DataSet haetieto(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum, string taulunimi)
         {
