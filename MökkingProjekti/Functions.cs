@@ -14,6 +14,7 @@ using Org.BouncyCastle.Utilities.Collections;
 using static MökkingProjekti.MokkingDBDataSet;
 using System.Collections;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Org.BouncyCastle.Asn1.X500;
 
 namespace MökkingProjekti
 {
@@ -612,6 +613,26 @@ namespace MökkingProjekti
 
             adapter.Fill(dataSet, taulunimi);
             return dataSet;
+        }
+        public static string reader()
+        {
+            
+            
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "SELECT varaus_id FROM varaus WHERE varaus_id = (SELECT MAX(varaus_id) FROM varaus);";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader rdr = cmd.ExecuteReader();
+            
+            while (rdr.Read())
+            {
+                string id = rdr["varaus_id"].ToString();
+                return id;
+                con.Close();
+            }
+            con.Close();
+            return null;
+
         }
         public static DataSet haepalvelutieto(string alueid, string nimi, string tyyppi, string kuvaus, string hinta, string alv, string taulunimi)
         {
