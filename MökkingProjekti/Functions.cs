@@ -200,6 +200,15 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public static void poistavaraus(string varausid)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "DELETE FROM varaus WHERE varaus_id = " + varausid + ";";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
         // mökin poisto varmistuksella 
         public static void poistamokki(string alue_id, string mokkinimi, string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara)
         {

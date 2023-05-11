@@ -79,6 +79,10 @@ namespace MökkingProjekti
                         haetaulu("varaus");
                         haku = false;
                     }
+                    else
+                    {
+                        ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    }
                     break;
 
                 case "palvelu":
@@ -455,7 +459,8 @@ namespace MökkingProjekti
 
         private void btnpoistavaraus_Click(object sender, EventArgs e)
         {
-            taulunimi.Text = dtplahtopaiva.Value.ToShortDateString();
+            Functions.poistavaraus(ID.ToString());
+            haetaulu("varaus");
         } 
         
         private void btreservation_Click(object sender, EventArgs e)
