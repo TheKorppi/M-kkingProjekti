@@ -255,6 +255,15 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public static void paivitapalvelu(string alueid, string nimi, string typpi, string kuvaus, string hinta, string alv,int ID)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "UPDATE palvelu SET alue_id = " + alueid + ", nimi ='" + nimi + "' , tyyppi = " + typpi + ", kuvaus = '" + kuvaus + "', hinta = " + hinta + ", alv = " + alv + " WHERE palvelu_id = " + ID;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
         public static DataSet haetieto(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum, string taulunimi)
         {

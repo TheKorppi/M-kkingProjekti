@@ -363,7 +363,8 @@ namespace MökkingProjekti
 
         private void btnmuokkaapalvelu_Click(object sender, EventArgs e)
         {
-
+            Functions.paivitapalvelu(cmbpalvelualue.Text, tbpalvelunimi.Text, tbpalvelutyyppi.Text, tbpalvelukuvaus.Text, tbpalveluhinta.Text, tbpalvelualv.Text, ID);
+            haetaulu("palvelu");
         }
 
         private void btnperuutapalvelu_Click(object sender, EventArgs e) // TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
