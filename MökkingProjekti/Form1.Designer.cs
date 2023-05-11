@@ -76,6 +76,7 @@
             this.btnpoistavaraus = new System.Windows.Forms.Button();
             this.btnmuokkaavaraus = new System.Windows.Forms.Button();
             this.Plasku = new System.Windows.Forms.Panel();
+            this.btnvaraushae = new System.Windows.Forms.Button();
             this.btnmuokkaalasku = new System.Windows.Forms.Button();
             this.btnpoistalasku = new System.Windows.Forms.Button();
             this.btnperuutalasku = new System.Windows.Forms.Button();
@@ -87,6 +88,7 @@
             this.lbbillID = new System.Windows.Forms.Label();
             this.tblaskusvarausid = new System.Windows.Forms.TextBox();
             this.Ppalvelu = new System.Windows.Forms.Panel();
+            this.btnhaepalvelu = new System.Windows.Forms.Button();
             this.cmbpalvelualue = new System.Windows.Forms.ComboBox();
             this.Alue = new System.Windows.Forms.Label();
             this.btnpoistapalvelu = new System.Windows.Forms.Button();
@@ -129,6 +131,7 @@
             this.tbaluenimi = new System.Windows.Forms.TextBox();
             this.lblocationname = new System.Windows.Forms.Label();
             this.Pmokki = new System.Windows.Forms.Panel();
+            this.btnmokkihaku = new System.Windows.Forms.Button();
             this.tbmokkihenkilomaara = new System.Windows.Forms.TextBox();
             this.lbmokkihenkilomaara = new System.Windows.Forms.Label();
             this.btnpoistamokki = new System.Windows.Forms.Button();
@@ -166,9 +169,6 @@
             this.tsbtnpalvelut = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btnmokkihaku = new System.Windows.Forms.Button();
-            this.btnlaskuhaku = new System.Windows.Forms.Button();
-            this.btnhaepalvelu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
@@ -602,7 +602,7 @@
             // 
             // Plasku
             // 
-            this.Plasku.Controls.Add(this.btnlaskuhaku);
+            this.Plasku.Controls.Add(this.btnvaraushae);
             this.Plasku.Controls.Add(this.btnmuokkaalasku);
             this.Plasku.Controls.Add(this.btnpoistalasku);
             this.Plasku.Controls.Add(this.btnperuutalasku);
@@ -619,6 +619,16 @@
             this.Plasku.Size = new System.Drawing.Size(434, 301);
             this.Plasku.TabIndex = 46;
             this.Plasku.Paint += new System.Windows.Forms.PaintEventHandler(this.Plasku_Paint);
+            // 
+            // btnvaraushae
+            // 
+            this.btnvaraushae.Location = new System.Drawing.Point(249, 33);
+            this.btnvaraushae.Name = "btnvaraushae";
+            this.btnvaraushae.Size = new System.Drawing.Size(75, 23);
+            this.btnvaraushae.TabIndex = 8;
+            this.btnvaraushae.Text = "Hae varaus";
+            this.btnvaraushae.UseVisualStyleBackColor = true;
+            this.btnvaraushae.Click += new System.EventHandler(this.btnvaraushae_Click);
             // 
             // btnmuokkaalasku
             // 
@@ -743,6 +753,16 @@
             this.Ppalvelu.Name = "Ppalvelu";
             this.Ppalvelu.Size = new System.Drawing.Size(435, 301);
             this.Ppalvelu.TabIndex = 57;
+            // 
+            // btnhaepalvelu
+            // 
+            this.btnhaepalvelu.Location = new System.Drawing.Point(238, 201);
+            this.btnhaepalvelu.Name = "btnhaepalvelu";
+            this.btnhaepalvelu.Size = new System.Drawing.Size(75, 23);
+            this.btnhaepalvelu.TabIndex = 12;
+            this.btnhaepalvelu.Text = "Hae palvelu";
+            this.btnhaepalvelu.UseVisualStyleBackColor = true;
+            this.btnhaepalvelu.Click += new System.EventHandler(this.btnhaepalvelu_Click);
             // 
             // cmbpalvelualue
             // 
@@ -1196,6 +1216,16 @@
             this.Pmokki.Size = new System.Drawing.Size(454, 301);
             this.Pmokki.TabIndex = 58;
             // 
+            // btnmokkihaku
+            // 
+            this.btnmokkihaku.Location = new System.Drawing.Point(356, 201);
+            this.btnmokkihaku.Name = "btnmokkihaku";
+            this.btnmokkihaku.Size = new System.Drawing.Size(75, 23);
+            this.btnmokkihaku.TabIndex = 13;
+            this.btnmokkihaku.Text = "Hae mökki";
+            this.btnmokkihaku.UseVisualStyleBackColor = true;
+            this.btnmokkihaku.Click += new System.EventHandler(this.btnmokkihaku_Click);
+            // 
             // tbmokkihenkilomaara
             // 
             this.tbmokkihenkilomaara.Location = new System.Drawing.Point(284, 130);
@@ -1414,7 +1444,7 @@
             this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1823, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1481, 25);
             this.toolStrip1.TabIndex = 60;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -1528,47 +1558,17 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(1216, 443);
+            this.dataGridView2.Location = new System.Drawing.Point(990, 461);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(364, 300);
+            this.dataGridView2.Size = new System.Drawing.Size(371, 282);
             this.dataGridView2.TabIndex = 61;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            // 
-            // btnmokkihaku
-            // 
-            this.btnmokkihaku.Location = new System.Drawing.Point(356, 201);
-            this.btnmokkihaku.Name = "btnmokkihaku";
-            this.btnmokkihaku.Size = new System.Drawing.Size(75, 23);
-            this.btnmokkihaku.TabIndex = 13;
-            this.btnmokkihaku.Text = "Hae mökki";
-            this.btnmokkihaku.UseVisualStyleBackColor = true;
-            this.btnmokkihaku.Click += new System.EventHandler(this.btnmokkihaku_Click);
-            // 
-            // btnlaskuhaku
-            // 
-            this.btnlaskuhaku.Location = new System.Drawing.Point(249, 33);
-            this.btnlaskuhaku.Name = "btnlaskuhaku";
-            this.btnlaskuhaku.Size = new System.Drawing.Size(75, 23);
-            this.btnlaskuhaku.TabIndex = 8;
-            this.btnlaskuhaku.Text = "Hae lasku";
-            this.btnlaskuhaku.UseVisualStyleBackColor = true;
-            this.btnlaskuhaku.Click += new System.EventHandler(this.btnvaraushae_Click);
-            // 
-            // btnhaepalvelu
-            // 
-            this.btnhaepalvelu.Location = new System.Drawing.Point(238, 201);
-            this.btnhaepalvelu.Name = "btnhaepalvelu";
-            this.btnhaepalvelu.Size = new System.Drawing.Size(75, 23);
-            this.btnhaepalvelu.TabIndex = 12;
-            this.btnhaepalvelu.Text = "Hae palvelu";
-            this.btnhaepalvelu.UseVisualStyleBackColor = true;
-            this.btnhaepalvelu.Click += new System.EventHandler(this.btnhaepalvelu_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1823, 857);
+            this.ClientSize = new System.Drawing.Size(1481, 857);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.Plasku);
@@ -1755,7 +1755,7 @@
         private System.Windows.Forms.Label Alue;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btnmokkihaku;
-        private System.Windows.Forms.Button btnlaskuhaku;
+        private System.Windows.Forms.Button btnvaraushae;
         private System.Windows.Forms.Button btnhaepalvelu;
     }
 }
