@@ -141,7 +141,17 @@ namespace MökkingProjekti
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ToolTip toolTip1 = new ToolTip();
 
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+            // Force the ToolTip text to be displayed whether or not the form is active.
+            toolTip1.ShowAlways = true;
+            toolTip1.SetToolTip(this.btnasiakaslisaa, "Lisää asiakas Tauluun");
+            toolTip1.SetToolTip(this.btnasiakasperuuta, "Tyhjennä Laatikot");
+            toolTip1.SetToolTip(this.btnmuokkaa, "Muokkaa Taulukosta Valittua Asiakasta");
         }
 
         
