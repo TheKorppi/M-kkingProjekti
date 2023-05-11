@@ -72,6 +72,7 @@ namespace MökkingProjekti
 
         public static void lisaaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum)
         {
+            /*
             string connection = getDatasource();
             string query = "insert into asiakas(etunimi, sukunimi, puhelinnro, email, lahiosoite, postinro)  values" + "('" + nimi + "','" + sukunimi + "','" + puhnum + "','" + email + "','" + lahiosoite + "','" + postinum + "');";
             SqlConnection con = new SqlConnection(connection);
@@ -79,9 +80,34 @@ namespace MökkingProjekti
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             con.Close();
+            */
+
+            string connection = getDatasource();
+            string query = "SELECT COUNT(*) FROM asiakas WHERE etunimi='" + nimi + "' AND sukunimi='" + sukunimi + "' AND puhelinnro='" + puhnum + "' AND email='" + email + "' AND lahiosoite='" + lahiosoite + "' AND postinro='" + postinum + "';";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlCommand command = new SqlCommand(query, con);
+            int count = (int)command.ExecuteScalar();
+            con.Close();
+
+            // Jos asiakasta ei ole jo tietokannassa, suorita lisäys
+            if (count == 0)
+            {
+                con.Open();
+                query = "INSERT INTO asiakas(etunimi, sukunimi, puhelinnro, email, lahiosoite, postinro)  values" + "('" + nimi + "','" + sukunimi + "','" + puhnum + "','" + email + "','" + lahiosoite + "','" + postinum + "');";
+                command = new SqlCommand(query, con);
+                command.ExecuteNonQuery();
+                con.Close();
+            }
+            else
+            {
+                MessageBox.Show("Asiakas nimellä " + nimi + " " + sukunimi + " on jo tietokannassa!");
+            }
         }
+        //lisää palvelun tietokantaan ja varmistaa onko aluetta ennestään tietokannassa
         public static void lisaapalvelu(string alueid, string nimi, string typpi, string kuvaus, string hinta, string alv)
         {
+            {/*
             string connection = getDatasource();
             string query = "insert into palvelu(alue_id, nimi, tyyppi, kuvaus, hinta, alv)  values" + "(" + alueid + ",'" + nimi + "'," + typpi + ",'" + kuvaus + "'," + hinta + "," + alv + ");";
             SqlConnection con = new SqlConnection(connection);
@@ -89,6 +115,30 @@ namespace MökkingProjekti
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             con.Close();
+            */
+            }
+
+            string connection = getDatasource();
+            string query = "SELECT COUNT(*) FROM palvelu WHERE nimi='" + nimi + "' AND alue_id='" + alueid + "' AND kuvaus='" + kuvaus + "';";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlCommand command = new SqlCommand(query, con);
+            int count = (int)command.ExecuteScalar();
+            con.Close();
+
+            // Jos palvelu ei ole jo tietokannassa, suorita lisäys
+            if (count == 0)
+            {
+                query = "insert into palvelu(alue_id, nimi, tyyppi, kuvaus, hinta, alv)  values" + "(" + alueid + ",'" + nimi + "'," + typpi + ",'" + kuvaus + "'," + hinta + "," + alv + ");";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            else
+            {
+                MessageBox.Show("Palvelu nimellä " + nimi + ", alueella " + alueid + " ja kuvauksella " + kuvaus + " on jo tietokannassa!");
+            }
         }
         public static void lisaalasku(string id, string hinta, string alv)
         {
