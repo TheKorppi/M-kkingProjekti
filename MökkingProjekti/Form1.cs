@@ -487,12 +487,14 @@ namespace MökkingProjekti
             tblaskualv.Clear();
         }//TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
 
+        //muokkaa laskua
         private void btnmuokkaalasku_Click(object sender, EventArgs e)
         {
             Functions.paivitalasku(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text, ID);
             haetaulu("lasku");
         }
 
+        //poistaa laskun
         private void btnpoistalasku_Click(object sender, EventArgs e)
         {
             Functions.poistalasku(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text);
@@ -501,7 +503,6 @@ namespace MökkingProjekti
 
 
        // alue paneelin painikkeet
-
         private void btnmuokkaaalue_Click(object sender, EventArgs e)
         {
             Functions.paivitaalue(tbaluenimi.Text, IDhelp);
@@ -509,6 +510,7 @@ namespace MökkingProjekti
 
         }
 
+        //lisää alueen
         private void btnlisaaalue_Click(object sender, EventArgs e)
         {
             Functions.lisaaalue(tbaluenimi.Text);
@@ -516,11 +518,13 @@ namespace MökkingProjekti
             haetaulu(mode);
         }
 
+        //tyhjentää kentät
         private void btnperuutaalue_Click(object sender, EventArgs e) //TYHJENTÄÄ KYSEISEN PANEELIN TEKSTIKENTÄT
         {
             tbaluenimi.Clear();
         }
 
+        //poistaa alueen
         private void btnpoistaalue_Click(object sender, EventArgs e)
         {
             Functions.poistaalue(tbaluenimi.Text);
@@ -755,7 +759,7 @@ namespace MökkingProjekti
         }
 
 
-
+        //Kaikki haku napit
         private void btnmokkihaku_Click(object sender, EventArgs e)
         {
             DataSet data = Functions.haemokkitieto(tbmokkialuenimi.Text, tbmokkinimi.Text, tbmokkiosoite.Text, tbmokkipostinumero.Text, tbmokkivarustelu.Text, tbmokkikuvaus.Text, tbmokkihinta.Text, tbmokkihenkilomaara.Text, "mokki");
@@ -774,6 +778,7 @@ namespace MökkingProjekti
             dataGridView1.DataSource = data.Tables["palvelu"];
         }
 
+        //varauksee palveluiden lisäys napit
         private void btnvarauspalvelulisaa_Click(object sender, EventArgs e)
         {
             Functions.lisaavarauspalvelu(tbvarauksenpalvelutid.Text, tbvarauspalveluid.Text, tbpalveluidenlukumaara.Text);
