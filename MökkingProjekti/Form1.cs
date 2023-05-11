@@ -111,6 +111,8 @@ namespace MökkingProjekti
                         }
                         else
                         {
+                           
+
                             tbvarauksenpalvelutid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                         }
                     }
@@ -150,9 +152,15 @@ namespace MökkingProjekti
                 case "varaus":
                     if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
                     {
-                        IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
-                        cbalue.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-                        cbmokki.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                        
+                        
+                            IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
+                            cbalue.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                            cbmokki.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                        
+                       
+                        
+                        
                         //haetaulu("varaus");
                     }
                     break;
@@ -160,8 +168,20 @@ namespace MökkingProjekti
                 case "palvelu":
                     if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
                     {
-                        cmbpalvelualue.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-                        IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
+                        if (state)
+                        {
+                            cmbpalvelualue.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                            IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
+                        }
+                        else
+                        {
+                            tbvarauksenpalvelutid.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                            tbvarauspalveluid.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                            tbpalveluidenlukumaara.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                        }
+
+
+                        
                     }
                     break;
 
@@ -228,9 +248,7 @@ namespace MökkingProjekti
 
         private void lisaabtn_Click(object sender, EventArgs e)
         {
-            //Functions.haelaskutieto(Convert.ToInt32(tblaskusvarausid.Text), Convert.ToDouble(tblaskusumma.Text), Convert.ToDouble(tblaskualv.Text), "lasku");
-            DataSet data = Functions.haelaskutieto(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text,"lasku");
-            dataGridView1.DataSource = data.Tables["lasku"]; ;
+            
         }
 
         private void tietokannanTiedostopolkuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -765,7 +783,8 @@ namespace MökkingProjekti
 
         private void btnvarauspalvelupoista_Click(object sender, EventArgs e)
         {
-
+            Functions.poistavarauspalvelu(tbvarauksenpalvelutid.Text, tbvarauspalveluid.Text, tbpalveluidenlukumaara.Text);
+            haeaputaulu("varauksen_palvelut");
         }
 
         private void btnvarauspalvelumuokkaa_Click(object sender, EventArgs e)
@@ -777,11 +796,13 @@ namespace MökkingProjekti
         {
             if (state)
             {
+                haeaputaulu("varauksen_palvelut");
                 haetaulu("varaus");
                 state = false;
             }
             else
             {
+                haeaputaulu("alue");
                 haetaulu("palvelu");
                 state = true;
             }

@@ -628,7 +628,7 @@ namespace MökkingProjekti
             {
                 string id = rdr["varaus_id"].ToString();
                 return id;
-                con.Close();
+                
             }
             con.Close();
             return null;
