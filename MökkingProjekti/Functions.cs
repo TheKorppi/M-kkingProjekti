@@ -69,7 +69,7 @@ namespace MökkingProjekti
             return dataSet;
 
         }
-
+        //lisää asiakas tietokantaan ja varmistaa onko aluetta ennestään tietokannassa
         public static void lisaaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum)
         {
             /*
@@ -160,7 +160,6 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
-
         //lisää mökin tietokantaan ja näyttää datagripviewissä
         public static void lisaamokki(string alue_id, string mokkinimi,string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara)
         {   
@@ -252,7 +251,6 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
-
         public static void poistalasku(string varausid, string summa, string alv)
         {
             SqlConnection con = new SqlConnection(getDatasource());
@@ -262,7 +260,6 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
-
         public static void poistavaraus(string varausid)
         {
             SqlConnection con = new SqlConnection(getDatasource());
@@ -272,7 +269,6 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
-
         // mökin poisto varmistuksella 
         public static void poistamokki(string alue_id, string mokkinimi, string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara)
         {
