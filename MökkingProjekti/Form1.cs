@@ -17,6 +17,7 @@ namespace MökkingProjekti
     {
         public string mode="asiakas";
         public int ID = 0;
+        public int IDhelp = 0;
        
         public Form1()
         {
@@ -31,6 +32,12 @@ namespace MökkingProjekti
             //hakee datagridiin tiedot comboboxin kirjoituksen perusteella
             DataSet tauludata = Functions.paivitadatagrid(taulunimi);
             dataGridView1.DataSource = tauludata.Tables[taulunimi];
+        }
+        public void haeaputaulu(string taulunimi)
+        {
+            //hakee datagridiin tiedot comboboxin kirjoituksen perusteella
+            DataSet tauludata = Functions.paivitadatagrid(taulunimi);
+            dataGridView2.DataSource = tauludata.Tables[taulunimi];
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -150,6 +157,7 @@ namespace MökkingProjekti
             Palue.Enabled = true;
             Palue.Visible = true;
             haetaulu("mokki");
+            haeaputaulu("alue");
             mode = "mokki";
             taulunimi.Text = "Mökit";
             
@@ -338,6 +346,7 @@ namespace MökkingProjekti
         private void btnlisaaalue_Click(object sender, EventArgs e)
         {
             Functions.lisaaalue(tbaluenimi.Text);
+            haeaputaulu("alue");
             haetaulu(mode);
         }
 

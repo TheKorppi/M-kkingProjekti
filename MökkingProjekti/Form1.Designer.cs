@@ -165,6 +165,7 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbtnpalvelut = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
@@ -181,6 +182,7 @@
             this.Palue.SuspendLayout();
             this.Pmokki.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -1516,11 +1518,20 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(951, 79);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 300);
+            this.dataGridView2.TabIndex = 61;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1823, 857);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.Plasku);
             this.Controls.Add(this.Pasiakas);
@@ -1561,6 +1572,7 @@
             this.Pmokki.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1703,6 +1715,7 @@
         private System.Windows.Forms.Label lbmokkihenkilomaara;
         private System.Windows.Forms.ComboBox cmbpalvelualue;
         private System.Windows.Forms.Label Alue;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 
