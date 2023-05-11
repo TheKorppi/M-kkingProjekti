@@ -354,6 +354,7 @@
             // 
             // dtptulopaiva
             // 
+            this.dtptulopaiva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtptulopaiva.Location = new System.Drawing.Point(284, 30);
             this.dtptulopaiva.Margin = new System.Windows.Forms.Padding(2);
             this.dtptulopaiva.MinDate = new System.DateTime(2023, 4, 27, 0, 0, 0, 0);

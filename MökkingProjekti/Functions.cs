@@ -99,10 +99,10 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        public static void lisaavaraus(string asiakasid, string mokkiid, string varausalku, string varausloppu)
+        public static void lisaavaraus(string asiakasid, string mokkiid, string varausalku,string varausloppu)
         {
             string connection = getDatasource();
-            string query = "insert into varaus(asiakas_id,mokki_mokki_id , varattu_pvm, vahvistus_pvm, varattu_alkupvm, varattu_loppupvm )  values" + "(" + asiakasid + ", " + mokkiid + ", '" + DateTime.Now.ToShortDateString() + "','"+ DateTime.Now.ToShortDateString()+"','"+varausalku+"','"+varausloppu+"'); ";
+            string query = "insert into varaus(asiakas_id,mokki_mokki_id , varattu_pvm, vahvistus_pvm, varattu_alkupvm, varattu_loppupvm )  values" + "(" + asiakasid + ", " + mokkiid + ", '" + DateTime.Now.ToString("MM/dd/yyyy") + "', '"+ DateTime.Now.ToString("MM/dd/yyyy") +"' ,'"+varausalku+"' , '"+varausloppu+"'); ";
             SqlConnection con = new SqlConnection(connection);
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);

@@ -480,7 +480,7 @@ namespace MökkingProjekti
             if (allTextboxesFilled)
             {
                 MessageBox.Show("yes");
-                Functions.lisaavaraus(ID.ToString(), cbmokki.Text, dtptulopaiva.Value.ToShortDateString(), dtplahtopaiva.Value.ToShortDateString());
+                Functions.lisaavaraus(ID.ToString(), cbmokki.Text, dtptulopaiva.Value.ToString("MM/dd/yyyy"), dtplahtopaiva.Value.ToString("MM/dd/yyyy"));
                 haetaulu("varaus");
             }
             else
