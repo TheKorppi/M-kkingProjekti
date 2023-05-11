@@ -43,154 +43,169 @@ namespace MökkingProjekti
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            switch (mode)
+            try 
             {
+                switch (mode)
+                {
 
-                case "asiakas":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
-                    {
-                        tbasiakasnimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                        tbasiakassnimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                        tbasiakaspuhnum.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                        tbasiakassposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                        tbasiakasosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                        tbasiakaspostinum.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                        ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                    }
-                    break;
-                case "varaus":
-                    //tbvarausetunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    //tbvaraussukunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    //tbvarauspuhelinnumero.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    //tbvaraussahkoposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                    //tbvaraajanosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                    //tbvaraajanpostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                    //ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-
-
-                    if (haku)
-                    {
+                    case "asiakas":
                         if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
                         {
-                            tbvarausetunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                            tbvaraussukunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                            tbvarauspuhelinnumero.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                            tbvaraussahkoposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                            tbvaraajanosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                            tbvaraajanpostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                            tbasiakasnimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                            tbasiakassnimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                            tbasiakaspuhnum.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                            tbasiakassposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                            tbasiakasosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                            tbasiakaspostinum.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                             ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                            haetaulu("varaus");
-                            haku = false;
                         }
-                        else { }
+                        break;
+                    case "varaus":
+                        //tbvarausetunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                        //tbvaraussukunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                        //tbvarauspuhelinnumero.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                        //tbvaraussahkoposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                        //tbvaraajanosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                        //tbvaraajanpostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                        //ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+
+
+                        if (haku)
+                        {
+                            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                            {
+                                tbvarausetunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                                tbvaraussukunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                                tbvarauspuhelinnumero.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                                tbvaraussahkoposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                                tbvaraajanosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                                tbvaraajanpostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                                ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                                haetaulu("varaus");
+                                haku = false;
+                            }
+                            else { }
 
                         }
                         else
 
                         {
+                            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                            {
+                                ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                            }
+                        }
+
+                        break;
+
+                    case "palvelu":
                         if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
                         {
+                            if (state)
+                            {
+                                tbvarauspalveluid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                                tbpalvelunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                                tbpalvelutyyppi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                                tbpalvelukuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                                tbpalveluhinta.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                                ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                            }
+                            else
+                            {
+
+
+                                tbvarauksenpalvelutid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                            }
+                        }
+                        break;
+
+                    case "mokki":
+                        if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                        {
+                            tbmokkialuenimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                            tbmokkinimi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                            tbmokkiosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                            tbmokkipostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                            tbmokkivarustelu.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                            tbmokkikuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                            tbmokkihinta.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                            tbmokkihenkilomaara.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
                             ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                         }
-                        }
-                    
-                    break;
+                        break;
 
-                case "palvelu":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
-                    {
-                        if (state)
+                    case "lasku":
+                        if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
                         {
-                            tbvarauspalveluid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                            tbpalvelunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                            tbpalvelutyyppi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                            tbpalvelukuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                            tbpalveluhinta.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                            tblaskualv.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                            tblaskusumma.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                            tblaskusvarausid.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                             ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                         }
-                        else
-                        {
-                           
+                        break;
 
-                            tbvarauksenpalvelutid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                        }
-                    }
-                    break;
-
-                case "mokki":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
-                    {
-                        tbmokkialuenimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                        tbmokkinimi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                        tbmokkiosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                        tbmokkipostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                        tbmokkivarustelu.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-                        tbmokkikuvaus.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                        tbmokkihinta.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                        tbmokkihenkilomaara.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-                        ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                    }
-                    break;
-
-                case "lasku":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
-                    {
-                        tblaskualv.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                        tblaskusumma.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                        tblaskusvarausid.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                        ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                    }
-                    break;
-
+                }
             }
+            catch (Exception ex )
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            switch (mode)
-            {               
-                case "varaus":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
-                    {
-                        
-                        
+            try
+            {
+                switch (mode)
+                {
+                    case "varaus":
+                        if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                        {
+
+
                             IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
                             cbalue.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
                             cbmokki.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-                        
-                       
-                        
-                        
-                        //haetaulu("varaus");
-                    }
-                    break;
 
-                case "palvelu":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
-                    {
-                        if (state)
-                        {
-                            cmbpalvelualue.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-                            IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
+
+
+
+                            //haetaulu("varaus");
                         }
-                        else
+                        break;
+
+                    case "palvelu":
+                        if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
                         {
-                            tbvarauksenpalvelutid.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-                            tbvarauspalveluid.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-                            tbpalveluidenlukumaara.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                            if (state)
+                            {
+                                cmbpalvelualue.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                                IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
+                            }
+                            else
+                            {
+                                tbvarauksenpalvelutid.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                                tbvarauspalveluid.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                                tbpalveluidenlukumaara.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                            }
+
+
+
                         }
+                        break;
 
+                    case "mokki":
+                        tbaluenimi.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                        IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
 
-                        
-                    }
-                    break;
-
-                case "mokki":
-                    tbaluenimi.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
-                   
-                    break;
+                        break;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
