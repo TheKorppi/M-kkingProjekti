@@ -701,7 +701,8 @@ namespace MökkingProjekti
 
         private void btnvaraushae_Click(object sender, EventArgs e)
         {
-           
+            DataSet data = Functions.haelaskutieto(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text,"lasku");
+            dataGridView1.DataSource = data.Tables["lasku"];
         }
 
         private void btnhaepalvelu_Click(object sender, EventArgs e)

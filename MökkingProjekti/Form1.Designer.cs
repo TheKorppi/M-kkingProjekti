@@ -167,7 +167,7 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btnmokkihaku = new System.Windows.Forms.Button();
-            this.btnvaraushae = new System.Windows.Forms.Button();
+            this.btnlaskuhaku = new System.Windows.Forms.Button();
             this.btnhaepalvelu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
@@ -602,7 +602,7 @@
             // 
             // Plasku
             // 
-            this.Plasku.Controls.Add(this.btnvaraushae);
+            this.Plasku.Controls.Add(this.btnlaskuhaku);
             this.Plasku.Controls.Add(this.btnmuokkaalasku);
             this.Plasku.Controls.Add(this.btnpoistalasku);
             this.Plasku.Controls.Add(this.btnperuutalasku);
@@ -1544,15 +1544,15 @@
             this.btnmokkihaku.UseVisualStyleBackColor = true;
             this.btnmokkihaku.Click += new System.EventHandler(this.btnmokkihaku_Click);
             // 
-            // btnvaraushae
+            // btnlaskuhaku
             // 
-            this.btnvaraushae.Location = new System.Drawing.Point(249, 33);
-            this.btnvaraushae.Name = "btnvaraushae";
-            this.btnvaraushae.Size = new System.Drawing.Size(75, 23);
-            this.btnvaraushae.TabIndex = 8;
-            this.btnvaraushae.Text = "Hae varaus";
-            this.btnvaraushae.UseVisualStyleBackColor = true;
-            this.btnvaraushae.Click += new System.EventHandler(this.btnvaraushae_Click);
+            this.btnlaskuhaku.Location = new System.Drawing.Point(249, 33);
+            this.btnlaskuhaku.Name = "btnlaskuhaku";
+            this.btnlaskuhaku.Size = new System.Drawing.Size(75, 23);
+            this.btnlaskuhaku.TabIndex = 8;
+            this.btnlaskuhaku.Text = "Hae lasku";
+            this.btnlaskuhaku.UseVisualStyleBackColor = true;
+            this.btnlaskuhaku.Click += new System.EventHandler(this.btnvaraushae_Click);
             // 
             // btnhaepalvelu
             // 
@@ -1755,7 +1755,7 @@
         private System.Windows.Forms.Label Alue;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btnmokkihaku;
-        private System.Windows.Forms.Button btnvaraushae;
+        private System.Windows.Forms.Button btnlaskuhaku;
         private System.Windows.Forms.Button btnhaepalvelu;
     }
 }
