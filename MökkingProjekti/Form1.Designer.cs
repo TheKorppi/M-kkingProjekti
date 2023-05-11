@@ -166,6 +166,9 @@
             this.tsbtnpalvelut = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnmokkihaku = new System.Windows.Forms.Button();
+            this.btnvaraushae = new System.Windows.Forms.Button();
+            this.btnhaepalvelu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
@@ -541,7 +544,7 @@
             this.Pvaraus.Controls.Add(this.lbpostcode);
             this.Pvaraus.Controls.Add(this.lbcheckin);
             this.Pvaraus.Controls.Add(this.tbvaraajanpostinumero);
-            this.Pvaraus.Location = new System.Drawing.Point(20, 79);
+            this.Pvaraus.Location = new System.Drawing.Point(27, 97);
             this.Pvaraus.Name = "Pvaraus";
             this.Pvaraus.Size = new System.Drawing.Size(896, 300);
             this.Pvaraus.TabIndex = 56;
@@ -599,6 +602,7 @@
             // 
             // Plasku
             // 
+            this.Plasku.Controls.Add(this.btnvaraushae);
             this.Plasku.Controls.Add(this.btnmuokkaalasku);
             this.Plasku.Controls.Add(this.btnpoistalasku);
             this.Plasku.Controls.Add(this.btnperuutalasku);
@@ -609,7 +613,7 @@
             this.Plasku.Controls.Add(this.lbbilltax);
             this.Plasku.Controls.Add(this.lbbillID);
             this.Plasku.Controls.Add(this.tblaskusvarausid);
-            this.Plasku.Location = new System.Drawing.Point(20, 79);
+            this.Plasku.Location = new System.Drawing.Point(27, 97);
             this.Plasku.Margin = new System.Windows.Forms.Padding(2);
             this.Plasku.Name = "Plasku";
             this.Plasku.Size = new System.Drawing.Size(434, 301);
@@ -717,6 +721,7 @@
             // 
             // Ppalvelu
             // 
+            this.Ppalvelu.Controls.Add(this.btnhaepalvelu);
             this.Ppalvelu.Controls.Add(this.cmbpalvelualue);
             this.Ppalvelu.Controls.Add(this.Alue);
             this.Ppalvelu.Controls.Add(this.btnpoistapalvelu);
@@ -733,7 +738,7 @@
             this.Ppalvelu.Controls.Add(this.lbname);
             this.Ppalvelu.Controls.Add(this.btnperuutapalvelu);
             this.Ppalvelu.Controls.Add(this.btnlisaapalvelu);
-            this.Ppalvelu.Location = new System.Drawing.Point(20, 79);
+            this.Ppalvelu.Location = new System.Drawing.Point(27, 97);
             this.Ppalvelu.Margin = new System.Windows.Forms.Padding(2);
             this.Ppalvelu.Name = "Ppalvelu";
             this.Ppalvelu.Size = new System.Drawing.Size(435, 301);
@@ -916,7 +921,7 @@
             this.Pasiakas.Controls.Add(this.lbcustomerpostcode);
             this.Pasiakas.Controls.Add(this.lbcustomeraddress);
             this.Pasiakas.Controls.Add(this.lbcustomerfname);
-            this.Pasiakas.Location = new System.Drawing.Point(20, 79);
+            this.Pasiakas.Location = new System.Drawing.Point(27, 97);
             this.Pasiakas.Margin = new System.Windows.Forms.Padding(2);
             this.Pasiakas.Name = "Pasiakas";
             this.Pasiakas.Size = new System.Drawing.Size(434, 301);
@@ -1094,7 +1099,7 @@
             this.Palue.Controls.Add(this.btnlisaaalue);
             this.Palue.Controls.Add(this.tbaluenimi);
             this.Palue.Controls.Add(this.lblocationname);
-            this.Palue.Location = new System.Drawing.Point(20, 79);
+            this.Palue.Location = new System.Drawing.Point(27, 97);
             this.Palue.Margin = new System.Windows.Forms.Padding(2);
             this.Palue.Name = "Palue";
             this.Palue.Size = new System.Drawing.Size(435, 301);
@@ -1164,6 +1169,7 @@
             // 
             // Pmokki
             // 
+            this.Pmokki.Controls.Add(this.btnmokkihaku);
             this.Pmokki.Controls.Add(this.tbmokkihenkilomaara);
             this.Pmokki.Controls.Add(this.lbmokkihenkilomaara);
             this.Pmokki.Controls.Add(this.btnpoistamokki);
@@ -1184,7 +1190,7 @@
             this.Pmokki.Controls.Add(this.lbcottageprice);
             this.Pmokki.Controls.Add(this.lbdescription);
             this.Pmokki.Controls.Add(this.lbloactio);
-            this.Pmokki.Location = new System.Drawing.Point(460, 79);
+            this.Pmokki.Location = new System.Drawing.Point(466, 97);
             this.Pmokki.Margin = new System.Windows.Forms.Padding(2);
             this.Pmokki.Name = "Pmokki";
             this.Pmokki.Size = new System.Drawing.Size(454, 301);
@@ -1522,11 +1528,40 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(951, 79);
+            this.dataGridView2.Location = new System.Drawing.Point(1216, 443);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(364, 300);
             this.dataGridView2.TabIndex = 61;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // btnmokkihaku
+            // 
+            this.btnmokkihaku.Location = new System.Drawing.Point(356, 201);
+            this.btnmokkihaku.Name = "btnmokkihaku";
+            this.btnmokkihaku.Size = new System.Drawing.Size(75, 23);
+            this.btnmokkihaku.TabIndex = 13;
+            this.btnmokkihaku.Text = "Hae mökki";
+            this.btnmokkihaku.UseVisualStyleBackColor = true;
+            this.btnmokkihaku.Click += new System.EventHandler(this.btnmokkihaku_Click);
+            // 
+            // btnvaraushae
+            // 
+            this.btnvaraushae.Location = new System.Drawing.Point(249, 33);
+            this.btnvaraushae.Name = "btnvaraushae";
+            this.btnvaraushae.Size = new System.Drawing.Size(75, 23);
+            this.btnvaraushae.TabIndex = 8;
+            this.btnvaraushae.Text = "Hae varaus";
+            this.btnvaraushae.UseVisualStyleBackColor = true;
+            this.btnvaraushae.Click += new System.EventHandler(this.btnvaraushae_Click);
+            // 
+            // btnhaepalvelu
+            // 
+            this.btnhaepalvelu.Location = new System.Drawing.Point(238, 201);
+            this.btnhaepalvelu.Name = "btnhaepalvelu";
+            this.btnhaepalvelu.Size = new System.Drawing.Size(75, 23);
+            this.btnhaepalvelu.TabIndex = 12;
+            this.btnhaepalvelu.Text = "Hae palvelu";
+            this.btnhaepalvelu.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1718,6 +1753,9 @@
         private System.Windows.Forms.ComboBox cmbpalvelualue;
         private System.Windows.Forms.Label Alue;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btnmokkihaku;
+        private System.Windows.Forms.Button btnvaraushae;
+        private System.Windows.Forms.Button btnhaepalvelu;
     }
 }
 
