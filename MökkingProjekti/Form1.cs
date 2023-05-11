@@ -265,6 +265,7 @@ namespace MökkingProjekti
             Palue.Visible = false;
             dataGridView1.DataSource = null;
             haetaulu("palvelu");
+            haeaputaulu("alue");
             mode = "palvelu";
             taulunimi.Text = "Palvelu";
         }
