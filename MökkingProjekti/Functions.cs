@@ -171,6 +171,16 @@ namespace MökkingProjekti
                 MessageBox.Show("Alue nimellä " + nimi + " on jo tietokannassa!");
             }
         }
+        public static void lisaavarauspalvelu(string varaus_id, string palvelu_id, string lkm)
+        {
+            string connection = getDatasource();
+            string query = "insert into varauksen_palvelut(varaus_id, palvelu_id,lkm) values("+varaus_id+","+palvelu_id+","+lkm+"); ";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
 
         public static void poistaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum)
@@ -250,6 +260,15 @@ namespace MökkingProjekti
                 con.Close();
             }
         }
+        public static void poistavarauspalvelu(string varaus_id, string palvelu_id, string lkm)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "DELETE FROM varauksen_palvelut WHERE varaus_id = " + varaus_id + " and palvelu_id = "+palvelu_id+" and lkm = "+lkm+";";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
        
         public static void paivatiaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum,int ID)
         {
@@ -292,6 +311,15 @@ namespace MökkingProjekti
         {
             SqlConnection con = new SqlConnection(getDatasource());
             string query = "UPDATE alue SET nimi = '" + nimi + "' WHERE alue_id = " + id;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+        public static void paivitavarauspalvelu(string varaus_id, string palvelu_id, string lkm, string varaus_id2, string palvelu_id2, string lkm2)
+        {
+            SqlConnection con = new SqlConnection(getDatasource());
+            string query = "UPDATE varausten_palvelut SET varaus_id = " + varaus_id + ", palvelu_id=" + palvelu_id + "lkm= " + lkm + "  WHERE varaus_id = " + varaus_id2 + ", palvelu_id=" + palvelu_id2 + "lkm= " + lkm2 + " ;";
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
