@@ -264,6 +264,8 @@ namespace MökkingProjekti
             Pasiakas.Visible = false;
             Palue.Enabled = true;
             Palue.Visible = true;
+            Ppavelutvaraukseen.Enabled = false;
+            Ppavelutvaraukseen.Visible = false;
             dataGridView1.DataSource = null; // tyhjentää nopeasti taulun ja täyttää seuraavaksi uudelleen
             haetaulu("mokki");
             haeaputaulu("alue");
@@ -288,6 +290,8 @@ namespace MökkingProjekti
             Pasiakas.Visible = true;
             Palue.Enabled = false;
             Palue.Visible = false;
+            Ppavelutvaraukseen.Enabled = false;
+            Ppavelutvaraukseen.Visible = false;
             dataGridView1.DataSource = null; // tyhjentää nopeasti taulun ja täyttää seuraavaksi uudelleen
             haetaulu("asiakas");
             mode = "asiakas";
@@ -310,6 +314,8 @@ namespace MökkingProjekti
             Pasiakas.Visible = false;
             Palue.Enabled = false;
             Palue.Visible = false;
+            Ppavelutvaraukseen.Enabled = false;
+            Ppavelutvaraukseen.Visible = false;
             dataGridView1.DataSource = null; // tyhjentää nopeasti taulun ja täyttää seuraavaksi uudelleen
             haetaulu("asiakas");
             haeaputaulu("mokkihelp");
@@ -334,6 +340,8 @@ namespace MökkingProjekti
             Pasiakas.Visible = false;
             Palue.Enabled = false;
             Palue.Visible = false;
+            Ppavelutvaraukseen.Enabled = false;
+            Ppavelutvaraukseen.Visible = false;
             dataGridView1.DataSource = null; // tyhjentää nopeasti taulun ja täyttää seuraavaksi uudelleen
             haetaulu("lasku");
             mode = "lasku";
