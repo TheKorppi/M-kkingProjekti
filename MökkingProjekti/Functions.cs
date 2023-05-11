@@ -613,6 +613,16 @@ namespace MökkingProjekti
             adapter.Fill(dataSet, taulunimi);
             return dataSet;
         }
+        public static bool datagridsort(DataGridView dgv,DataGridViewCellEventArgs e)
+        {
+
+           if (e.RowIndex >= 0 && e.RowIndex < dgv.Rows.Count)
+            {
+                return true;
+            }
+            else
+            return false;
+        }
         public static DataSet haepalvelutieto(string alueid, string nimi, string tyyppi, string kuvaus, string hinta, string alv, string taulunimi)
         {
             int count = 0;
