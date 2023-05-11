@@ -150,10 +150,39 @@ namespace MökkingProjekti
             toolTip1.InitialDelay = 1000;
             toolTip1.ReshowDelay = 500;
             // Force the ToolTip text to be displayed whether or not the form is active.
-            toolTip1.ShowAlways = true;
-            toolTip1.SetToolTip(this.btnasiakaslisaa, "Lisää asiakas Tauluun");
-            toolTip1.SetToolTip(this.btnasiakasperuuta, "Tyhjennä Laatikot");
-            toolTip1.SetToolTip(this.btnmuokkaa, "Muokkaa Taulukosta Valittua Asiakasta");
+
+            // NÄYTTÄÄ BUTTONIN PÄÄLLÄ PAINIKKEEN TOIMINNON TAI TARKOITUKSEN
+            {
+                toolTip1.ShowAlways = true;
+
+                toolTip1.SetToolTip(this.btnasiakasperuuta, "Tyhjennä Laatikot");
+                toolTip1.SetToolTip(this.btnperuutavaraus, "Tyhjennä Laatikot");
+                toolTip1.SetToolTip(this.btnperuutalasku, "Tyhjennä Laatikot");
+                toolTip1.SetToolTip(this.btnperuutamokki, "Tyhjennä Laatikot");
+                toolTip1.SetToolTip(this.btnperuutaalue, "Tyhjennä Laatikot");
+
+                toolTip1.SetToolTip(this.btnmuokkaa, "Muokkaa Taulukosta Valittua Asiakasta");
+                toolTip1.SetToolTip(this.btnmuokkaalasku, "Muokkaa Taulukosta Valittua Laskua");
+                toolTip1.SetToolTip(this.btnmuokkaamokki, "Muokkaa Taulukosta Valittua Mökkiä");
+                toolTip1.SetToolTip(this.btnmuokkaaalue, "Muokkaa Taulukosta Valittua Aluetta");
+                //  toolTip1.SetToolTip(this. "MUokka Taulukosta Valittua Varausta");
+
+                toolTip1.SetToolTip(this.btnpoistaasiakas, "Poistaa asiakkaan tiedot");
+                toolTip1.SetToolTip(this.btnpoistaalue, "Poistaa alueen tiedot");
+                toolTip1.SetToolTip(this.btnpoistalasku, "Poistaa laskun tiedot");
+                toolTip1.SetToolTip(this.btnpoistapalvelu, "Poistaa palvelun tiedot");
+                toolTip1.SetToolTip(this.btnpoistavaraus, "Poistaa varauksen tiedot");
+
+                toolTip1.SetToolTip(this.btnasiakaslisaa, "Lisää uusi asiakas Tauluun");
+                toolTip1.SetToolTip(this.btnlisaaalue, "Lisää uusi alue tauluun");
+                toolTip1.SetToolTip(this.btnlisaapalvelu, "Lisää uusi palvelu tauluun");
+                toolTip1.SetToolTip(this.btnlisaamokki, "Lisää uusi mökki tauluun");
+                toolTip1.SetToolTip(this.btnlisaavaraus, "Lisää uusi varaus tauluun");
+
+                toolTip1.SetToolTip(this.aikajaksobtn, "Aukaisee uuden sivun aikajaksoraporteille");
+                toolTip1.SetToolTip(this.laskubtn, "Aukaisee uuden sivun laskuja varten");
+            }
+       
         }
 
         
@@ -209,6 +238,7 @@ namespace MökkingProjekti
             Pasiakas.Visible = false;
             Palue.Enabled = true;
             Palue.Visible = true;
+            dataGridView1.DataSource = null; // tyhjentää nopeasti taulun ja täyttää seuraavaksi uudelleen
             haetaulu("mokki");
             haeaputaulu("alue");
             mode = "mokki";
@@ -231,6 +261,7 @@ namespace MökkingProjekti
             Pasiakas.Visible = true;
             Palue.Enabled = false;
             Palue.Visible = false;
+            dataGridView1.DataSource = null; // tyhjentää nopeasti taulun ja täyttää seuraavaksi uudelleen
             haetaulu("asiakas");
             mode = "asiakas";
             taulunimi.Text = "Asiakkat";
@@ -252,6 +283,7 @@ namespace MökkingProjekti
             Pasiakas.Visible = false;
             Palue.Enabled = false;
             Palue.Visible = false;
+            dataGridView1.DataSource = null; // tyhjentää nopeasti taulun ja täyttää seuraavaksi uudelleen
             haetaulu("asiakas");
             haeaputaulu("mokkihelp");
             mode = "varaus";
@@ -274,7 +306,7 @@ namespace MökkingProjekti
             Pasiakas.Visible = false;
             Palue.Enabled = false;
             Palue.Visible = false;
-            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = null; // tyhjentää nopeasti taulun ja täyttää seuraavaksi uudelleen
             haetaulu("lasku");
             mode = "lasku";
             taulunimi.Text = "Laskut";
@@ -296,7 +328,7 @@ namespace MökkingProjekti
             Pasiakas.Visible = false;
             Palue.Visible = false;
             Palue.Visible = false;
-            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = null; // tyhjentää nopeasti taulun ja täyttää seuraavaksi uudelleen
             haetaulu("palvelu");
             haeaputaulu("alue");
             mode = "palvelu";
@@ -354,8 +386,15 @@ namespace MökkingProjekti
 
         private void btnpoistaasiakas_Click(object sender, EventArgs e)
         {
-            Functions.poistaasiakas(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text);
-            haetaulu(mode);
+            // Functions.poistaasiakas(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text);
+            // haetaulu(mode);
+            DialogResult result = MessageBox.Show("Haluatko varmasti poistaa asiakkaan?", "Asiakkaan poisto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            
+            if (result == DialogResult.Yes)
+            {
+                Functions.poistaasiakas(tbasiakasnimi.Text, tbasiakassnimi.Text, tbasiakaspuhnum.Text, tbasiakassposti.Text, tbasiakasosoite.Text, tbasiakaspostinum.Text);
+                haetaulu(mode);
+            }
         }
 
 
@@ -384,10 +423,7 @@ namespace MökkingProjekti
         private void btnpoistalasku_Click(object sender, EventArgs e)
         {
             Functions.poistalasku(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text);
-            haetaulu("lasku");
-
-
-            
+            haetaulu("lasku");    
         }
 
 

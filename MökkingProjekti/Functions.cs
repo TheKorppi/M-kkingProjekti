@@ -191,6 +191,7 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
         public static void poistalasku(string varausid, string summa, string alv)
         {
             SqlConnection con = new SqlConnection(getDatasource());
@@ -200,6 +201,7 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
         public static void poistavaraus(string varausid)
         {
             SqlConnection con = new SqlConnection(getDatasource());
@@ -209,6 +211,7 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
         // mökin poisto varmistuksella 
         public static void poistamokki(string alue_id, string mokkinimi, string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara)
         {
@@ -247,6 +250,7 @@ namespace MökkingProjekti
                 con.Close();
             }
         }
+       
         public static void paivatiaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum,int ID)
         {
             SqlConnection con = new SqlConnection(getDatasource());
@@ -256,6 +260,7 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
         public static void paivitalasku(string varausid, string summa, string alv, int ID)
         {
             SqlConnection con = new SqlConnection(getDatasource());
