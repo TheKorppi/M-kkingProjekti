@@ -48,7 +48,7 @@ namespace MökkingProjekti
             {
 
                 case "asiakas":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                    if (Functions.datagridsort(dataGridView1, e))
                     {
                         tbasiakasnimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                         tbasiakassnimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -71,7 +71,7 @@ namespace MökkingProjekti
 
                     if (haku)
                     {
-                        if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                        if (Functions.datagridsort(dataGridView1, e))
                         {
                             tbvarausetunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                             tbvaraussukunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -89,7 +89,7 @@ namespace MökkingProjekti
                         else
 
                         {
-                        if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                        if (Functions.datagridsort(dataGridView1, e))
                         {
                             ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                         }
@@ -98,7 +98,7 @@ namespace MökkingProjekti
                     break;
 
                 case "palvelu":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                    if (Functions.datagridsort(dataGridView1, e))
                     {
                         tbpalvelunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                         tbpalvelutyyppi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -109,7 +109,7 @@ namespace MökkingProjekti
                     break;
 
                 case "mokki":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                    if (Functions.datagridsort(dataGridView1, e))
                     {
                         tbmokkialuenimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                         tbmokkinimi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -124,7 +124,7 @@ namespace MökkingProjekti
                     break;
 
                 case "lasku":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                    if (Functions.datagridsort(dataGridView1, e))
                     {
                         tblaskualv.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                         tblaskusumma.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -140,7 +140,7 @@ namespace MökkingProjekti
             switch (mode)
             {               
                 case "varaus":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                    if (Functions.datagridsort(dataGridView1, e))
                     {
                         IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
                         cbalue.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -150,7 +150,7 @@ namespace MökkingProjekti
                     break;
 
                 case "palvelu":
-                    if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+                    if (Functions.datagridsort(dataGridView1, e))
                     {
                         cmbpalvelualue.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
                         IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
