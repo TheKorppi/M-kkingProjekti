@@ -745,5 +745,34 @@ namespace MökkingProjekti
             DataSet data = Functions.haepalvelutieto(cmbpalvelualue.Text, tbpalvelunimi.Text, tbpalvelutyyppi.Text, tbpalvelukuvaus.Text, tbpalveluhinta.Text, tbpalvelualv.Text, "palvelu");
             dataGridView1.DataSource = data.Tables["palvelu"];
         }
+
+        private void btnvarauspalvelulisaa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnvarauspalvelupoista_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnvarauspalvelumuokkaa_Click(object sender, EventArgs e)
+        {
+
+        }
+        public bool state = true;
+        private void btnvaihdanakymaa_Click(object sender, EventArgs e)
+        {
+            if (state)
+            {
+                haetaulu("varaus");
+                state = false;
+            }
+            else
+            {
+                haetaulu("palvelu");
+                state = true;
+            }
+        }
     }
 }

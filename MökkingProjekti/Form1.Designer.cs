@@ -179,6 +179,10 @@
             this.lblisaapalveluitaotsikko = new System.Windows.Forms.Label();
             this.mySqlCommandBuilder1 = new MySqlConnector.MySqlCommandBuilder();
             this.taulunimi2 = new System.Windows.Forms.Label();
+            this.btnvarauspalvelulisaa = new System.Windows.Forms.Button();
+            this.btnvarauspalvelumuokkaa = new System.Windows.Forms.Button();
+            this.btnvaihdanakymaa = new System.Windows.Forms.Button();
+            this.btnvarauspalvelupoista = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
@@ -1578,6 +1582,10 @@
             // 
             // Ppavelutvaraukseen
             // 
+            this.Ppavelutvaraukseen.Controls.Add(this.btnvarauspalvelupoista);
+            this.Ppavelutvaraukseen.Controls.Add(this.btnvaihdanakymaa);
+            this.Ppavelutvaraukseen.Controls.Add(this.btnvarauspalvelumuokkaa);
+            this.Ppavelutvaraukseen.Controls.Add(this.btnvarauspalvelulisaa);
             this.Ppavelutvaraukseen.Controls.Add(this.lblvarauspalveluid);
             this.Ppavelutvaraukseen.Controls.Add(this.tbvarauspalveluid);
             this.Ppavelutvaraukseen.Controls.Add(this.lbvarauksellepalveluid);
@@ -1585,7 +1593,7 @@
             this.Ppavelutvaraukseen.Controls.Add(this.tbpalveluidenlukumaara);
             this.Ppavelutvaraukseen.Controls.Add(this.lbpalveluidenlkm);
             this.Ppavelutvaraukseen.Controls.Add(this.lblisaapalveluitaotsikko);
-            this.Ppavelutvaraukseen.Location = new System.Drawing.Point(440, 97);
+            this.Ppavelutvaraukseen.Location = new System.Drawing.Point(978, 85);
             this.Ppavelutvaraukseen.Margin = new System.Windows.Forms.Padding(2);
             this.Ppavelutvaraukseen.Name = "Ppavelutvaraukseen";
             this.Ppavelutvaraukseen.Size = new System.Drawing.Size(465, 296);
@@ -1669,6 +1677,46 @@
             this.taulunimi2.Name = "taulunimi2";
             this.taulunimi2.Size = new System.Drawing.Size(0, 30);
             this.taulunimi2.TabIndex = 62;
+            // 
+            // btnvarauspalvelulisaa
+            // 
+            this.btnvarauspalvelulisaa.Location = new System.Drawing.Point(199, 176);
+            this.btnvarauspalvelulisaa.Name = "btnvarauspalvelulisaa";
+            this.btnvarauspalvelulisaa.Size = new System.Drawing.Size(75, 23);
+            this.btnvarauspalvelulisaa.TabIndex = 62;
+            this.btnvarauspalvelulisaa.Text = "Lisää palvelu varaukselle";
+            this.btnvarauspalvelulisaa.UseVisualStyleBackColor = true;
+            this.btnvarauspalvelulisaa.Click += new System.EventHandler(this.btnvarauspalvelulisaa_Click);
+            // 
+            // btnvarauspalvelumuokkaa
+            // 
+            this.btnvarauspalvelumuokkaa.Location = new System.Drawing.Point(199, 244);
+            this.btnvarauspalvelumuokkaa.Name = "btnvarauspalvelumuokkaa";
+            this.btnvarauspalvelumuokkaa.Size = new System.Drawing.Size(75, 23);
+            this.btnvarauspalvelumuokkaa.TabIndex = 63;
+            this.btnvarauspalvelumuokkaa.Text = "Muokkaa";
+            this.btnvarauspalvelumuokkaa.UseVisualStyleBackColor = true;
+            this.btnvarauspalvelumuokkaa.Click += new System.EventHandler(this.btnvarauspalvelumuokkaa_Click);
+            // 
+            // btnvaihdanakymaa
+            // 
+            this.btnvaihdanakymaa.Location = new System.Drawing.Point(16, 250);
+            this.btnvaihdanakymaa.Name = "btnvaihdanakymaa";
+            this.btnvaihdanakymaa.Size = new System.Drawing.Size(105, 23);
+            this.btnvaihdanakymaa.TabIndex = 64;
+            this.btnvaihdanakymaa.Text = "Katso varauksia";
+            this.btnvaihdanakymaa.UseVisualStyleBackColor = true;
+            this.btnvaihdanakymaa.Click += new System.EventHandler(this.btnvaihdanakymaa_Click);
+            // 
+            // btnvarauspalvelupoista
+            // 
+            this.btnvarauspalvelupoista.Location = new System.Drawing.Point(199, 211);
+            this.btnvarauspalvelupoista.Name = "btnvarauspalvelupoista";
+            this.btnvarauspalvelupoista.Size = new System.Drawing.Size(75, 23);
+            this.btnvarauspalvelupoista.TabIndex = 65;
+            this.btnvarauspalvelupoista.Text = "Poista";
+            this.btnvarauspalvelupoista.UseVisualStyleBackColor = true;
+            this.btnvarauspalvelupoista.Click += new System.EventHandler(this.btnvarauspalvelupoista_Click);
             // 
             // Form1
             // 
@@ -1877,6 +1925,10 @@
         private System.Windows.Forms.TextBox tbvarauspalveluid;
         private MySqlConnector.MySqlCommandBuilder mySqlCommandBuilder1;
         private System.Windows.Forms.Label taulunimi2;
+        private System.Windows.Forms.Button btnvarauspalvelupoista;
+        private System.Windows.Forms.Button btnvaihdanakymaa;
+        private System.Windows.Forms.Button btnvarauspalvelumuokkaa;
+        private System.Windows.Forms.Button btnvarauspalvelulisaa;
     }
 }
 
