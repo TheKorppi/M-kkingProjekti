@@ -18,7 +18,8 @@ namespace MökkingProjekti
         public string mode="asiakas";
         public int ID = 0;
         public int IDhelp = 0;
-       
+        public bool haku = true;
+
         public Form1()
         {
             InitializeComponent();
@@ -42,6 +43,7 @@ namespace MökkingProjekti
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             switch (mode)
             {
                 case "asiakas":
@@ -56,14 +58,27 @@ namespace MökkingProjekti
                     break;
 
                 case "varaus":
-                    tbvarausetunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    tbvaraussukunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    tbvarauspuhelinnumero.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    tbvaraussahkoposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                    tbvaraajanosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                    tbvaraajanpostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                    ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                    haetaulu("varaus");
+                    //tbvarausetunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    //tbvaraussukunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    //tbvarauspuhelinnumero.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    //tbvaraussahkoposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    //tbvaraajanosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    //tbvaraajanpostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                    //ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                   
+                    
+                    if (haku)
+                    {
+                        tbvarausetunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                        tbvaraussukunimi.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                        tbvarauspuhelinnumero.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                        tbvaraussahkoposti.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                        tbvaraajanosoite.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                        tbvaraajanpostinumero.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                        ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                        haetaulu("varaus");
+                        haku = false;
+                    }
                     break;
 
                 case "palvelu":
@@ -224,6 +239,7 @@ namespace MökkingProjekti
             haetaulu("asiakas");
             mode = "varaus";
             taulunimi.Text = "Varaukset";
+            haku = true;
         }
 
         // toolstrip painikkeesta aukasee LASKUT paneelin ja sulkee muut
@@ -433,11 +449,13 @@ namespace MökkingProjekti
             tbvaraajanpostinumero.Clear();
             dtplahtopaiva.Value = DateTime.Today;
             dtptulopaiva.Value = DateTime.Today;
+            haku = true;
+            haetaulu("asiakas");
         }
 
         private void btnpoistavaraus_Click(object sender, EventArgs e)
         {
-       
+            taulunimi.Text = dtplahtopaiva.Value.ToShortDateString();
         } 
         
         private void btreservation_Click(object sender, EventArgs e)
@@ -462,6 +480,8 @@ namespace MökkingProjekti
             if (allTextboxesFilled)
             {
                 MessageBox.Show("yes");
+                Functions.lisaavaraus(ID.ToString(), cbmokki.Text, dtptulopaiva.Value.ToShortDateString(), dtplahtopaiva.Value.ToShortDateString());
+                haetaulu("varaus");
             }
             else
             {

@@ -99,6 +99,16 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public static void lisaavaraus(string asiakasid, string mokkiid, string varausalku, string varausloppu)
+        {
+            string connection = getDatasource();
+            string query = "insert into varaus(asiakas_id,mokki_mokki_id , varattu_pvm, vahvistus_pvm, varattu_alkupvm, varattu_loppupvm )  values" + "(" + asiakasid + ", " + mokkiid + ", '" + DateTime.Now.ToShortDateString() + "','"+ DateTime.Now.ToShortDateString()+"','"+varausalku+"','"+varausloppu+"'); ";
+            SqlConnection con = new SqlConnection(connection);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
         //lisää mökin tietokantaan ja näyttää datagripviewissä
         public static void lisaamokki(string alue_id, string mokkinimi,string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara)
