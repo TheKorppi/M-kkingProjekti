@@ -542,6 +542,8 @@ namespace MökkingProjekti
                 }
 
             }
+            else
+                varaus_id = null;
             if (summa != "")
             {
 
@@ -555,6 +557,8 @@ namespace MökkingProjekti
                     query = query + "and summa = @summa ";
                 }
             }
+            else
+                summa = null;
             if (alv != "")
             {
 
@@ -568,6 +572,8 @@ namespace MökkingProjekti
                     query = query + "and alv = @alv ";
                 }
             }
+            else
+                alv = null;
 
 
             SqlDataAdapter adapter = new SqlDataAdapter(query, getDatasource());
@@ -579,104 +585,112 @@ namespace MökkingProjekti
             adapter.Fill(dataSet, taulunimi);
             return dataSet;
         }
-        //public static DataSet haepalvelutieto(int alueid, string nimi, int tyyppi, string kuvaus, double hinta, double alv, string taulunimi)
-        //{
-        //    int count = 0;
-        //    string query = "SELECT * FROM " + taulunimi + " WHERE "; //alue_id = alueid and nimi = @nimi and tyyppi = @tyyppi and kuvaus = @kuvaus and hinta = @hinta and hinta = @hinta" and alv = @alv and =a;
-        //    if (nimi != "")
-        //    {
+        public static DataSet haepalvelutieto(string alueid, string nimi, string tyyppi, string kuvaus, string hinta, string alv, string taulunimi)
+        {
+            int count = 0;
+            string query = "SELECT * FROM " + taulunimi + " WHERE "; //alue_id = alueid and nimi = @nimi and tyyppi = @tyyppi and kuvaus = @kuvaus and hinta = @hinta and hinta = @hinta" and alv = @alv and =a;
+            if (alueid != "")
+            {
 
-        //        if (count == 0)
-        //        {
-        //            query = query + "alue_id = @alueid ";
-        //            count++;
-        //        }
-        //        else
-        //        {
-        //            query = query + "and alue_id = @alueid ";
-        //        }
+                if (count == 0)
+                {
+                    query = query + "alue_id = @alueid ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and alue_id = @alueid ";
+                }
 
-        //    }
-        //    if (nimi != "")
-        //    {
+            }
+            else 
+                alueid = null;
+            if (nimi != "")
+            {
 
-        //        if (count == 0)
-        //        {
-        //            query = query + "nimi = @nimi ";
-        //            count++;
-        //        }
-        //        else
-        //        {
-        //            query = query + "and nimi = @nimi ";
-        //        }
-        //    }
-        //    if (tyyppi != "")
-        //    {
+                if (count == 0)
+                {
+                    query = query + "nimi = @nimi ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and nimi = @nimi ";
+                }
+            }
+            if (tyyppi != "")
+            {
 
-        //        if (count == 0)
-        //        {
-        //            query = query + "tyyppi = @tyyppi ";
-        //            count++;
-        //        }
-        //        else
-        //        {
-        //            query = query + "and tyyppi = @tyyppi ";
-        //        }
-        //    }
-        //    if (kuvaus != "")
-        //    {
+                if (count == 0)
+                {
+                    query = query + "tyyppi = @tyyppi ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and tyyppi = @tyyppi ";
+                }
+            }
+            else
+                tyyppi = null;
+            if (kuvaus != "")
+            {
 
-        //        if (count == 0)
-        //        {
-        //            query = query + "kuvaus = @kuvaus ";
-        //            count++;
-        //        }
-        //        else
-        //        {
-        //            query = query + "and kuvaus = @kuvaus ";
-        //        }
-        //    }
-        //    if (hinta != "")
-        //    {
+                if (count == 0)
+                {
+                    query = query + "kuvaus = @kuvaus ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and kuvaus = @kuvaus ";
+                }
+            }
+            if (hinta != "")
+            {
 
-        //        if (count == 0)
-        //        {
-        //            query = query + "hinta = @hinta ";
-        //            count++;
-        //        }
-        //        else
-        //        {
-        //            query = query + "and hinta = @hinta ";
-        //        }
-        //    }
+                if (count == 0)
+                {
+                    query = query + "hinta = @hinta ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and hinta = @hinta ";
+                }
+            }
+            else
+                hinta = null;
 
-        //    if (alv != "")
-        //    {
+            if (alv != "")
+            {
 
-        //        if (count == 0)
-        //        {
-        //            query = query + "alv = @alv ";
-        //            count++;
-        //        }
-        //        else
-        //        {
-        //            query = query + "and alv = @alv ";
-        //        }
-        //    }
+                if (count == 0)
+                {
+                    query = query + "alv = @alv ";
+                    count++;
+                }
+                else
+                {
+                    query = query + "and alv = @alv ";
+                }
+            }
+            else
+                alv = null;
 
 
-        //    SqlDataAdapter adapter = new SqlDataAdapter(query, getDatasource());
-        //    DataSet dataSet = new DataSet();
-        //    adapter.SelectCommand.Parameters.AddWithValue("alueid", nimi);
-        //    adapter.SelectCommand.Parameters.AddWithValue("@nimi", nimi);
-        //    adapter.SelectCommand.Parameters.AddWithValue("@tyyppi", tyyppi);
-        //    adapter.SelectCommand.Parameters.AddWithValue("@kuvaus", kuvaus);
-        //    adapter.SelectCommand.Parameters.AddWithValue("@hinta", hinta);
-        //    adapter.SelectCommand.Parameters.AddWithValue("@alv", alv);
-        //    adapter.Fill(dataSet, taulunimi);
-        //    return dataSet;
+            SqlDataAdapter adapter = new SqlDataAdapter(query, getDatasource());
+            DataSet dataSet = new DataSet();
+            adapter.SelectCommand.Parameters.AddWithValue("alueid",Convert.ToInt32(alueid));
+            adapter.SelectCommand.Parameters.AddWithValue("@nimi", nimi);
+            adapter.SelectCommand.Parameters.AddWithValue("@tyyppi", Convert.ToInt32(tyyppi));
+            adapter.SelectCommand.Parameters.AddWithValue("@kuvaus", kuvaus);
+            adapter.SelectCommand.Parameters.AddWithValue("@hinta", Convert.ToDouble(hinta));
+            adapter.SelectCommand.Parameters.AddWithValue("@alv", Convert.ToDouble(alv));
+            adapter.Fill(dataSet, taulunimi);
+            return dataSet;
 
-        //}
+        }
         public static string getDatasource()
         {
             StreamReader sr = new StreamReader(getpath());

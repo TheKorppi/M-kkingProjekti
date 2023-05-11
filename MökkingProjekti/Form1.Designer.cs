@@ -1562,6 +1562,7 @@
             this.btnhaepalvelu.TabIndex = 12;
             this.btnhaepalvelu.Text = "Hae palvelu";
             this.btnhaepalvelu.UseVisualStyleBackColor = true;
+            this.btnhaepalvelu.Click += new System.EventHandler(this.btnhaepalvelu_Click);
             // 
             // Form1
             // 

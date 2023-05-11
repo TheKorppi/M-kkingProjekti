@@ -701,7 +701,13 @@ namespace MökkingProjekti
 
         private void btnvaraushae_Click(object sender, EventArgs e)
         {
+           
+        }
 
+        private void btnhaepalvelu_Click(object sender, EventArgs e)
+        {
+            DataSet data = Functions.haepalvelutieto(cmbpalvelualue.Text, tbpalvelunimi.Text, tbpalvelutyyppi.Text, tbpalvelukuvaus.Text, tbpalveluhinta.Text, tbpalvelualv.Text, "palvelu");
+            dataGridView1.DataSource = data.Tables["palvelu"];
         }
     }
 }
