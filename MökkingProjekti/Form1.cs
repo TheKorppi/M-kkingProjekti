@@ -364,6 +364,8 @@ namespace MökkingProjekti
             Pvaraus.Visible = false;
             Ppalvelu.Enabled = true;
             Ppalvelu.Visible = true;
+            Ppavelutvaraukseen.Visible = true;
+            Ppavelutvaraukseen.Enabled = true;
             Pmokki.Enabled = false;
             Pmokki.Visible = false;
             Plasku.Enabled = false;
@@ -757,7 +759,8 @@ namespace MökkingProjekti
 
         private void btnvarauspalvelulisaa_Click(object sender, EventArgs e)
         {
-
+            Functions.lisaavarauspalvelu(tbvarauksenpalvelutid.Text, tbvarauspalveluid.Text, tbpalveluidenlukumaara.Text);
+            haeaputaulu("varauksen_palvelut");
         }
 
         private void btnvarauspalvelupoista_Click(object sender, EventArgs e)
