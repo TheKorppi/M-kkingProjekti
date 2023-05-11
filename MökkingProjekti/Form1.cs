@@ -269,6 +269,7 @@ namespace MökkingProjekti
             haeaputaulu("alue");
             mode = "mokki";
             taulunimi.Text = "Mökit";
+            taulunimi2.Text = "Alueet";
             
         }
 
@@ -314,6 +315,7 @@ namespace MökkingProjekti
             haeaputaulu("mokkihelp");
             mode = "varaus";
             taulunimi.Text = "Varaukset";
+            taulunimi2.Text = "Alue & Mökki";
             haku = true;
         }
 
@@ -359,6 +361,7 @@ namespace MökkingProjekti
             haeaputaulu("alue");
             mode = "palvelu";
             taulunimi.Text = "Palvelu";
+            taulunimi2.Text = "Alueet";
         }
 
 
