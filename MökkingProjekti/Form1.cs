@@ -123,7 +123,9 @@ namespace MökkingProjekti
                 case "varaus":
 
                     IDhelp = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
-                    haetaulu("varaus");
+                    cbalue.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    cbmokki.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    //haetaulu("varaus");
                     break;
 
                 case "palvelu":
@@ -251,6 +253,7 @@ namespace MökkingProjekti
             Palue.Enabled = false;
             Palue.Visible = false;
             haetaulu("asiakas");
+            haeaputaulu("mokkihelp");
             mode = "varaus";
             taulunimi.Text = "Varaukset";
             haku = true;
