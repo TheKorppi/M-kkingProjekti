@@ -25,6 +25,24 @@ namespace MökkingProjekti
             InitializeComponent();
             Functions.ifkysymys(Functions.getpath());
             haetaulu("asiakas");
+            Pvaraus.Enabled = false;
+            Pvaraus.Visible = false;
+            Ppalvelu.Enabled = false;
+            Ppalvelu.Visible = false;
+            Pmokki.Enabled = false;
+            Pmokki.Visible = false;
+            Plasku.Enabled = false;
+            Plasku.Visible = false;
+            Pasiakas.Enabled = true;
+            Pasiakas.Visible = true;
+            Palue.Enabled = false;
+            Palue.Visible = false;
+            Ppavelutvaraukseen.Enabled = false;
+            Ppavelutvaraukseen.Visible = false;
+            dataGridView1.DataSource = null; // tyhjentää nopeasti taulun ja täyttää seuraavaksi uudelleen
+            haetaulu("asiakas");
+            mode = "asiakas";
+            taulunimi.Text = "Asiakkat";
         }
         
 
@@ -529,6 +547,7 @@ namespace MökkingProjekti
         {
             Functions.poistaalue(tbaluenimi.Text);
             haetaulu(mode);
+            haeaputaulu("alue");
         }
 
 
@@ -610,7 +629,6 @@ namespace MökkingProjekti
             }
             if (allTextboxesFilled)
             {
-                MessageBox.Show("yes");
                 Functions.lisaavaraus(ID.ToString(), cbmokki.Text, dtptulopaiva.Value.ToString("MM/dd/yyyy"), dtplahtopaiva.Value.ToString("MM/dd/yyyy"));
                 Functions.lisaavarauspalvelu(Functions.reader(), "1", "0");
                 haetaulu("varaus");
@@ -768,8 +786,11 @@ namespace MökkingProjekti
 
         private void btnvaraushae_Click(object sender, EventArgs e)
         {
-            DataSet data = Functions.haelaskutieto(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text,"lasku");
-            dataGridView1.DataSource = data.Tables["lasku"];
+            try
+            {
+                DataSet data = Functions.haelaskutieto(tblaskusvarausid.Text, tblaskusumma.Text, tblaskualv.Text, "lasku");
+                dataGridView1.DataSource = data.Tables["lasku"];
+            } catch (Exception ex) { MessageBox.Show(ex.ToString()); }
         }
 
         private void btnhaepalvelu_Click(object sender, EventArgs e)

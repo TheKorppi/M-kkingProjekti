@@ -83,28 +83,30 @@ namespace MökkingProjekti
             cmd.ExecuteNonQuery();
             con.Close();
             */
-
-            string connection = getDatasource();
-            string query = "SELECT COUNT(*) FROM asiakas WHERE etunimi='" + nimi + "' AND sukunimi='" + sukunimi + "' AND puhelinnro='" + puhnum + "' AND email='" + email + "' AND lahiosoite='" + lahiosoite + "' AND postinro='" + postinum + "';";
-            SqlConnection con = new SqlConnection(connection);
-            con.Open();
-            SqlCommand command = new SqlCommand(query, con);
-            int count = (int)command.ExecuteScalar();
-            con.Close();
-
-            // Jos asiakasta ei ole jo tietokannassa, suorita lisäys
-            if (count == 0)
+            try
             {
+                string connection = getDatasource();
+                string query = "SELECT COUNT(*) FROM asiakas WHERE etunimi='" + nimi + "' AND sukunimi='" + sukunimi + "' AND puhelinnro='" + puhnum + "' AND email='" + email + "' AND lahiosoite='" + lahiosoite + "' AND postinro='" + postinum + "';";
+                SqlConnection con = new SqlConnection(connection);
                 con.Open();
-                query = "INSERT INTO asiakas(etunimi, sukunimi, puhelinnro, email, lahiosoite, postinro)  values" + "('" + nimi + "','" + sukunimi + "','" + puhnum + "','" + email + "','" + lahiosoite + "','" + postinum + "');";
-                command = new SqlCommand(query, con);
-                command.ExecuteNonQuery();
+                SqlCommand command = new SqlCommand(query, con);
+                int count = (int)command.ExecuteScalar();
                 con.Close();
-            }
-            else
-            {
-                MessageBox.Show("Asiakas nimellä " + nimi + " " + sukunimi + " on jo tietokannassa!");
-            }
+
+                // Jos asiakasta ei ole jo tietokannassa, suorita lisäys
+                if (count == 0)
+                {
+                    con.Open();
+                    query = "INSERT INTO asiakas(etunimi, sukunimi, puhelinnro, email, lahiosoite, postinro)  values" + "('" + nimi + "','" + sukunimi + "','" + puhnum + "','" + email + "','" + lahiosoite + "','" + postinum + "');";
+                    command = new SqlCommand(query, con);
+                    command.ExecuteNonQuery();
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Asiakas nimellä " + nimi + " " + sukunimi + " on jo tietokannassa!");
+                }
+            }catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
         //lisää palvelun tietokantaan ja varmistaa onko aluetta ennestään tietokannassa
         public static void lisaapalvelu(string alueid, string nimi, string typpi, string kuvaus, string hinta, string alv)
@@ -162,6 +164,10 @@ namespace MökkingProjekti
         }
         public static void lisaavaraus(string asiakasid, string mokkiid, string varausalku,string varausloppu)
         {
+            try
+            {
+
+            
             string connection = getDatasource();
             string query = "insert into varaus(asiakas_id,mokki_mokki_id , varattu_pvm, vahvistus_pvm, varattu_alkupvm, varattu_loppupvm )  values" + "(" + asiakasid + ", " + mokkiid + ", '" + DateTime.Now.ToString("MM/dd/yyyy") + "', '"+ DateTime.Now.ToString("MM/dd/yyyy") +"' ,'"+varausalku+"' , '"+varausloppu+"'); ";
             SqlConnection con = new SqlConnection(connection);
@@ -169,6 +175,7 @@ namespace MökkingProjekti
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             con.Close();
+            }catch (Exception ex) { MessageBox.Show(ex.ToString()); }
         }
         //lisää mökin tietokantaan ja näyttää datagripviewissä
         public static void lisaamokki(string alue_id, string mokkinimi,string katuosoite, string postinro, string varustelu, string kuvaus, string hinta, string henkilomaara)
@@ -240,33 +247,43 @@ namespace MökkingProjekti
         }
         public static void lisaavarauspalvelu(string varaus_id, string palvelu_id, string lkm)
         {
-            string connection = getDatasource();
-            string query = "insert into varauksen_palvelut(varaus_id, palvelu_id,lkm) values("+varaus_id+","+palvelu_id+","+lkm+"); ";
-            SqlConnection con = new SqlConnection(connection);
-            con.Open();
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                string connection = getDatasource();
+                string query = "insert into varauksen_palvelut(varaus_id, palvelu_id,lkm) values(" + varaus_id + "," + palvelu_id + "," + lkm + "); ";
+                SqlConnection con = new SqlConnection(connection);
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
 
         public static void poistaasiakas(string nimi, string sukunimi, string puhnum, string email, string lahiosoite, string postinum)
         {
-            SqlConnection con = new SqlConnection(getDatasource());
-            string query = "DELETE FROM asiakas WHERE etunimi = '" + nimi + "' AND sukunimi = '" + sukunimi + "' AND puhelinnro = '" + puhnum + "';";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                SqlConnection con = new SqlConnection(getDatasource());
+                string query = "DELETE FROM asiakas WHERE etunimi = '" + nimi + "' AND sukunimi = '" + sukunimi + "' AND puhelinnro = '" + puhnum + "';";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
         public static void poistapalvelu(int ID)
         {
-            SqlConnection con = new SqlConnection(getDatasource());
-            string query = "DELETE FROM palvelu WHERE palvelu_id = " +ID;
-            con.Open();
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                SqlConnection con = new SqlConnection(getDatasource());
+                string query = "DELETE FROM palvelu WHERE palvelu_id = " + ID;
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
         public static void poistalasku(string varausid, string summa, string alv)
         {
