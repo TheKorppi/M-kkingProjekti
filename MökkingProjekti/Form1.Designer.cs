@@ -74,18 +74,6 @@
             this.btnlisaapalveluvaraus = new System.Windows.Forms.Button();
             this.btnpoistavaraus = new System.Windows.Forms.Button();
             this.btnmuokkaavaraus = new System.Windows.Forms.Button();
-            this.Plasku = new System.Windows.Forms.Panel();
-            this.btnvaraushae = new System.Windows.Forms.Button();
-            this.btnmuokkaalasku = new System.Windows.Forms.Button();
-            this.btnpoistalasku = new System.Windows.Forms.Button();
-            this.btnperuutalasku = new System.Windows.Forms.Button();
-            this.btnlisaalasku = new System.Windows.Forms.Button();
-            this.tblaskusumma = new System.Windows.Forms.TextBox();
-            this.tblaskualv = new System.Windows.Forms.TextBox();
-            this.lbbillprice = new System.Windows.Forms.Label();
-            this.lbbilltax = new System.Windows.Forms.Label();
-            this.lbbillID = new System.Windows.Forms.Label();
-            this.tblaskusvarausid = new System.Windows.Forms.TextBox();
             this.Ppalvelu = new System.Windows.Forms.Panel();
             this.btnhaepalvelu = new System.Windows.Forms.Button();
             this.cmbpalvelualue = new System.Windows.Forms.ComboBox();
@@ -182,6 +170,18 @@
             this.lblisaapalveluitaotsikko = new System.Windows.Forms.Label();
             this.mySqlCommandBuilder1 = new MySqlConnector.MySqlCommandBuilder();
             this.taulunimi2 = new System.Windows.Forms.Label();
+            this.tblaskusvarausid = new System.Windows.Forms.TextBox();
+            this.lbbillID = new System.Windows.Forms.Label();
+            this.lbbilltax = new System.Windows.Forms.Label();
+            this.lbbillprice = new System.Windows.Forms.Label();
+            this.tblaskualv = new System.Windows.Forms.TextBox();
+            this.tblaskusumma = new System.Windows.Forms.TextBox();
+            this.btnlisaalasku = new System.Windows.Forms.Button();
+            this.btnperuutalasku = new System.Windows.Forms.Button();
+            this.btnpoistalasku = new System.Windows.Forms.Button();
+            this.btnmuokkaalasku = new System.Windows.Forms.Button();
+            this.btnvaraushae = new System.Windows.Forms.Button();
+            this.Plasku = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asiakasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mokkingDBDataSetBindingSource)).BeginInit();
@@ -192,7 +192,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mokkiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alueBindingSource)).BeginInit();
             this.Pvaraus.SuspendLayout();
-            this.Plasku.SuspendLayout();
             this.Ppalvelu.SuspendLayout();
             this.Pasiakas.SuspendLayout();
             this.Palue.SuspendLayout();
@@ -200,6 +199,7 @@
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.Ppavelutvaraukseen.SuspendLayout();
+            this.Plasku.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -548,7 +548,7 @@
             this.Pvaraus.Controls.Add(this.lbpostcode);
             this.Pvaraus.Controls.Add(this.lbcheckin);
             this.Pvaraus.Controls.Add(this.tbvaraajanpostinumero);
-            this.Pvaraus.Location = new System.Drawing.Point(27, 97);
+            this.Pvaraus.Location = new System.Drawing.Point(24, 95);
             this.Pvaraus.Name = "Pvaraus";
             this.Pvaraus.Size = new System.Drawing.Size(896, 300);
             this.Pvaraus.TabIndex = 56;
@@ -602,133 +602,6 @@
             this.btnmuokkaavaraus.Text = "Muokkaa";
             this.btnmuokkaavaraus.UseVisualStyleBackColor = true;
             this.btnmuokkaavaraus.Click += new System.EventHandler(this.btnmuokkaavaraus_Click);
-            // 
-            // Plasku
-            // 
-            this.Plasku.Controls.Add(this.btnvaraushae);
-            this.Plasku.Controls.Add(this.btnmuokkaalasku);
-            this.Plasku.Controls.Add(this.btnpoistalasku);
-            this.Plasku.Controls.Add(this.btnperuutalasku);
-            this.Plasku.Controls.Add(this.btnlisaalasku);
-            this.Plasku.Controls.Add(this.tblaskusumma);
-            this.Plasku.Controls.Add(this.tblaskualv);
-            this.Plasku.Controls.Add(this.lbbillprice);
-            this.Plasku.Controls.Add(this.lbbilltax);
-            this.Plasku.Controls.Add(this.lbbillID);
-            this.Plasku.Controls.Add(this.tblaskusvarausid);
-            this.Plasku.Location = new System.Drawing.Point(27, 97);
-            this.Plasku.Margin = new System.Windows.Forms.Padding(2);
-            this.Plasku.Name = "Plasku";
-            this.Plasku.Size = new System.Drawing.Size(434, 301);
-            this.Plasku.TabIndex = 46;
-            // 
-            // btnvaraushae
-            // 
-            this.btnvaraushae.Location = new System.Drawing.Point(249, 33);
-            this.btnvaraushae.Name = "btnvaraushae";
-            this.btnvaraushae.Size = new System.Drawing.Size(75, 23);
-            this.btnvaraushae.TabIndex = 8;
-            this.btnvaraushae.Text = "Hae varaus";
-            this.btnvaraushae.UseVisualStyleBackColor = true;
-            this.btnvaraushae.Click += new System.EventHandler(this.btnvaraushae_Click);
-            // 
-            // btnmuokkaalasku
-            // 
-            this.btnmuokkaalasku.Location = new System.Drawing.Point(144, 132);
-            this.btnmuokkaalasku.Margin = new System.Windows.Forms.Padding(2);
-            this.btnmuokkaalasku.Name = "btnmuokkaalasku";
-            this.btnmuokkaalasku.Size = new System.Drawing.Size(56, 19);
-            this.btnmuokkaalasku.TabIndex = 6;
-            this.btnmuokkaalasku.Text = "Muokkaa";
-            this.btnmuokkaalasku.UseVisualStyleBackColor = true;
-            this.btnmuokkaalasku.Click += new System.EventHandler(this.btnmuokkaalasku_Click);
-            // 
-            // btnpoistalasku
-            // 
-            this.btnpoistalasku.Location = new System.Drawing.Point(144, 157);
-            this.btnpoistalasku.Margin = new System.Windows.Forms.Padding(2);
-            this.btnpoistalasku.Name = "btnpoistalasku";
-            this.btnpoistalasku.Size = new System.Drawing.Size(56, 19);
-            this.btnpoistalasku.TabIndex = 7;
-            this.btnpoistalasku.Text = "Poista";
-            this.btnpoistalasku.UseVisualStyleBackColor = true;
-            this.btnpoistalasku.Click += new System.EventHandler(this.btnpoistalasku_Click);
-            // 
-            // btnperuutalasku
-            // 
-            this.btnperuutalasku.Location = new System.Drawing.Point(38, 155);
-            this.btnperuutalasku.Margin = new System.Windows.Forms.Padding(2);
-            this.btnperuutalasku.Name = "btnperuutalasku";
-            this.btnperuutalasku.Size = new System.Drawing.Size(56, 19);
-            this.btnperuutalasku.TabIndex = 5;
-            this.btnperuutalasku.Text = "Peruuta";
-            this.btnperuutalasku.UseVisualStyleBackColor = true;
-            this.btnperuutalasku.Click += new System.EventHandler(this.btnperuutalasku_Click);
-            // 
-            // btnlisaalasku
-            // 
-            this.btnlisaalasku.Location = new System.Drawing.Point(38, 132);
-            this.btnlisaalasku.Margin = new System.Windows.Forms.Padding(2);
-            this.btnlisaalasku.Name = "btnlisaalasku";
-            this.btnlisaalasku.Size = new System.Drawing.Size(56, 19);
-            this.btnlisaalasku.TabIndex = 4;
-            this.btnlisaalasku.Text = "Lisää";
-            this.btnlisaalasku.UseVisualStyleBackColor = true;
-            this.btnlisaalasku.Click += new System.EventHandler(this.btnlisaalasku_Click);
-            // 
-            // tblaskusumma
-            // 
-            this.tblaskusumma.Location = new System.Drawing.Point(144, 58);
-            this.tblaskusumma.Margin = new System.Windows.Forms.Padding(2);
-            this.tblaskusumma.Name = "tblaskusumma";
-            this.tblaskusumma.Size = new System.Drawing.Size(76, 20);
-            this.tblaskusumma.TabIndex = 2;
-            // 
-            // tblaskualv
-            // 
-            this.tblaskualv.Location = new System.Drawing.Point(144, 89);
-            this.tblaskualv.Margin = new System.Windows.Forms.Padding(2);
-            this.tblaskualv.Name = "tblaskualv";
-            this.tblaskualv.Size = new System.Drawing.Size(76, 20);
-            this.tblaskualv.TabIndex = 3;
-            // 
-            // lbbillprice
-            // 
-            this.lbbillprice.AutoSize = true;
-            this.lbbillprice.Location = new System.Drawing.Point(35, 67);
-            this.lbbillprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbbillprice.Name = "lbbillprice";
-            this.lbbillprice.Size = new System.Drawing.Size(42, 13);
-            this.lbbillprice.TabIndex = 3;
-            this.lbbillprice.Text = "Summa";
-            // 
-            // lbbilltax
-            // 
-            this.lbbilltax.AutoSize = true;
-            this.lbbilltax.Location = new System.Drawing.Point(35, 93);
-            this.lbbilltax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbbilltax.Name = "lbbilltax";
-            this.lbbilltax.Size = new System.Drawing.Size(22, 13);
-            this.lbbilltax.TabIndex = 2;
-            this.lbbilltax.Text = "Alv";
-            // 
-            // lbbillID
-            // 
-            this.lbbillID.AutoSize = true;
-            this.lbbillID.Location = new System.Drawing.Point(35, 38);
-            this.lbbillID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbbillID.Name = "lbbillID";
-            this.lbbillID.Size = new System.Drawing.Size(54, 13);
-            this.lbbillID.TabIndex = 1;
-            this.lbbillID.Text = "Varaus ID";
-            // 
-            // tblaskusvarausid
-            // 
-            this.tblaskusvarausid.Location = new System.Drawing.Point(144, 33);
-            this.tblaskusvarausid.Margin = new System.Windows.Forms.Padding(2);
-            this.tblaskusvarausid.Name = "tblaskusvarausid";
-            this.tblaskusvarausid.Size = new System.Drawing.Size(76, 20);
-            this.tblaskusvarausid.TabIndex = 1;
             // 
             // Ppalvelu
             // 
@@ -1413,9 +1286,9 @@
             this.lbloactio.Location = new System.Drawing.Point(19, 43);
             this.lbloactio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbloactio.Name = "lbloactio";
-            this.lbloactio.Size = new System.Drawing.Size(28, 13);
+            this.lbloactio.Size = new System.Drawing.Size(39, 13);
             this.lbloactio.TabIndex = 0;
-            this.lbloactio.Text = "Alue";
+            this.lbloactio.Text = "Alue id";
             // 
             // aikajaksobtn
             // 
@@ -1704,6 +1577,133 @@
             this.taulunimi2.Size = new System.Drawing.Size(0, 30);
             this.taulunimi2.TabIndex = 62;
             // 
+            // tblaskusvarausid
+            // 
+            this.tblaskusvarausid.Location = new System.Drawing.Point(144, 33);
+            this.tblaskusvarausid.Margin = new System.Windows.Forms.Padding(2);
+            this.tblaskusvarausid.Name = "tblaskusvarausid";
+            this.tblaskusvarausid.Size = new System.Drawing.Size(76, 20);
+            this.tblaskusvarausid.TabIndex = 1;
+            // 
+            // lbbillID
+            // 
+            this.lbbillID.AutoSize = true;
+            this.lbbillID.Location = new System.Drawing.Point(35, 38);
+            this.lbbillID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbbillID.Name = "lbbillID";
+            this.lbbillID.Size = new System.Drawing.Size(54, 13);
+            this.lbbillID.TabIndex = 1;
+            this.lbbillID.Text = "Varaus ID";
+            // 
+            // lbbilltax
+            // 
+            this.lbbilltax.AutoSize = true;
+            this.lbbilltax.Location = new System.Drawing.Point(35, 93);
+            this.lbbilltax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbbilltax.Name = "lbbilltax";
+            this.lbbilltax.Size = new System.Drawing.Size(22, 13);
+            this.lbbilltax.TabIndex = 2;
+            this.lbbilltax.Text = "Alv";
+            // 
+            // lbbillprice
+            // 
+            this.lbbillprice.AutoSize = true;
+            this.lbbillprice.Location = new System.Drawing.Point(35, 67);
+            this.lbbillprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbbillprice.Name = "lbbillprice";
+            this.lbbillprice.Size = new System.Drawing.Size(42, 13);
+            this.lbbillprice.TabIndex = 3;
+            this.lbbillprice.Text = "Summa";
+            // 
+            // tblaskualv
+            // 
+            this.tblaskualv.Location = new System.Drawing.Point(144, 89);
+            this.tblaskualv.Margin = new System.Windows.Forms.Padding(2);
+            this.tblaskualv.Name = "tblaskualv";
+            this.tblaskualv.Size = new System.Drawing.Size(76, 20);
+            this.tblaskualv.TabIndex = 3;
+            // 
+            // tblaskusumma
+            // 
+            this.tblaskusumma.Location = new System.Drawing.Point(144, 58);
+            this.tblaskusumma.Margin = new System.Windows.Forms.Padding(2);
+            this.tblaskusumma.Name = "tblaskusumma";
+            this.tblaskusumma.Size = new System.Drawing.Size(76, 20);
+            this.tblaskusumma.TabIndex = 2;
+            // 
+            // btnlisaalasku
+            // 
+            this.btnlisaalasku.Location = new System.Drawing.Point(38, 132);
+            this.btnlisaalasku.Margin = new System.Windows.Forms.Padding(2);
+            this.btnlisaalasku.Name = "btnlisaalasku";
+            this.btnlisaalasku.Size = new System.Drawing.Size(56, 19);
+            this.btnlisaalasku.TabIndex = 4;
+            this.btnlisaalasku.Text = "Lisää";
+            this.btnlisaalasku.UseVisualStyleBackColor = true;
+            this.btnlisaalasku.Click += new System.EventHandler(this.btnlisaalasku_Click);
+            // 
+            // btnperuutalasku
+            // 
+            this.btnperuutalasku.Location = new System.Drawing.Point(38, 155);
+            this.btnperuutalasku.Margin = new System.Windows.Forms.Padding(2);
+            this.btnperuutalasku.Name = "btnperuutalasku";
+            this.btnperuutalasku.Size = new System.Drawing.Size(56, 19);
+            this.btnperuutalasku.TabIndex = 5;
+            this.btnperuutalasku.Text = "Peruuta";
+            this.btnperuutalasku.UseVisualStyleBackColor = true;
+            this.btnperuutalasku.Click += new System.EventHandler(this.btnperuutalasku_Click);
+            // 
+            // btnpoistalasku
+            // 
+            this.btnpoistalasku.Location = new System.Drawing.Point(144, 157);
+            this.btnpoistalasku.Margin = new System.Windows.Forms.Padding(2);
+            this.btnpoistalasku.Name = "btnpoistalasku";
+            this.btnpoistalasku.Size = new System.Drawing.Size(56, 19);
+            this.btnpoistalasku.TabIndex = 7;
+            this.btnpoistalasku.Text = "Poista";
+            this.btnpoistalasku.UseVisualStyleBackColor = true;
+            this.btnpoistalasku.Click += new System.EventHandler(this.btnpoistalasku_Click);
+            // 
+            // btnmuokkaalasku
+            // 
+            this.btnmuokkaalasku.Location = new System.Drawing.Point(144, 132);
+            this.btnmuokkaalasku.Margin = new System.Windows.Forms.Padding(2);
+            this.btnmuokkaalasku.Name = "btnmuokkaalasku";
+            this.btnmuokkaalasku.Size = new System.Drawing.Size(56, 19);
+            this.btnmuokkaalasku.TabIndex = 6;
+            this.btnmuokkaalasku.Text = "Muokkaa";
+            this.btnmuokkaalasku.UseVisualStyleBackColor = true;
+            this.btnmuokkaalasku.Click += new System.EventHandler(this.btnmuokkaalasku_Click);
+            // 
+            // btnvaraushae
+            // 
+            this.btnvaraushae.Location = new System.Drawing.Point(249, 33);
+            this.btnvaraushae.Name = "btnvaraushae";
+            this.btnvaraushae.Size = new System.Drawing.Size(75, 23);
+            this.btnvaraushae.TabIndex = 8;
+            this.btnvaraushae.Text = "Hae varaus";
+            this.btnvaraushae.UseVisualStyleBackColor = true;
+            this.btnvaraushae.Click += new System.EventHandler(this.btnvaraushae_Click);
+            // 
+            // Plasku
+            // 
+            this.Plasku.Controls.Add(this.btnvaraushae);
+            this.Plasku.Controls.Add(this.btnmuokkaalasku);
+            this.Plasku.Controls.Add(this.btnpoistalasku);
+            this.Plasku.Controls.Add(this.btnperuutalasku);
+            this.Plasku.Controls.Add(this.btnlisaalasku);
+            this.Plasku.Controls.Add(this.tblaskusumma);
+            this.Plasku.Controls.Add(this.tblaskualv);
+            this.Plasku.Controls.Add(this.lbbillprice);
+            this.Plasku.Controls.Add(this.lbbilltax);
+            this.Plasku.Controls.Add(this.lbbillID);
+            this.Plasku.Controls.Add(this.tblaskusvarausid);
+            this.Plasku.Location = new System.Drawing.Point(25, 95);
+            this.Plasku.Margin = new System.Windows.Forms.Padding(2);
+            this.Plasku.Name = "Plasku";
+            this.Plasku.Size = new System.Drawing.Size(434, 301);
+            this.Plasku.TabIndex = 46;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1739,8 +1739,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.alueBindingSource)).EndInit();
             this.Pvaraus.ResumeLayout(false);
             this.Pvaraus.PerformLayout();
-            this.Plasku.ResumeLayout(false);
-            this.Plasku.PerformLayout();
             this.Ppalvelu.ResumeLayout(false);
             this.Ppalvelu.PerformLayout();
             this.Pasiakas.ResumeLayout(false);
@@ -1754,6 +1752,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.Ppavelutvaraukseen.ResumeLayout(false);
             this.Ppavelutvaraukseen.PerformLayout();
+            this.Plasku.ResumeLayout(false);
+            this.Plasku.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1831,15 +1831,6 @@
         private System.Windows.Forms.Button btnperuutamokki;
         private System.Windows.Forms.Button btnlisaamokki;
         private System.Windows.Forms.Panel Pasiakas;
-        private System.Windows.Forms.Panel Plasku;
-        private System.Windows.Forms.Label lbbillID;
-        private System.Windows.Forms.TextBox tblaskusvarausid;
-        private System.Windows.Forms.TextBox tblaskusumma;
-        private System.Windows.Forms.TextBox tblaskualv;
-        private System.Windows.Forms.Label lbbillprice;
-        private System.Windows.Forms.Label lbbilltax;
-        private System.Windows.Forms.Button btnperuutalasku;
-        private System.Windows.Forms.Button btnlisaalasku;
         private System.Windows.Forms.Label lbcustomeraddress;
         private System.Windows.Forms.Label lbcustomerfname;
         private System.Windows.Forms.Label lbcustomerlname;
@@ -1877,8 +1868,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.Button btnmuokkaa;
         private System.Windows.Forms.Button btnpoistaasiakas;
-        private System.Windows.Forms.Button btnmuokkaalasku;
-        private System.Windows.Forms.Button btnpoistalasku;
         private System.Windows.Forms.Button btnpoistaalue;
         private System.Windows.Forms.Button btnmuokkaaalue;
         private System.Windows.Forms.Button btnpoistapalvelu;
@@ -1897,7 +1886,6 @@
         private System.Windows.Forms.Label Alue;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btnmokkihaku;
-        private System.Windows.Forms.Button btnvaraushae;
         private System.Windows.Forms.Button btnhaepalvelu;
         private System.Windows.Forms.Panel Ppavelutvaraukseen;
         private System.Windows.Forms.Label lbvarauksellepalveluid;
@@ -1913,6 +1901,18 @@
         private System.Windows.Forms.Button btnvaihdanakymaa;
         private System.Windows.Forms.Button btnvarauspalvelumuokkaa;
         private System.Windows.Forms.Button btnvarauspalvelulisaa;
+        private System.Windows.Forms.TextBox tblaskusvarausid;
+        private System.Windows.Forms.Label lbbillID;
+        private System.Windows.Forms.Label lbbilltax;
+        private System.Windows.Forms.Label lbbillprice;
+        private System.Windows.Forms.TextBox tblaskualv;
+        private System.Windows.Forms.TextBox tblaskusumma;
+        private System.Windows.Forms.Button btnlisaalasku;
+        private System.Windows.Forms.Button btnperuutalasku;
+        private System.Windows.Forms.Button btnpoistalasku;
+        private System.Windows.Forms.Button btnmuokkaalasku;
+        private System.Windows.Forms.Button btnvaraushae;
+        private System.Windows.Forms.Panel Plasku;
     }
 }
 
